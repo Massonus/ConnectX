@@ -1,9 +1,10 @@
+from flask import render_template, request, redirect, url_for, session
 from database import database_owm as owm
-from main import app
+from config import app
 
 
 @app.route('/')
-def hello_world():  # put application's code here
+def hello_world():
     return f'Hello World!'
 
 

@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 
-from main import app
+from config import app
 
 db = SQLAlchemy(app)
 session = db.session
