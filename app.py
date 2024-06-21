@@ -1,6 +1,5 @@
-from flask import Flask
-
-app = Flask(__name__)
+import database_owm as owm
+from main import app
 
 
 @app.route('/')
@@ -9,4 +8,5 @@ def hello_world():  # put application's code here
 
 
 if __name__ == '__main__':
+    owm.initialize_tables()
     app.run()
