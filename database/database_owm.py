@@ -23,6 +23,16 @@ class User(db.Model):
         user = session.query(User).filter_by(username=username, password=password).first()
         return user
 
+    @staticmethod
+    def is_username_already_exists(username):
+        result = session.query(User).filter_by(username=username).first()
+        return True if result is not None else False
+
+    @staticmethod
+    def is_email_already_exists(email):
+        result = session.query(User).filter_by(email=email).first()
+        return True if result is not None else False
+
 
 def initialize_tables():
     db.drop_all()
