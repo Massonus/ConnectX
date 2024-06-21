@@ -18,6 +18,11 @@ class User(db.Model):
         user = session.query(User).filter_by(id=user_id).first()
         return user.username
 
+    @staticmethod
+    def get_by_username_and_password(username, password):
+        user = session.query(User).filter_by(username=username, password=password).first()
+        return user
+
 
 def initialize_tables():
     db.drop_all()
