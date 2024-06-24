@@ -1,7 +1,8 @@
 from flask import render_template, request, session
-from app.database import database_owm as owm
-from config import app
+from application.database import database_owm as owm
+from config import app as app
 import re
+import application.util.user_util as user_util
 
 
 @app.route('/')
@@ -12,7 +13,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        account = owm.User.get_by_username_and_password(username, password)
+        account = user_util.get_by_username_and_password(username, password)
         if account:
             session['loggedin'] = True
             session['id'] = account.id
@@ -38,14 +39,14 @@ def register():
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         username = request.form['username']
         password = request.form['password']
-        is_username_exist = owm.User.is_username_already_exists(username)
+        is_username_exist = user_util.is_username_already_exists(username)
 
         if is_username_exist:
             msg = 'Username already exists !'
         elif not re.match(r'[A-Za-z0-9]+', username):
             msg = 'Username must contain only characters and numbers !'
         else:
-            owm.User.add_new_user(username, password)
+            user_util.add_new_user(username, password)
             msg = 'You have successfully registered !'
     return render_template('register.html', msg=msg)
 
@@ -59,5 +60,5 @@ def test_username():
 if __name__ == '__main__':
     with app.app_context():
         owm.initialize_tables()
-        owm.User.add_new_user('username', 'password')
+        user_util.add_new_user('username', 'password')
     app.run()
