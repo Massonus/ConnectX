@@ -1,4 +1,4 @@
-from database import db, session
+from app.database import db, session
 
 
 class User(db.Model):

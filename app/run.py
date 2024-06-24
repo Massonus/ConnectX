@@ -1,5 +1,5 @@
-from flask import render_template, request, redirect, url_for, session
-from database import database_owm as owm
+from flask import render_template, request, session
+from app.database import database_owm as owm
 from config import app
 import re
 
