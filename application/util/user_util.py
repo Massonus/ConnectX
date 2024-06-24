@@ -1,5 +1,7 @@
 from application.models.user import User
-from application.database import session
+from application.extension import db
+
+session = db.session
 
 
 def add_new_user(username, password):

@@ -1,8 +1,9 @@
 from flask import render_template, request, session
-from application.database import database_owm as owm
-from config import app as app
+from application import create_app, initialize_tables
 import re
 import application.util.user_util as user_util
+
+app = create_app()
 
 
 @app.route('/')
@@ -59,6 +60,6 @@ def test_username():
 
 if __name__ == '__main__':
     with app.app_context():
-        owm.initialize_tables()
+        initialize_tables()
         user_util.add_new_user('username', 'password')
     app.run()
