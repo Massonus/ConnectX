@@ -1,12 +1,7 @@
-<!-- templates/rate_detail.html -->
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+{% block content %}
+
 {% for rate in rates %}
     <h1>{{ rate.name }}</h1>
     <p><strong>Скорость:</strong> {{ rate.speed }} Мбит/с</p>
@@ -15,7 +10,5 @@
     <a href="{{ url_for('rate.show_rates') }}">Назад к списку тарифов</a>
 {% endfor %}
 
+{% endblock %}
 
-
-</body>
-</html>
