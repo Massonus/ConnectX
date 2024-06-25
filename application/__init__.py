@@ -17,7 +17,7 @@ def create_app():
     app.register_blueprint(main_bp)
 
     from application.routes.user_routes import bp as posts_bp
-    app.register_blueprint(posts_bp, url_prefix='/user')  ###           
+    app.register_blueprint(posts_bp, url_prefix='/user')
     return app
 
 

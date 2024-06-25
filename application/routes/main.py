@@ -1,10 +1,11 @@
 from flask import Blueprint
 from flask import session
+from flask import render_template, request, session
 
 bp = Blueprint('main', __name__)
 
 
 @bp.route('/')
-def test_username():
+def index():
     username = session.get('username')
-    return username if username is not None else 'Unauthorized'
+    return render_template('index.html')
