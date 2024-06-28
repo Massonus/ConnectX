@@ -21,6 +21,10 @@ def login():
             session['loggedin'] = True
             session['id'] = account.id
             session['username'] = account.username
+            if account.is_admin:
+                session['is_admin'] = True
+            else:
+                session['is_admin'] = False
             msg = 'Logged in successfully !'
             return render_template('index.html', msg=msg)
         else:
@@ -49,6 +53,6 @@ def register():
         elif not re.match(r'[A-Za-z0-9]+', username):
             msg = 'Username must contain only characters and numbers !'
         else:
-            user_util.add_new_user(username, password)
+            user_util.add_new_user(username, password, False)
             msg = 'You have successfully registered !'
     return render_template('user/register.html', msg=msg)

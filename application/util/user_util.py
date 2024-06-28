@@ -4,8 +4,8 @@ from application.extension import db
 session = db.session
 
 
-def add_new_user(username, password):
-    user = User(username=username, password=password)
+def add_new_user(username, password, is_admin):
+    user = User(username=username, password=password, is_admin=is_admin)
     session.add(user)
     session.commit()
 
