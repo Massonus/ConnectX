@@ -1,97 +1,14 @@
-<!-- templates/tariffs.html -->
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Our Tariffs</title>
-    <style>
-        /* Ваш CSS стиль здесь */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        .container {
-            width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .title {
-            color: #333;
-        }
-
-        .tariff {
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-            margin-top: 20px;
-        }
-
-        .tariff h2 {
-            margin-top: 0;
-            font-size: 20px;
-            color: #4CAF50;
-        }
-
-        .tariff ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .tariff li {
-            margin-bottom: 10px;
-        }
-
-        .bottom {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .bottom a {
-            text-decoration: none;
-            color: #4CAF50;
-        }
-
-        .bottom a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="header">
-        <h1 class="title">Our Rates</h1>
-    </div>
-
-    {% for rate in rates %}
-    <div class="rate">
-        <h2>{{ rate.name }}</h2>
-        <ul>
-            <li>Price: {{ rate.price }}</li>
-            <li>Speed: Up to {{ rate.speed }} Mbps</li>
-            <li>Data: {{ rate.description }}</li>
-        </ul>
-    </div>
-    {% endfor %}
-
-    <p class="bottom">Want to know more? <a href="#">Contact us</a></p>
-</div>
-</body>
-</html>
+{% block content %}
 
 
+<h1>{{ rate.name }}</h1>
+<p><strong>Speed:</strong> {{ rate.speed }} Мбит/с</p>
+<p><strong>Price:</strong> {{ rate.price }} </p>
+<p><strong>Description:</strong> {{ rate.description }}</p>
+
+
+{% endblock %}
 
 
