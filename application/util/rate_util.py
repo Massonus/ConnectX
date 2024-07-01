@@ -1,19 +1,29 @@
 from application.models.rate import Rate
-from application.extension import db
-
-session = db.session
+from application.util import do_commit
+from application.util import session
 
 
 def get_all():
     return session.query(Rate).all()
 
 
-def add_new(name, speed, price, description):
-    rate = Rate(name=name, speed=speed, price=price, description=description)
+def add_new(values):
+    rate = Rate(**values)
     session.add(rate)
-    session.commit()
+    do_commit()
 
 
-def get_rate_by_id(rate_id):
-    rate = db.session.query(Rate).filter_by(id=rate_id).first()
+def delete(rate_id):
+    rate = get_by_id(rate_id)
+    session.delete(rate)
+    do_commit()
+
+
+def get_by_id(rate_id):
+    rate = session.query(Rate).filter_by(id=rate_id).first()
     return rate
+
+
+def edit(rate_id, values):
+    session.query(Rate).filter_by(id=rate_id).update(values)
+    do_commit()
