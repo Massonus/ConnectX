@@ -1,4 +1,4 @@
-from application.extension import db
+from app.extension import db
 
 session = db.session
 

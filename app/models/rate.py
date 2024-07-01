@@ -1,6 +1,6 @@
-# application/models/rate.py
+# app/models/rate.py
 
-from application.extension import db
+from app.extension import db
 
 
 class Rate(db.Model):

@@ -1,6 +1,6 @@
-from application.models.rate import Rate
-from application.util import do_commit
-from application.util import session
+from app.models.rate import Rate
+from app.util import do_commit
+from app.util import session
 
 
 def get_all():

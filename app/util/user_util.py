@@ -1,5 +1,5 @@
-from application.models.user import User
-from application.extension import db
+from app.models.user import User
+from app.extension import db
 
 session = db.session
 
