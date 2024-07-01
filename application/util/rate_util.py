@@ -7,8 +7,8 @@ def get_all():
     return session.query(Rate).all()
 
 
-def add_new(name, speed, price, description):
-    rate = Rate(name=name, speed=speed, price=price, description=description)
+def add_new(values):
+    rate = Rate(**values)
     session.add(rate)
     do_commit()
 

@@ -2,6 +2,10 @@
 
 {% block content %}
 
+    {% if session.is_admin %}
+        <button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
+    {% endif %}
+
     {% for rate in rates %}
         <h1>{{ rate.name }}</h1>
         <p><strong>Speed:</strong> {{ rate.speed }} Мбит/с</p>
