@@ -3,7 +3,7 @@ import re
 from flask import Blueprint
 from flask import render_template, request, session
 
-import application.util.user_util as user_util
+import app.util.user_util as user_util
 
 bp = Blueprint('user', __name__)
 
@@ -37,6 +37,7 @@ def logout():
     session.pop('loggedin', None)
     session.pop('id', None)
     session.pop('username', None)
+    session.pop('is_admin', None)
     return render_template('index.html')
 
 

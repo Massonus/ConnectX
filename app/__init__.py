@@ -1,6 +1,6 @@
 from flask import Flask
-from application.util import user_util, rate_util
-from application.extension import db
+from app.util import user_util, rate_util
+from app.extension import db
 
 
 def create_app():
@@ -15,13 +15,13 @@ def create_app():
         rate_util.add_new({'name': 'Basic', 'speed': 50, 'price': 100, 'description': "Basic rate"})
         rate_util.add_new({'name': 'Basic1', 'speed': 41, 'price': 24, 'description': "Standart rate"})
 
-    from application.routes.main import bp as main_bp
+    from app.routes.main import bp as main_bp
     app.register_blueprint(main_bp)
 
-    from application.routes.user_routes import bp as posts_bp
+    from app.routes.user_routes import bp as posts_bp
     app.register_blueprint(posts_bp, url_prefix='/user')
 
-    from application.routes.rate_main import bp as rate_bp
+    from app.routes.rate_main import bp as rate_bp
     app.register_blueprint(rate_bp, url_prefix='/rate')
 
     return app

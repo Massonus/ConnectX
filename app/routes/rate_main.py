@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, redirect, request
-from application.util import rate_util
+from app.util import rate_util
 
 bp = Blueprint('rate', __name__)
 
