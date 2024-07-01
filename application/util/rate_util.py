@@ -14,6 +14,12 @@ def add_new(name, speed, price, description):
     session.commit()
 
 
+def delete(rate_id):
+    rate = get_rate_by_id(rate_id)
+    session.delete(rate)
+    session.commit()
+
+
 def get_rate_by_id(rate_id):
     rate = db.session.query(Rate).filter_by(id=rate_id).first()
     return rate
