@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if session.is_admin %}
+        <button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
+    {% endif %}
+
+    {% for rate in rates %}
+        <h1>{{ rate.name }}</h1>
+        <p><strong>Speed:</strong> {{ rate.speed }} Мбит/с</p>
+        <p><strong>Price:</strong> {{ rate.price }} </p>
+        <p><strong>Description:</strong> {{ rate.description }}</p>
+        <a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Подробнее</a>
+    {% endfor %}
+    
+{% endblock %}
+
+
+
+

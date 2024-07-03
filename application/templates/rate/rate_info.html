@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>{{ rate.name }}</h1>
+    <p><strong>Speed:</strong> {{ rate.speed }} Мбит/с</p>
+    <p><strong>Price:</strong> {{ rate.price }} </p>
+    <p><strong>Description:</strong> {{ rate.description }}</p>
+    {% if session.is_admin %}
+        <button><a href="{{ url_for('rate.delete_rate', rate_id=rate.id) }}">Delete</a></button>
+        <button><a href="{{ url_for('rate.edit_page', rate_id=rate.id) }}">Edit</a></button>
+    {% endif %}
+
+{% endblock %}
+
+
