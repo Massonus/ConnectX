@@ -7,11 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/category.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rate.css') }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/site.webmanifest') }}">
+    <title>ConnectX</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <a class="navbar-brand" href="{{ url_for('main.index') }}">FlaskBlog</a>
+    <a class="navbar-brand" href="{{ url_for('main.index') }}">ConnectX</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,5 +63,55 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__section footer__section--brand">
+            <h2 class="footer__title">
+                <img src="{{ url_for('static', filename='img/connectX-logo.svg') }}" alt="ConnectX" class="footer__logo">
+                ConnectX
+            </h2>
+            <p class="footer__description">At ConnectX, we're here to provide the fastest internet connection.</p>
+            <div class="footer__social-links">
+                <a href="#" class="footer__social-link"><img src="{{ url_for('static', filename='img/telegram-icon.svg') }}" alt="Telegram"></a>
+            </div>
+        </div>
+        <div class="footer__section footer__section--links">
+            <h3 class="footer__subtitle">Useful Links</h3>
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="#" class="footer__link">About Us</a></li>
+                <li class="footer__list-item"><a href="{{ url_for('rate.show_rates') }}" class="footer__link">Rate</a>
+                </li>
+                <li class="footer__list-item"><a href="{{ url_for('category.show_categories') }}" class="footer__link">Category</a>
+                </li>
+                <li class="footer__list-item"><a href="{{ url_for('news.show_news') }}" class="footer__link">News</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__section footer__section--services">
+            <h3 class="footer__subtitle">Services</h3>
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="#" class="footer__link">Screen Repairs</a></li>
+                <li class="footer__list-item"><a href="#" class="footer__link">Battery Replacement</a></li>
+                <li class="footer__list-item"><a href="#" class="footer__link">Charging Port Repairs</a></li>
+                <li class="footer__list-item"><a href="#" class="footer__link">Water Damage Restoration</a></li>
+            </ul>
+        </div>
+        <div class="footer__section footer__section--support">
+            <h3 class="footer__subtitle">Support</h3>
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="#" class="footer__link">Warranty</a></li>
+                <li class="footer__list-item"><a href="#" class="footer__link">Service Terms</a></li>
+                <li class="footer__list-item"><a href="#" class="footer__link">Help</a></li>
+                <li class="footer__list-item"><a href="#" class="footer__link">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p class="footer__copyright">© Created by</p>
+        <p class="footer__rights">All rights Reserved</p>
+    </div>
+</footer>
+
 </body>
 </html>
