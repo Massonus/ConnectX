@@ -1,4 +1,4 @@
-from application.models.category import Test
+from application.models.service import Test
 from application.util import do_commit
 from application.util import session
 
