@@ -15,7 +15,7 @@ def create_app():
         user_util.add_new_user('username', 'password', True)
         rate_util.add_new({'name': 'Basic', 'speed': 50, 'price': 100, 'description': "Basic rate"})
         rate_util.add_new({'name': 'Basic1', 'speed': 41, 'price': 24, 'description': "Standart rate"})
-        category_util.add_new({'name': 'service'})
+        service_util.add_new({'name': 'service'})
         news_util.add_news({'title': 'Test new', 'description': 'Test news'})
         news_util.add_news({'title': 'Test new1', 'description': 'Test news'})
 
