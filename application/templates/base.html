@@ -10,13 +10,14 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/rate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/danylo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sasha.css') }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='img/site.webmanifest') }}">
+
     <title>ConnectX</title>
 </head>
 <body>
@@ -38,8 +39,8 @@
                 <li><a class="nav-link" href="#">About</a></li>
                 <li><a class="nav-link" href="{{ url_for('user.login') }}">Login</a></li>
                 <li><a class="nav-link" href="{{ url_for('rate.show_rates') }}">Rate</a></li>
-                <li><a class="nav-link" href="{{ url_for('news.show_news') }}">News</a></li>
-                <li><a class="nav-link" href="{{ url_for('service.show_services') }}">Service</a></li>
+                <li><a class="nav-link" href="#">News</a></li>
+                <li><a class="nav-link" href="#">Service</a></li>
             </ul>
         </nav>
         <a href="#">Get a Quote</a>
@@ -82,12 +83,9 @@
             <h3>Useful Links</h3>
             <ul class="footer-list">
                 <li><a href="#">About Us</a></li>
-                <li><a href="{{ url_for('rate.show_rates') }}">Rate</a>
-                </li>
-                <li><a href="{{ url_for('service.show_services') }}">Service</a>
-                </li>
-                <li><a href="{{ url_for('news.show_news') }}">News</a>
-                </li>
+                <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">News</a></li>
             </ul>
         </div>
         <div>
