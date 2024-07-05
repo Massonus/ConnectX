@@ -1,5 +1,5 @@
 from flask import Flask
-from application.util import user_util, rate_util, category_util, news_util
+from application.util import user_util, rate_util, service_util, news_util
 from application.extension import db
 
 
