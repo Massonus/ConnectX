@@ -29,7 +29,7 @@ def login():
             return render_template('index.html', msg=msg)
         else:
             msg = 'Incorrect username / password !'
-    return render_template('user/login.html', msg=msg)
+    return render_template('maksym/user/login.html', msg=msg)
 
 
 @bp.route('/logout')
@@ -56,4 +56,4 @@ def register():
         else:
             user_util.add_new_user(username, password, False)
             msg = 'You have successfully registered !'
-    return render_template('user/register.html', msg=msg)
+    return render_template('maksym/user/register.html', msg=msg)

@@ -1,5 +1,3 @@
-# application/models/rate.py
-
 from application.extension import db
 
 

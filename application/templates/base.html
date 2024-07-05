@@ -5,20 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/rate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_us.css') }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='img/site.webmanifest') }}">
+
     <title>ConnectX</title>
 </head>
+
 <body>
 <header>
     <div class="header-top">
@@ -32,37 +33,27 @@
         </div>
     </div>
     <div>
-        <a href="{{ url_for('main.index') }}" class="header-logo"><img src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="ConnectX"></a>
+        <a href="{{ url_for('main.index') }}" class="header-logo"><img
+                src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="ConnectX"></a>
         <nav class="nav">
             <ul class="header-menu">
-                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="{{ url_for('about.index') }}">About us</a></li>
                 <li><a class="nav-link" href="{{ url_for('user.login') }}">Login</a></li>
                 <li><a class="nav-link" href="{{ url_for('rate.show_rates') }}">Rate</a></li>
-                <li><a class="nav-link" href="{{ url_for('news.show_news') }}">News</a></li>
-                <li><a class="nav-link" href="{{ url_for('service.show_services') }}">Service</a></li>
+                <li><a class="nav-link" href="{{ url_for('main.index', filename='danylo/main/call_us.html', _anchor='call-us-block') }}">Testimonials</a></li>
+                <li><a class="nav-link" href="{{ url_for('main.index', filename='andriy/main/news.html', _anchor='news-block') }}">News</a></li>
+                <li><a class="nav-link" href="{{ url_for('main.index', filename='danylo/main/services.html', _anchor='services-block') }}">Service</a></li>
             </ul>
         </nav>
         <a href="#">Get a Quote</a>
     </div>
 </header>
 
+
 <div class="container">
     {% block content %} {% endblock %}
 </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 
 <footer class="footer">
     <div class="container">
@@ -81,13 +72,11 @@
         <div>
             <h3>Useful Links</h3>
             <ul class="footer-list">
-                <li><a href="#">About Us</a></li>
-                <li><a href="{{ url_for('rate.show_rates') }}">Rate</a>
-                </li>
-                <li><a href="{{ url_for('service.show_services') }}">Service</a>
-                </li>
-                <li><a href="{{ url_for('news.show_news') }}">News</a>
-                </li>
+                <li><a href="{{ url_for('about.index') }}">About Us</a></li>
+                <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+                <li><a href="{{ url_for('main.index', filename='andriy/main/news.html', _anchor='news-block') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('main.index', filename='danylo/main/services.html', _anchor='services-block') }}">Service</a></li>
+                <li><a href="{{ url_for('main.index', filename='andriy/main/news.html', _anchor='news-block') }}">News</a></li>
             </ul>
         </div>
         <div>

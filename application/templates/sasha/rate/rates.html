@@ -2,7 +2,7 @@
 
 {% block content %}
     {% if session.is_admin %}
-        <button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
+        <button><a href="{{ url_for('sasha.add_page') }}">Add</a></button>
     {% endif %}
 
     {% for rate in rates %}
