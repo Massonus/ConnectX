@@ -24,6 +24,12 @@ def create_app():
     from application.routes.rate_main import bp as rate_bp
     app.register_blueprint(rate_bp, url_prefix='/rate')
 
+    from application.routes.about_us import bp as about_bp
+    app.register_blueprint(about_bp, url_prefix='/about')
+
+    from application.routes.contact import bp as contact_bp
+    app.register_blueprint(contact_bp, url_prefix='/contact')
+
     return app
 
 
