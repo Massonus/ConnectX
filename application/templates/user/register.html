@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h1 class="word">Register</h1>
+    <h3 class="word">Register</h3>
     <form action="{{ url_for('user.register') }}" method="post">
         <div class="msg">{{ msg }}</div>
         <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/>
