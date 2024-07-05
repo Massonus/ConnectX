@@ -20,29 +20,29 @@
     <title>ConnectX</title>
 </head>
 <body>
-<header class="header">
-    <div class="header_top">
-        <a class="header__phone" href="tel:+12345678900">+1 (234) 567 89 00</a>
-        <a class="header__email" href="mailto:connectX@email.com">connectX@email.com</a>
-        <div class="header__socials">
+<header>
+    <div class="header-top">
+        <a class="phone" href="tel:+12345678900">+1 (234) 567 89 00</a>
+        <a class="email" href="mailto:connectX@email.com">connectX@email.com</a>
+        <div class="socials">
             <a href="#" class="link-youtube"></a>
             <a href="#" class="link-twitter"></a>
             <a href="#" class="link-facebook"></a>
             <a href="#" class="link-instagram"></a>
         </div>
     </div>
-    <div class="header_bottom">
-        <a href="{{ url_for('main.index') }}" class="header__logo"><img src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="ConnectX"></a>
-        <nav class="header_nav">
-            <ul class="header_menu">
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('user.login') }}">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('rate.show_rates') }}">Rate</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('news.show_news') }}">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('service.show_services') }}">Service</a></li>
+    <div>
+        <a href="{{ url_for('main.index') }}" class="header-logo"><img src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="ConnectX"></a>
+        <nav class="nav">
+            <ul class="header-menu">
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="{{ url_for('user.login') }}">Login</a></li>
+                <li><a class="nav-link" href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+                <li><a class="nav-link" href="{{ url_for('news.show_news') }}">News</a></li>
+                <li><a class="nav-link" href="{{ url_for('service.show_services') }}">Service</a></li>
             </ul>
         </nav>
-        <a href="#" class="header_cta">Get a Quote</a>
+        <a href="#">Get a Quote</a>
     </div>
 </header>
 
@@ -65,51 +65,51 @@
         crossorigin="anonymous"></script>
 
 <footer class="footer">
-    <div class="footer__container">
-        <div class="footer__section footer__section--brand">
-            <h2 class="footer__title">
+    <div class="container">
+        <div>
+            <h2>
                 <img src="{{ url_for('static', filename='img/footer-logo.svg') }}" alt="ConnectX"
-                     class="footer__logo">
+                     class="footer-logo">
                 ConnectX
             </h2>
-            <p class="footer__description">At ConnectX, we're here to provide the fastest internet connection.</p>
-            <div class="footer__social-links">
-                <a href="#" class="footer__social-link"><img
+            <p>At ConnectX, we're here to provide the fastest internet connection.</p>
+            <div>
+                <a href="#"><img
                         src="{{ url_for('static', filename='img/telegram-icon.svg') }}" alt="Telegram"></a>
             </div>
         </div>
-        <div class="footer__section footer__section--links">
-            <h3 class="footer__subtitle">Useful Links</h3>
-            <ul class="footer__list">
-                <li class="footer__list-item"><a href="#" class="footer__link">About Us</a></li>
-                <li class="footer__list-item"><a href="{{ url_for('rate.show_rates') }}" class="footer__link">Rate</a>
+        <div>
+            <h3>Useful Links</h3>
+            <ul class="footer-list">
+                <li><a href="#">About Us</a></li>
+                <li><a href="{{ url_for('rate.show_rates') }}">Rate</a>
                 </li>
-                <li class="footer__list-item"><a href="{{ url_for('service.show_services') }}" class="footer__link">Service</a>
+                <li><a href="{{ url_for('service.show_services') }}">Service</a>
                 </li>
-                <li class="footer__list-item"><a href="{{ url_for('news.show_news') }}" class="footer__link">News</a>
+                <li><a href="{{ url_for('news.show_news') }}">News</a>
                 </li>
             </ul>
         </div>
-        <div class="footer__section footer__section--services">
-            <h3 class="footer__subtitle">Services</h3>
-            <ul class="footer__list">
-                <li class="footer__list-item"><a href="#" class="footer__link">Screen Repairs</a></li>
-                <li class="footer__list-item"><a href="#" class="footer__link">Battery Replacement</a></li>
-                <li class="footer__list-item"><a href="#" class="footer__link">Charging Port Repairs</a></li>
-                <li class="footer__list-item"><a href="#" class="footer__link">Water Damage Restoration</a></li>
+        <div>
+            <h3>Services</h3>
+            <ul class="footer-list">
+                <li><a href="#">Screen Repairs</a></li>
+                <li><a href="#">Battery Replacement</a></li>
+                <li><a href="#">Charging Port Repairs</a></li>
+                <li><a href="#">Water Damage Restoration</a></li>
             </ul>
         </div>
-        <div class="footer__section footer__section--support">
-            <h3 class="footer__subtitle">Support</h3>
-            <ul class="footer__list">
-                <li class="footer__list-item"><a href="#" class="footer__link">Warranty</a></li>
-                <li class="footer__list-item"><a href="#" class="footer__link">Service Terms</a></li>
-                <li class="footer__list-item"><a href="#" class="footer__link">Help</a></li>
-                <li class="footer__list-item"><a href="#" class="footer__link">Contact Us</a></li>
+        <div>
+            <h3 class="footer-subtitle">Support</h3>
+            <ul class="footer-list">
+                <li><a href="#">Warranty</a></li>
+                <li><a href="#">Service Terms</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </div>
     </div>
-    <div class="footer_bottom">
+    <div class="footer-bottom">
         <p class="copyright">© Created by Team 04</p>
         <p class="rights">All rights Reserved</p>
     </div>
