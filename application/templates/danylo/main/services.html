@@ -1,5 +1,31 @@
-<div id="services-block" class=""> {#называем класс сами и работаем внутри этого div#}
-
-<p>services</p>
-
+<div id="services-block" class="service-section"> {#называем класс сами и работаем внутри этого div#}
+      <p>services</p>
+      <h2>We Repair Smartphones, That's It.</h2>
+      <p>Learn more about our services.</p>
+      <div class="services-container">
+            <div class="service-item">
+                  <img src="{{ url_for('static', filename='img/screen-replacement.png') }}" alt="Scree Replacement">
+                  <h3>Screen Replacement</h3>
+                  <p>Restore your device's visual clarity with our expert screen replacement service, ensuring a pristine display for uninterrupted usage.</p>
+                  <a href="#" class="btn">Learn the Price</a>
+            </div>
+            <div class="service-item">
+                  <img src="{{ url_for('static', filename='img/battery-replacement.png') }}" alt="Battery Replacement">
+                  <h3>Battery Replacement</h3>
+                  <p>Say goodbye to dwindling battery life with our swift and efficient battery replacement service, rejuvenating your device's power.</p>
+                  <a href="#" class="btn">Learn the Price</a>
+            </div>
+            <div class="service-item">
+                  <img src="{{ url_for('static', filename='img/water-damage-restoration.png') }}" alt="Water Damage Restoration">
+                  <h3>Water Damage Restoration</h3>
+                  <p>Trust our specialists to restore water-damaged devices to their optimal functionality, saving your gadgets from irreversible harm.</p>
+                  <a href="#" class="btn">Learn the Price</a>
+            </div>
+            <div class="service-item">
+                  <img src="{{ url_for('static', filename='img/charging-port-repairs.png') }}" alt="Charging Port Repairs">
+                  <h3>Charging Port Repairs</h3>
+                  <p>Ensure seamless charging capabilites with our professional charging port repair service, resolving issues.</p>
+                  <a href="#" class="btn">Learn the Price</a>
+            </div>
+      </div>
 </div>
