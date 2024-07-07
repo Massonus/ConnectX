@@ -1,20 +1,60 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% if session.is_admin %}
-        <button><a href="{{ url_for('sasha.add_page') }}">Add</a></button>
-    {% endif %}
+{% if session.is_admin %}
+<button><a href="{{ url_for('sasha.add_page') }}">Add</a></button>
+{% endif %}
 
-    {% for rate in rates %}
-        <h1>{{ rate.name }}</h1>
-        <p><strong>Speed:</strong> {{ rate.speed }} Мбит/с</p>
-        <p><strong>Price:</strong> {{ rate.price }} </p>
-        <p><strong>Description:</strong> {{ rate.description }}</p>
-        <a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Подробнее</a>
-    {% endfor %}
-    
+{% for rate in rates %}
+<h1>{{ rate.name }}</h1>
+<p><strong>Speed:</strong> {{ rate.speed }} Мбит/с</p>
+<p><strong>Price:</strong> {{ rate.price }} </p>
+<p><strong>Description:</strong> {{ rate.description }}</p>
+<a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Подробнее</a>
+<style ></style>
+
+<div class="tariff-container">
+        <div class="tariff-card">
+            <h2>Оберіг</h2>
+            <p><strong>Домашній інтернет</strong><br>до 100 Мбіт/с, безлім трафік</p>
+            <p><strong>1 Суперсила на вибір</strong></p>
+            <div class="icons">
+                <span>🔍</span>
+                <span>🎵</span>
+                <span>🌐</span>
+            </div>
+            <p class="price">150 грн/міс</p>
+            <p class="condition">Якщо маєте на рахунку 900 грн кожні 6 місяців</p>
+            <button>Обрати тариф</button>
+        </div>
+        <div class="tariff-card">
+            <h2>Дім</h2>
+            <p><strong>Домашній інтернет</strong><br>до 1 Гбіт/сек, безлім трафік</p>
+            <p><strong>1 Суперсила на вибір</strong></p>
+            <div class="icons">
+                <span>🎵</span>
+                <span>🌐</span>
+            </div>
+            <p class="price">200 грн/міс, далі 330</p>
+            <p class="discount">Знижка на 3 місяці</p>
+            <button>Обрати тариф</button>
+        </div>
+        <div class="tariff-card">
+            <h2>Все разом Єдність</h2>
+            <p><strong>Домашній інтернет</strong><br>до 100 Мбіт/сек</p>
+            <p><strong>Мобільний зв'язок</strong><br>17 ГБ моб. інтернету</p>
+            <p>1200 хв по Україні, після Безлім на Київстар<br>49 додатків без плати за трафік</p>
+            <p><strong>1 Суперсила на вибір</strong></p>
+            <div class="icons">
+                <span>🔍</span>
+                <span>🎵</span>
+                <span>🌐</span>
+            </div>
+            <p class="price">200 грн/міс, далі 250</p>
+            <p class="discount">Знижка на 3 місяці</p>
+            <button>Обрати тариф</button>
+        </div>
+    </div>
+{% endfor %}
+
 {% endblock %}
-
-
-
-
