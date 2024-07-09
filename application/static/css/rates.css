@@ -1,3 +1,4 @@
+/*
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -58,4 +59,161 @@ button {
 
 button:hover {
     background-color: #c2e233;
+}
+*/
+
+/*
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+.tariff-container {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.tariff-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+.tariff-card h2 {
+    color: #333;
+}
+
+.tariff-card p {
+    color: #666;
+}
+
+.price {
+    font-size: 24px;
+    color: #000;
+}
+
+.condition, .discount {
+    background-color: #e7f3ff;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icons span {
+    font-size: 24px;
+    margin: 5px;
+}
+
+button {
+    background-color: #d1f543;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c2e233;
+}
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+}
+.carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tariff-container {
+    display: inline-flex;
+    gap: 20px;
+    justify-content: centre;
+    flex-wrap: wrap;
+    margin-top: 100px
+}
+
+.tariff-card {
+    width:325px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+    margin:20px;
+}
+
+.tariff-card h2 {
+    color: #333;
+}
+
+.tariff-card p {
+    color: #666;
+}
+
+.price {
+    font-size: 24px;
+    color: #000;
+}
+
+.condition, .discount {
+    background-color: #e7f3ff;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icons span {
+    font-size: 24px;
+    margin: 5px;
+}
+
+button {
+    background-color: #d1f543;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c2e233;
+}
+
+button a {
+    color: #000;
+    text-decoration: none;
 }
