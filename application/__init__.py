@@ -12,8 +12,9 @@ def create_app():
     with app.app_context():
         initialize_tables()
         user_util.add_new_user('username', 'password', True)
-        rate_util.add_new({'name': 'Basic', 'speed': 50, 'price': 100, 'description': "Basic sasha"})
-        rate_util.add_new({'name': 'Basic1', 'speed': 41, 'price': 24, 'description': "Standart sasha"})
+        rate_util.add_new({'name': 'Basic', 'speed': 80, 'price': 50, 'description': "Basic"})
+        rate_util.add_new({'name': 'Standart', 'speed': 100, 'price': 100, 'description': "Standart "})
+        rate_util.add_new({'name': 'Super', 'speed': 200, 'price': 150, 'description': "Super"})
 
     from application.routes.main import bp as main_bp
     app.register_blueprint(main_bp)
