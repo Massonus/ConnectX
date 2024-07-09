@@ -138,9 +138,11 @@ body {
     margin: 0;
     padding: 0;
 }
-.container {
+
+.rates-container {
   margin: auto;
   max-width: 1200px;
+  display: flex;
 }
 
 }

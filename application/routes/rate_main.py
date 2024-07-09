@@ -22,7 +22,7 @@ def do_add():
               'price': request.form['price'],
               'description': request.form['description']}
     rate_util.add_new(values)
-    return redirect('/sasha')
+    return redirect('/rate')
 
 
 @bp.route('/add', methods=('GET',))
@@ -43,10 +43,10 @@ def do_edit(rate_id):
                   'price': request.form['price'],
                   'description': request.form['description']}
         rate_util.edit(rate_id, values)
-    return redirect('/sasha')
+    return redirect('/rate')
 
 
 @bp.route('/delete/<int:rate_id>')
 def delete_rate(rate_id):
     rate_util.delete(rate_id)
-    return redirect('/sasha')
+    return redirect('/rate')
