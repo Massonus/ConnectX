@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #1a1a1a;
-    color: #fff;
+    color: white;
 }
 
 .header-top {
@@ -19,7 +19,7 @@ header {
 
 .header-contacts a,
 .header-socials a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     margin-right: 10px;
 }
@@ -31,9 +31,17 @@ header nav {
     padding: 20px;
 }
 
+.header-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 20px;
+}
+
 .header-logo img {
-    height: 50px;
-    width: 60px;
+    height: 80px;
+    width: 110px;
 }
 
 .header-links {
@@ -46,7 +54,7 @@ header nav {
 }
 
 .header-links a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 16px;
 }
@@ -58,7 +66,7 @@ header nav {
 
 .quote-button {
     background-color: #ff6600;
-    color: #fff;
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
@@ -69,9 +77,76 @@ header nav {
     background-color: #e65c00;
 }
 
+.pre-footer {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.pre-footer-container {
+    max-width: 50%;
+}
+
+.pre-footer-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pre-footer-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pre-footer-icon img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.quote-form {
+    width: 45%;
+    height: 60%;
+}
+
+.quote-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-form input, .quote-form textarea {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.quote-form input::placeholder, .quote-form textarea::placeholder {
+    color: #777777;
+}
+
+.request-quote-button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.request-quote-button:hover {
+    background-color: #e03e00;
+}
+
 footer {
     background-color: #1c1c1c;
-    color: #ffffff;
+    color: white;
     padding: 40px 0;
 }
 
@@ -83,9 +158,9 @@ footer {
     padding: 0 20px;
 }
 
-.footer-section {
-    flex: 1;
-    padding: 0 10px;
+.footer-logo {
+    display: flex;
+    align-items: center;
 }
 
 .footer-logo img {
@@ -95,7 +170,7 @@ footer {
 
 .footer-socials {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .footer-socials img {
@@ -103,7 +178,7 @@ footer {
     height: 24px;
 }
 
-.title {
+.link-title {
     font-size: 16px;
     margin-bottom: 20px;
     border-bottom: 2px solid #e65100;
@@ -121,7 +196,7 @@ footer {
 }
 
 .footer-links a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }

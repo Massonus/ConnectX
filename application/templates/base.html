@@ -37,12 +37,14 @@
             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
         </div>
     </div>
     <nav>
         <div class="header-logo">
-            <a href="{{ url_for('main.index') }}" class="header-logo"><img
-                    src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>ConnectX
+            <a href="{{ url_for('main.index') }}"><img
+                    src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
+            <p style="font-size: 3.2em;" >ConnectX</p>
         </div>
         <ul class="header-links">
             <li><a href="{{ url_for('about.index') }}">About us</a></li>
@@ -68,12 +70,46 @@
     {% block content %} {% endblock %}
 </div>
 
+<section class="pre-footer">
+    <div class="pre-footer-container">
+        <h2>Contact Us Now for Swift Repairs.</h2>
+        <p>Ready to experience the TechPro difference?</p>
+        <p>Don't let tech troubles hold you back – reach out to us today and let our expert team restore your devices to
+            their full potential. Schedule our appointment with our experts!</p>
+        <div class="pre-footer-details">
+            <div class="link-title">
+                <h3 style="color: #ff4500">Support Team</h3>
+                <p>+1 (234) 567 89 00</p>
+                <p>techpro@email.com</p>
+            </div>
+            <div class="link-title">
+                <h3 style="color: #ff4500">Visit Us</h3>
+                <p>194 MacDonough St, Brooklyn, NY 11216</p>
+                <p>Mon - Fri: 8AM - 6PM</p>
+            </div>
+        </div>
+        <div class="pre-footer-icon">
+            <img src="{{ url_for('static', filename='img/global-network.png') }}" alt="Revive Icon">
+            <p>Want to Revive Your Device?<br> Fill out the form on the right.</p>
+        </div>
+    </div>
+    <div class="quote-form">
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name*" required>
+            <input type="tel" name="phone" placeholder="Phone Number*" required>
+            <input type="email" name="email" placeholder="Email*" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="request-quote-button">Request a Quote</button>
+        </form>
+    </div>
+</section>
 
 <footer>
     <div class="footer-container">
         <div class="footer-section">
             <div class="footer-logo">
-                <img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX">ConnectX
+                <img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX">
+                <p style="font-size: 2.5em;">ConnectX</p>
             </div>
             <p style="margin: 10px 0 20px; font-size: 14px;">At TechPro, we're here to breathe new life into your
                 devices, swiftly and seamlessly.</p>
@@ -82,11 +118,12 @@
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
+                <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
 
             </div>
         </div>
         <div class="footer-section">
-            <h3 class="title">Useful Links</h3>
+            <h3 class="link-title">Useful Links</h3>
             <ul class="footer-links">
                 <li><a href="{{ url_for('about.index') }}">About us</a></li>
                 <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
@@ -96,7 +133,7 @@
             </ul>
         </div>
         <div class="footer-section">
-            <h3 class="title">Services</h3>
+            <h3 class="link-title">Services</h3>
             <ul class="footer-links">
                 <li><a href="#">Screen Repairs</a></li>
                 <li><a href="#">Battery Replacement</a></li>
@@ -105,7 +142,7 @@
             </ul>
         </div>
         <div class="footer-section">
-            <h3 class="title">Support</h3>
+            <h3 class="link-title">Support</h3>
             <ul class="footer-links">
                 <li><a href="#">Warranty</a></li>
                 <li><a href="#">Service Terms</a></li>
