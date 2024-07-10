@@ -1,52 +1,52 @@
 .service-section {
-      text-align: center;
-      padding: 50px 0;
+    text-align: center;
+    padding: 50px 0;
 }
 
 .services-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .service-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 285px;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      text-align: left;
-      background-color: #333;
-      color: #fff;
-      height: 450px;
-      box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 285px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    background-color: #333;
+    color: #fff;
+    height: 450px;
+    box-sizing: border-box;
 }
 
 .service-item img {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
 }
-  
+
 .service-item h3 {
-      margin-top: 10px 0;
-      font-size: 1.2em;
-      flex-shrink: 0;
+    margin-top: 10px;
+    font-size: 1.2em;
+    flex-shrink: 0;
 }
-  
+
 .service-item p {
-      margin: 5px 0;
-      flex-grow: 1;
+    margin: 5px 0;
+    flex-grow: 1;
 }
 
 .service-item .btn {
-      display: inline-block;
-      padding: 8px 12px;
-      background-color: #f90;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: auto;
-      align-self: flex-start;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f90;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    align-self: flex-start;
 }
