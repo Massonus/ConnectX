@@ -6,4 +6,4 @@ bp = Blueprint('contact', __name__)
 
 @bp.route('/')
 def index():
-    return render_template('sasha/contact/contact.html')
+    return render_template('contact/contact.html')
