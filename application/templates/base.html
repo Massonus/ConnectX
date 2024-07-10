@@ -22,35 +22,36 @@
 
     <title>ConnectX</title>
 </head>
-
 <body>
 <header>
     <div class="header-top">
-        <a class="phone" href="tel:+12345678900">+1 (234) 567 89 00</a>
-        <a class="email" href="mailto:connectX@email.com">connectX@email.com</a>
+        <div class="header-contacts">
+            <a class="phone" href="tel:+12345678900">+1 (234) 567 89 00</a>
+            <a class="email" href="mailto:techpro@email.com">connectX@email.com</a>
+        </div>
         <div class="socials">
-            <a href="#" class="link-youtube"></a>
-            <a href="#" class="link-twitter"></a>
-            <a href="#" class="link-facebook"></a>
-            <a href="#" class="link-instagram"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/youtube-icon.svg') }}" alt="YouTube"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/twitter-icon.svg') }}" alt="Twitter"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/facebook-icon.svg') }}" alt="Facebook"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/instagram-icon.svg') }}" alt="Instagram"></a>
         </div>
     </div>
-    <div>
-        <a href="{{ url_for('main.index') }}" class="header-logo"><img
-                src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="ConnectX"></a>
-        <nav class="nav">
-            <ul class="header-menu">
-                <li><a class="nav-link" href="{{ url_for('about.index') }}">About us</a></li>
-                <li><a class="nav-link" href="{{ url_for('user.login') }}">Login</a></li>
-                <li><a class="nav-link" href="{{ url_for('rate.show_rates') }}">Rate</a></li>
-                <li><a class="nav-link" href="{{ url_for('main.index', filename='main_page/call_us.html', _anchor='call-us-block') }}">Testimonials</a></li>
-                <li><a class="nav-link" href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a></li>
-                <li><a class="nav-link" href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a></li>
-                <li><a class="nav-link" href="{{ url_for('contact.index') }}">Contact us</a></li>
-            </ul>
-        </nav>
-        <a href="#">Get a Quote</a>
-    </div>
+    <nav>
+        <div class="header-logo">
+            <a href="{{ url_for('main.index') }}" class="header-logo"><img
+                    src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="ConnectX"></a>ConnectX
+        </div>
+        <ul class="header-links">
+            <li><a href="{{ url_for('about.index') }}">About us</a></li>
+            <li><a href="{{ url_for('user.login') }}">Login</a></li>
+            <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+            <li><a href="{{ url_for('main.index', filename='main_page/call_us.html', _anchor='call-us-block') }}">Testimonials</a></li>
+            <li><a href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a></li>
+            <li><a href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a></li>
+            <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
+        </ul>
+        <a class="quote" href="#">Get a Quote</a>
+    </nav>
 </header>
 
 
@@ -59,7 +60,7 @@
 </div>
 
 
-<footer class="footer">
+<footer>
     <div class="container">
         <div>
             <h2>
@@ -78,9 +79,12 @@
             <ul class="footer-list">
                 <li><a href="{{ url_for('about.index') }}">About Us</a></li>
                 <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
-                <li><a href="{{ url_for('main.index', filename='main_page/call_us.html', _anchor='call-us-block') }}">Testimonials</a></li>
-                <li><a href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a></li>
-                <li><a href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a></li>
+                <li><a href="{{ url_for('main.index', filename='main_page/call_us.html', _anchor='call-us-block') }}">Testimonials</a>
+                </li>
+                <li><a href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a>
+                </li>
+                <li><a href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a>
+                </li>
                 <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
             </ul>
         </div>
