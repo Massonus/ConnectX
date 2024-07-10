@@ -44,7 +44,7 @@
         <div class="header-logo">
             <a href="{{ url_for('main.index') }}"><img
                     src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
-            <p style="font-size: 3.2em;" >ConnectX</p>
+            <a style="text-decoration: none; color: white" href="{{ url_for('main.index') }}"><p style="font-size: 3.2em;" >ConnectX</p></a>
         </div>
         <ul class="header-links">
             <li><a href="{{ url_for('about.index') }}">About us</a></li>
@@ -108,8 +108,8 @@
     <div class="footer-container">
         <div class="footer-section">
             <div class="footer-logo">
-                <img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX">
-                <p style="font-size: 2.5em;">ConnectX</p>
+                 <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
+                     <a style="text-decoration: none; color: white" href="{{ url_for('main.index') }}"><p style="font-size: 2.5em;">ConnectX</p></a>
             </div>
             <p style="margin: 10px 0 20px; font-size: 14px;">At TechPro, we're here to breathe new life into your
                 devices, swiftly and seamlessly.</p>
