@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hardware.css') }}">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url_for('static', filename='img/site.webmanifest') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon//safari-pinned-tab.svg') }}">
+    <meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff">
 
     <title>ConnectX</title>
 </head>
@@ -30,16 +32,16 @@
             <a class="email" href="mailto:techpro@email.com">connectX@email.com</a>
         </div>
         <div class="socials">
-            <a href="#"><img src="{{ url_for('static', filename='img/youtube-icon.svg') }}" alt="YouTube"></a>
-            <a href="#"><img src="{{ url_for('static', filename='img/twitter-icon.svg') }}" alt="Twitter"></a>
-            <a href="#"><img src="{{ url_for('static', filename='img/facebook-icon.svg') }}" alt="Facebook"></a>
-            <a href="#"><img src="{{ url_for('static', filename='img/instagram-icon.svg') }}" alt="Instagram"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
         </div>
     </div>
     <nav>
         <div class="header-logo">
             <a href="{{ url_for('main.index') }}" class="header-logo"><img
-                    src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="ConnectX"></a>ConnectX
+                    src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>ConnectX
         </div>
         <ul class="header-links">
             <li><a href="{{ url_for('about.index') }}">About us</a></li>
@@ -64,14 +66,14 @@
     <div class="container">
         <div>
             <h2>
-                <img src="{{ url_for('static', filename='img/footer-logo.svg') }}" alt="ConnectX"
+                <img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"
                      class="footer-logo">
                 ConnectX
             </h2>
             <p>At ConnectX, we're here to provide the fastest internet connection.</p>
             <div>
                 <a href="#"><img
-                        src="{{ url_for('static', filename='img/telegram-icon.svg') }}" alt="Telegram"></a>
+                        src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
             </div>
         </div>
         <div>
