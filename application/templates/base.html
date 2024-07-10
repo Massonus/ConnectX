@@ -45,12 +45,18 @@
         </div>
         <ul class="header-links">
             <li><a href="{{ url_for('about.index') }}">About us</a></li>
-            <li><a href="{{ url_for('user.login') }}">Login</a></li>
             <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
             <li><a href="{{ url_for('main.index', filename='main_page/call_us.html', _anchor='call-us-block') }}">Testimonials</a></li>
             <li><a href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a></li>
             <li><a href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a></li>
             <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
+
+            {% if session.loggedin %}
+                <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('user.login') }}">Login</a></li>
+            {% endif %}
+
         </ul>
         <a class="quote" href="#">Get a Quote</a>
     </nav>
