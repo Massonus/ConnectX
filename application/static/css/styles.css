@@ -18,7 +18,7 @@ header {
 }
 
 .header-contacts a,
-.socials a {
+.header-socials a {
     color: #fff;
     text-decoration: none;
     margin-right: 10px;
@@ -56,7 +56,7 @@ header nav {
     color: #ff6600;
 }
 
-.quote {
+.quote-button {
     background-color: #ff6600;
     color: #fff;
     padding: 10px 20px;
@@ -64,14 +64,76 @@ header nav {
     border-radius: 4px;
 }
 
-.quote:hover,
-.quote:focus {
+.quote-button:hover,
+.quote-button:focus {
     background-color: #e65c00;
 }
 
 footer {
-    padding: 40px 0;
-    background-color: #000000;
+    background-color: #1c1c1c;
     color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials img {
+    width: 24px;
+    height: 24px;
+}
+
+.title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e65100;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e65100;
+}
+
+.footer-bottom {
     text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
 }

@@ -19,7 +19,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon//safari-pinned-tab.svg') }}">
-    <meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <title>ConnectX</title>
 </head>
@@ -31,7 +32,7 @@
             <a class="phone" href="tel:+12345678900">+1 (234) 567 89 00</a>
             <a class="email" href="mailto:techpro@email.com">connectX@email.com</a>
         </div>
-        <div class="socials">
+        <div class="header-socials">
             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
@@ -58,7 +59,7 @@
             {% endif %}
 
         </ul>
-        <a class="quote" href="#">Get a Quote</a>
+        <a class="quote-button" href="#">Get a Quote</a>
     </nav>
 </header>
 
@@ -69,49 +70,47 @@
 
 
 <footer>
-    <div class="container">
-        <div>
-            <h2>
-                <img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"
-                     class="footer-logo">
-                ConnectX
-            </h2>
-            <p>At ConnectX, we're here to provide the fastest internet connection.</p>
-            <div>
-                <a href="#"><img
-                        src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
+    <div class="footer-container">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX">ConnectX
+            </div>
+            <p style="margin: 10px 0 20px; font-size: 14px;">At TechPro, we're here to breathe new life into your
+                devices, swiftly and seamlessly.</p>
+            <div class="footer-socials">
+                <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
+                <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
+                <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
+                <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
+
             </div>
         </div>
-        <div>
-            <h3>Useful Links</h3>
-            <ul class="footer-list">
-                <li><a href="{{ url_for('about.index') }}">About Us</a></li>
+        <div class="footer-section">
+            <h3 class="title">Useful Links</h3>
+            <ul class="footer-links">
+                <li><a href="{{ url_for('about.index') }}">About us</a></li>
                 <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
-                <li><a href="{{ url_for('main.index', filename='main_page/call_us.html', _anchor='call-us-block') }}">Testimonials</a>
-                </li>
-                <li><a href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a>
-                </li>
-                <li><a href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a>
-                </li>
-                <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
+                <li><a href="{{ url_for('main.index', filename='main_page/call_us.html', _anchor='call-us-block') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a></li>
+                <li><a href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a></li>
             </ul>
         </div>
-        <div>
-            <h3>Services</h3>
-            <ul class="footer-list">
+        <div class="footer-section">
+            <h3 class="title">Services</h3>
+            <ul class="footer-links">
                 <li><a href="#">Screen Repairs</a></li>
                 <li><a href="#">Battery Replacement</a></li>
                 <li><a href="#">Charging Port Repairs</a></li>
                 <li><a href="#">Water Damage Restoration</a></li>
             </ul>
         </div>
-        <div>
-            <h3 class="footer-subtitle">Support</h3>
-            <ul class="footer-list">
+        <div class="footer-section">
+            <h3 class="title">Support</h3>
+            <ul class="footer-links">
                 <li><a href="#">Warranty</a></li>
                 <li><a href="#">Service Terms</a></li>
                 <li><a href="#">Help</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
             </ul>
         </div>
     </div>
