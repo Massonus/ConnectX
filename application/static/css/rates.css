@@ -134,9 +134,9 @@ button:hover {
 */
 
 .rates-container {
-  margin: auto;
-  max-width: 1200px;
-  display: flex;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
 }
 
 .carousel-container {
@@ -164,7 +164,7 @@ button:hover {
     padding: 20px;
     text-align: center;
     display: inline-block;
-    margin:20px;
+    margin: 20px;
 }
 
 .tariff-card h2 {

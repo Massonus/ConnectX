@@ -1,56 +1,56 @@
 .slider-container {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
 
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
 
-    .slide {
-      min-width: 100%;
-      flex: 1;
-      box-sizing: border-box;
-      padding: 10px;
-    }
+.slide {
+    min-width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 10px;
+}
 
-    .controls {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 
-    .controls label {
-      cursor: pointer;
-      padding: 5px;
-      font-size: 24px;
-      user-select: none;
-    }
+.controls label {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 24px;
+    user-select: none;
+}
 
-    .prev {
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translateY(-50%);
-      z-index: 1;
-    }
+.prev {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
 
-    .next {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      z-index: 1;
-    }
+.next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
 
-    .slide section {
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 20px;
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-    }
+.slide section {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
