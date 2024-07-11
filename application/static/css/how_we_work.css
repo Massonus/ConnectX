@@ -1,0 +1,67 @@
+.how-we-work-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #222;
+    color: #fff;
+    font-family:'Poppins', sans-serif;
+}
+
+.how-we-work-content {
+    max-width: 50%;
+}
+
+.how-we-work-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.how-we-work-content span {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: orangered;
+}
+
+.how-we-work-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.step img {
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.how-we-work-image {
+    max-width: 45%;
+}
+
+.how-we-work-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
