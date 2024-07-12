@@ -1,5 +1,31 @@
-<div class=""> {#называем класс сами и работаем внутри этого div#}
-    
-<p>welcome to techpro</p>
+<section class="welcome-container">
+    <div class="welcome-top">
+        <p class="welcome-subtitle">Welcome to TechPro</p>
+        <h3 class="welcome-title">Don't Delay, Repair Today.</h3>
+        <p class="welcome-text">Trust TechPro – Where Tech Meets Pro!</p>
+        <p class="welcome-text">Don't let technical troubles slow you down. At TechPro, we're here to breathe new life
+            into your devices, swiftly & seamlessly.</p>
+        <div class="welcome-links">
+            <a href="#">WARRANTY POLICY</a>
+            <a href="#">SERVICE TERMS</a>
+            <a href="#">SUPPORT</a>
+        </div>
+        <a href="#" class="video-link">
+            <span class="video-icon">▶</span> Watch Video
+        </a>
+    </div>
+    <div class="video">
+        <img src="{{ url_for('static', filename='img/phone.png') }}" alt="Phone" class="welcome-img">
+    </div>
 
-</div>
+    <div class="stats-container">
+        <div class="stats">
+            <p class="stats-number">34.5k <strong style="color: orangered">+</strong></p>
+            <p class="stats-text">Clients in NY.</p>
+        </div>
+        <img src="{{ url_for('static', filename='img/expert.png') }}" alt="Expert" class="expert-img">
+        <p>Our experts are ready to diagnose your device for completely free. <a href="#" class="services-link">Write
+            us!</a></p>
+        <p>Get <a href="#" class="services-link">repair services →</a></p>
+    </div>
+</section>
