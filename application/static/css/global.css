@@ -112,7 +112,7 @@ header nav {
     display: flex;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1090px) {
     .header-top {
         flex-direction: row;
         justify-content: space-between;
@@ -207,7 +207,7 @@ header nav {
     background-color: var(--quote-button-hover);
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1090px) {
     .pre-footer {
         flex-direction: row;
         justify-content: space-between;
@@ -310,7 +310,7 @@ footer {
     padding-top: 20px;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1090px) {
     .footer-container {
         flex-direction: row;
     }
