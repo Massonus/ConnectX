@@ -39,8 +39,9 @@
 
 .step {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .step h3 {
@@ -48,6 +49,7 @@
     margin-bottom: 10px;
     color: orangered;
     flex-shrink: 0;
+    padding-left: 10px;
 }
 
 .step p {
