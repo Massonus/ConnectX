@@ -101,6 +101,11 @@
         align-items: flex-start;
     }
 
+    .step h3 {
+        padding-left: 0;
+        margin-top: 0;
+    }
+
     .step p {
         margin-left: 0;
     }
