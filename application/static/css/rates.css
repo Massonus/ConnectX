@@ -1,35 +1,24 @@
 .rates-container {
     margin: auto;
-    max-width: 1200px;
-    display: flex;
-}
-
-.carousel-container {
-    overflow-x: auto;
-    white-space: nowrap;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .tariff-container {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 100px
+    margin-top: 20px;
 }
 
 .tariff-card {
-    width: 325px;
+    width: 100%;
+    max-width: 325px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
-    display: inline-block;
-    margin: 20px;
 }
 
 .tariff-card h2 {
@@ -75,4 +64,23 @@ button:hover {
 button a {
     color: #000;
     text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .rates-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tariff-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tariff-card {
+        margin: 20px;
+    }
 }
