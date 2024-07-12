@@ -68,7 +68,7 @@
     border-radius: 10px;
 }
 
-/* Desktop Styles @media(min-width: 768px) {
+@media(min-width: 768px) {
     .how-we-work-section {
         flex-direction: row;
         justify-content: space-between;
