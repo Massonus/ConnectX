@@ -19,6 +19,8 @@
     font-size: 1.2em;
     margin-bottom: 20px;
     color: orangered;
+    display: block;
+    margin-top: 20px;
 }
 
 .how-we-work-content h2 {
