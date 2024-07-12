@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
@@ -43,29 +42,30 @@
     </div>
     <nav>
         <div class="header-logo">
-            <a href="{{ url_for('main.index') }}"><img
-                    src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
-            <a style="text-decoration: none; color: white" href="{{ url_for('main.index') }}"><p style="font-size: 3.2em;" >ConnectX</p></a>
+            <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
+            <a class="logo-text" href="{{ url_for('main.index') }}">ConnectX</a>
         </div>
-        <ul class="header-links">
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="header-links" id="header-links">
             <li><a href="{{ url_for('about.index') }}">About us</a></li>
             <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
             <li><a href="{{ url_for('main.index', filename='main_page/cta_&_call_us.html', _anchor='call-us-block') }}">Testimonials</a></li>
             <li><a href="{{ url_for('main.index', filename='main_page/news.html', _anchor='news-block') }}">News</a></li>
             <li><a href="{{ url_for('main.index', filename='main_page/services.html', _anchor='service-block') }}">Service</a></li>
             <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
-
             {% if session.loggedin %}
                 <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
             {% else %}
                 <li><a href="{{ url_for('user.login') }}">Login</a></li>
             {% endif %}
-
         </ul>
         <a class="quote-button" href="#">Get a Quote</a>
     </nav>
 </header>
-
 
 <div class="container">
     {% block content %} {% endblock %}
@@ -75,8 +75,7 @@
     <div class="pre-footer-container">
         <h2>Contact Us Now for Swift Repairs.</h2>
         <p>Ready to experience the TechPro difference?</p>
-        <p>Don't let tech troubles hold you back – reach out to us today and let our expert team restore your devices to
-            their full potential. Schedule our appointment with our experts!</p>
+        <p>Don't let tech troubles hold you back – reach out to us today and let our expert team restore your devices to their full potential. Schedule our appointment with our experts!</p>
         <div class="pre-footer-details">
             <div class="link-title">
                 <h3 style="color: #ff4500">Support Team</h3>
@@ -109,18 +108,16 @@
     <div class="footer-container">
         <div class="footer-section">
             <div class="footer-logo">
-                 <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
-                     <a style="text-decoration: none; color: white" href="{{ url_for('main.index') }}"><p style="font-size: 2.5em;">ConnectX</p></a>
+                <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
+                <a class="footer-logo-text" href="{{ url_for('main.index') }}">ConnectX</a>
             </div>
-            <p style="margin: 10px 0 20px; font-size: 14px;">At TechPro, we're here to breathe new life into your
-                devices, swiftly and seamlessly.</p>
+            <p>At TechPro, we're here to breathe new life into your devices, swiftly and seamlessly.</p>
             <div class="footer-socials">
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
-
             </div>
         </div>
         <div class="footer-section">
@@ -157,6 +154,12 @@
         <p class="rights">All rights Reserved</p>
     </div>
 </footer>
+
+<script>
+    document.getElementById('burger-menu').addEventListener('click', function() {
+        document.getElementById('header-links').classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
