@@ -13,7 +13,7 @@ def show_rates():
 @bp.route('/basic/<int:rate_id>')
 def show_rate_by_id(rate_id):
     rate = rate_util.get_by_id(rate_id)  # Здесь должна быть функция для получения тарифа по его ID
-    return render_template('rates/rate_info.html', rate=rate)
+    return render_template('rates/rate-info.html', rate=rate)
 
 
 @bp.route('/add', methods=('POST',))
@@ -27,13 +27,13 @@ def do_add():
 
 @bp.route('/add', methods=('GET',))
 def add_page():
-    return render_template('rates/rate_add.html')
+    return render_template('rates/rate-add.html')
 
 
 @bp.route('/editPage/<int:rate_id>', methods=['GET'])
 def edit_page(rate_id):
     rate = rate_util.get_by_id(rate_id)
-    return render_template('rates/rate_edit.html', rate=rate)
+    return render_template('rates/rate-edit.html', rate=rate)
 
 
 @bp.route('/edit/<int:rate_id>', methods=('POST',))

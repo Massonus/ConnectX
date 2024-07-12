@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rates/add-edit-page.css') }}">
+{% endblock %}
+
 {% block content %}
 
     <form action="{{ url_for('rate.do_add') }}" method="POST">

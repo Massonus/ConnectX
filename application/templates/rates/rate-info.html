@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rates/info-page.css') }}">
+{% endblock %}
+
 {% block content %}
 
     <h3>{{ rate.name }}</h3>
