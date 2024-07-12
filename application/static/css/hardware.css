@@ -1,12 +1,12 @@
 .hardware-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     padding: 20px;
 }
 
 .hardware-service-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 40px;
 }
 
@@ -15,7 +15,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .service img {
@@ -39,7 +39,7 @@
 
 .stats-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .stat {
@@ -47,17 +47,42 @@
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    flex: 1;
-    margin: 10px;
+    margin: 10px 0;
     text-align: center;
 }
 
 .stat h2 {
     color: #ff4500;
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
 .stat p {
     margin: 10px;
+}
+
+@media (min-width: 768px) {
+    .hardware-service-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .service {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .stats-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .stat {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .stat h2 {
+        font-size: 3em;
+    }
 }
