@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rates-page.css') }}">
+{% endblock %}
+
 {% block content %}
     {% if session.is_admin %}
         <button><a href="{{ url_for('rate.add_page') }}">Add</a></button>

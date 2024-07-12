@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/reg-page.css') }}">
+{% endblock %}
+
 {% block content %}
 
     <h3 class="word">Register</h3>
