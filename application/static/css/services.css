@@ -1,3 +1,5 @@
+@import url('variables.css');
+
 .service-section {
     text-align: center;
     padding: 50px 0;
@@ -19,11 +21,11 @@
     width: 300px;
     height: 450px;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(---light-white);
     border-radius: 5px;
     text-align: left;
-    background-color: #222;
-    color: #fff;
+    background-color: var(--main-grey);
+    color: var(--white);
     box-sizing: border-box;
     font-family:'Poppins', sans-serif;
 }
@@ -47,8 +49,8 @@
 .service-item .btn {
     display: inline-block;
     padding: 8px 12px;
-    background-color: orangered;
-    color: #fff;
+    background-color: var(--orange);
+    color: var(--white);
     text-decoration: none;
     border-radius: 5px;
     margin-top: auto;

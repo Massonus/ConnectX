@@ -11,10 +11,10 @@
 }
 
 .service {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--shadow);
     margin: 10px 0;
 }
 
@@ -25,15 +25,15 @@
 
 .service h2 {
     margin-top: 20px;
-    color: #333;
+    color: var(--main-grey);
 }
 
 .service p {
-    color: #555;
+    color: var(---light-white);
 }
 
 .highlight {
-    color: #ff4500;
+    color: var(--orange);
     font-weight: bold;
 }
 
@@ -43,8 +43,8 @@
 }
 
 .stat {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--main-grey);
+    color: var(--white);
     padding: 20px;
     border-radius: 10px;
     margin: 10px 0;
@@ -52,7 +52,7 @@
 }
 
 .stat h2 {
-    color: #ff4500;
+    color: var(--orange);
     font-size: 2em;
     margin-bottom: 10px;
 }

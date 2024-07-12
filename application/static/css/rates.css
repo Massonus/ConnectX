@@ -1,3 +1,6 @@
+@import url('variables.css');
+
+
 .rates-container {
     margin: auto;
     padding: 20px;
@@ -14,29 +17,29 @@
 .tariff-card {
     width: 100%;
     max-width: 325px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px var(--shadow);
     padding: 20px;
     text-align: center;
 }
 
 .tariff-card h2 {
-    color: #333;
+    color: var(--main-grey);
 }
 
 .tariff-card p {
-    color: #666;
+    color: var(---light-white);
 }
 
 .price {
     font-size: 24px;
-    color: #000;
+    color: var(--dark);
 }
 
 .condition, .discount {
-    background-color: #e7f3ff;
-    color: #000;
+    background-color: var(--white);
+    color: var(--dark);
     padding: 5px;
     border-radius: 5px;
 }
@@ -47,9 +50,9 @@
 }
 
 button {
-    background-color: #d1f543;
+    background-color: var(--yellow);
     border: none;
-    color: #000;
+    color: var(--dark);
     padding: 10px 20px;
     margin-top: 10px;
     border-radius: 5px;
@@ -58,11 +61,11 @@ button {
 }
 
 button:hover {
-    background-color: #c2e233;
+    background-color: var(--yellow);
 }
 
 button a {
-    color: #000;
+    color: var(--dark);
     text-decoration: none;
 }
 
