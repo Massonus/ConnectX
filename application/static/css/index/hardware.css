@@ -29,7 +29,7 @@
 }
 
 .service p {
-    color: var(---light-white);
+    color: var(--light-white);
 }
 
 .highlight {

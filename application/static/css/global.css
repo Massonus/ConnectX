@@ -190,7 +190,7 @@ header nav {
 }
 
 .quote-form input::placeholder, .quote-form textarea::placeholder {
-    color: var(---light-white);
+    color: var(--light-white);
 }
 
 .request-quote-button {
