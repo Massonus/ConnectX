@@ -1,5 +1,70 @@
-<div class=""> {#называем класс сами и работаем внутри этого div#}
-
-<p>faq</p>
-    
+<div class="faq-header">
+    <h2 class="faq-header-top-title">FAQ</h2>
+    <h2 class="faq-header-title">Where Technology Meets Expertise</h2>
+    <p class="faq-header-subtitle">Browse the section below if you have any questions.</p>
 </div>
+<section class="faq">
+    <div class="faq-column faq-column-left">
+        <div class="faq-item" id="item1">
+            <div class="faq-question">Do You Offer Mail-in Repair Services for Customers Outside of New York?</div>
+            <div class="faq-answer">
+                <p>Yes, we provide convenient mail-in repair services for customers located outside of New York.
+                    Contact us for more information and instructions on how to proceed.</p>
+            </div>
+        </div>
+        <div class="faq-item" id="item2">
+            <div class="faq-question">How Much Does a Typical Phone Repair Cost?</div>
+            <div class="faq-answer">
+                <p>Repair costs vary depending on the issue and the model of your phone. We offer competitive
+                    pricing and transparent quotes before starting any repair.</p>
+            </div>
+        </div>
+        <div class="faq-item" id="item3">
+            <div class="faq-question">Can I Track the Status of My Repair?</div>
+            <div class="faq-answer">
+                <p>Yes, we provide updates on the status of your repair throughout the process. You can also contact
+                    us for real-time updates on your device's status.</p>
+            </div>
+        </div>
+        <div class="faq-item" id="item4">
+            <div class="faq-question">Do You Provide Any Post-repair Support?</div>
+            <div class="faq-answer">
+                <p>Yes, we offer post-repair support and warranties on our services. If you encounter any issues
+                    after your repair, don't hesitate to reach out, and we'll ensure your device is functioning
+                    correctly.</p>
+            </div>
+        </div>
+    </div>
+    <div class="faq-column faq-column-right">
+        <div class="faq-item" id="item5">
+            <div class="faq-question">What Should I Do if I'm Not Satisfied with the Repair Service?</div>
+            <div class="faq-answer">
+                <p>Your satisfaction is our top priority. If you have any concerns about the repair service, please
+                    contact us immediately, and we will do our best to address and resolve any issues promptly.</p>
+            </div>
+        </div>
+        <div class="faq-item" id="item6">
+            <div class="faq-question">Is it Safe to Leave My Data on the Device?</div>
+            <div class="faq-answer">
+                <p>We take data privacy seriously and ensure your personal information remains secure during
+                    repairs. However, we recommend backing up your data before bringing in your device for added
+                    peace of mind.</p>
+            </div>
+        </div>
+        <div class="faq-item" id="item7">
+            <div class="faq-question">What payment options do you provide?</div>
+            <div class="faq-answer">
+                <p>We offer a variety of payment methods. We accept cash, checks, and the majority of credit cards
+                    such as Visa, MasterCard, and American Express.</p>
+            </div>
+        </div>
+        <div class="faq-item" id="item8">
+            <div class="faq-question">Do You Have Same-day Repairs?</div>
+            <div class="faq-answer">
+                <p>Yes, we understand the urgency of certain repairs. Depending on the issue and technician
+                    availability, we strive to offer same-day repairs whenever possible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{{ url_for('static', filename='js/faq-accordion.js') }}"></script>

@@ -10,7 +10,7 @@ body {
 
 header {
     padding: 20px;
-    background-color: var(--dark);
+    background-image: url("../img/header-background.jpg");
     color: var(--white);
 }
 
