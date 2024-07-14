@@ -1,6 +1,6 @@
-$(document).ready(function () {
-    const track = $('.carousel-track');
-    const items = $('.carousel-item');
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
     const itemCount = items.length;
     let currentIndex = 0;
 
@@ -13,14 +13,14 @@ $(document).ready(function () {
             currentIndex = newIndex;
         }
         const newTransform = -currentIndex * 100;
-        track.css('transform', `translateX(${newTransform}%)`);
+        track.style.transform = `translateX(${newTransform}%)`;
     }
 
-    $('.carousel-button--right').click(function () {
+    document.querySelector('.carousel-button--right').addEventListener('click', () => {
         updateCarousel(currentIndex + 1);
     });
 
-    $('.carousel-button--left').click(function () {
+    document.querySelector('.carousel-button--left').addEventListener('click', () => {
         updateCarousel(currentIndex - 1);
     });
 });

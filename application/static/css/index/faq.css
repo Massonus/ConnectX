@@ -53,13 +53,32 @@
     cursor: pointer;
     background-color: var(--light-black);
     color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordion-icon {
+    font-size: 1.5em;
+    transition: transform 0.3s;
+}
+
+.accordion-title.active .accordion-icon {
+    transform: rotate(45deg);
 }
 
 .accordion-content {
-    display: none;
-    padding: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 10px;
     background-color: var(--light-black);
     color: var(--light-white);
+}
+
+.accordion-content p {
+    margin: 10px 0;
 }
 
 @media (min-width: 768px) {

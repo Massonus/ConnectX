@@ -7,9 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (openItem && openItem !== item) {
                 openItem.classList.remove("faq-item-open");
+                const openAnswer = openItem.querySelector(".faq-answer");
+                openAnswer.style.maxHeight = null;
+                openAnswer.style.padding = "0";
             }
 
             item.classList.toggle("faq-item-open");
+            const answer = item.querySelector(".faq-answer");
+            if (item.classList.contains("faq-item-open")) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.padding = "1em 0";
+            } else {
+                answer.style.maxHeight = null;
+                answer.style.padding = "0";
+            }
         });
     });
 });
