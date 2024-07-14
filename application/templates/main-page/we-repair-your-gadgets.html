@@ -1,5 +1,46 @@
-<div class=""> {#называем класс сами и работаем внутри этого div#}
-    
-<p>repair your gadgets</p>
-
-</div>
+<section class="repair-services">
+    <div class="repair-services__image-container">
+        <img class="repair-services__image" src="{{ url_for('static', filename='img/gadget-icons/repair.png') }}" alt="Repair Image">
+    </div>
+    <div class="repair-services-container">
+        <div class="repair-service-item we-repair">
+            <h1 class="repair-title">We Repair Your Gadgets</h1>
+            <h2 class="repair-subtitle">We Make Mobile Repair Stress-free.</h2>
+        </div>
+        <div class="repair-service-item">
+            <img src="img/icons/battery.png" alt="Poor Battery Life" class="services__icon">
+            <h3 class="repair-services-title">Poor Battery Life</h3>
+            <p class="repair-services-description">Revive your device’s stamina with TechPro’s battery replacement
+                service.</p>
+            <p class="repair-services-price">Repairs from $38</p>
+        </div>
+        <div class="repair-service-item">
+            <img src="img/icons/water.png" alt="Water Damages" class="services__icon">
+            <h3 class="repair-services-title">Water Damages</h3>
+            <p class="repair-services-description">Swiftly restore water-damaged devices to their former glory with our
+                expert care.</p>
+            <p class="repair-services-price">Repairs from $47</p>
+        </div>
+        <div class="repair-service-item">
+            <img src="img/icons/speaker.png" alt="Broken Speakers" class="services__icon">
+            <h3 class="repair-services-title">Broken Speakers</h3>
+            <p class="repair-services-description">Get crystal-clear sound back with TechPro’s speaker repair
+                service.</p>
+            <p class="repair-services-price">Repairs from $45</p>
+        </div>
+        <div class="repair-service-item">
+            <img src="img/icons/bluetooth.png" alt="No WiFi or Bluetooth" class="services__icon">
+            <h3 class="repair-services-title">No WiFi or Bluetooth</h3>
+            <p class="repair-services-description">Stay connected with our WiFi and Bluetooth troubleshooting and
+                repair.</p>
+            <p class="repair-services-price">Repairs from $65</p>
+        </div>
+        <div class="repair-service-item">
+            <img src="img/icons/cracked-screen.png" alt="Cracked Screens" class="services__icon">
+            <h3 class="repair-services-title">Cracked Screens</h3>
+            <p class="repair-services-description">Say goodbye to cracks and hello to pristine displays with TechPro’s
+                screen repair service.</p>
+            <p class="repair-services-price">Repairs from $47</p>
+        </div>
+    </div>
+</section>

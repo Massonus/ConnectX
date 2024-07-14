@@ -1,0 +1,90 @@
+.repair-services__image-container {
+    width: 100%;
+
+}
+
+.repair-services__image {
+    width: 70%;
+    height: 50%;
+    padding: 30px;
+}
+
+.repair-services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.repair-service-item {
+    max-width: 450px;
+    height: 150px;
+    text-align: left;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
+    margin: 10px 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.repair-service-item:hover {
+    box-shadow: 0 4px 8px var(--light-black);
+}
+
+.we-repair {
+    text-align: center;
+    flex: 1 1 100%;
+}
+
+.repair-title {
+    color: var(--orange);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.repair-subtitle {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.services__icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.repair-services-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.repair-services-description {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.repair-services-price {
+    font-weight: bold;
+    color: var(--orange);
+}
+
+/*@media (min-width: 768px) {*/
+/*    .we-repair {*/
+/*        flex-direction: column;*/
+/*        justify-content: space-between;*/
+/*    }*/
+
+/*    .repair-services {*/
+/*        flex-direction: row;*/
+/*        justify-content: space-between;*/
+/*    }*/
+
+/*    .repair-service-item {*/
+/*        flex: 1;*/
+/*        margin: 10px;*/
+/*    }*/
+/*}*/
