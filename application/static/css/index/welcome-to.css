@@ -1,5 +1,5 @@
 .welcome-container {
-    background-color: var(--dark);
+    background-image: url("../../img/header-background.jpg");
     color: var(--white);
     padding: 50px;
     display: flex;
