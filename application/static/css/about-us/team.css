@@ -1,0 +1,106 @@
+.team {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark);
+}
+
+.team-heading {
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.team-title {
+    color: var(--white);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.team-subtitle {
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-button {
+    background-color: var(--white);
+    color: var(--dark);
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.carousel-button--left {
+    left: 10px;
+}
+
+.carousel-button--right {
+    right: 10px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    color: var(--white);
+    background-color: var(--light-black);
+    min-width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+.carousel-image {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    max-width: 160px;
+}
+
+.carousel-name {
+    color: #e64a19;
+    margin-bottom: 10px;
+}
+
+.carousel-text {
+    margin-bottom: 20px;
+}
+
+.carousel-socials a {
+    margin: 0 10px;
+}
+
+.carousel-socials img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 768px) {
+    .team-title {
+        font-size: 2.5em;
+    }
+
+    .carousel-container {
+        width: 80%;
+    }
+
+    .carousel-image {
+        max-width: 200px;
+    }
+}
