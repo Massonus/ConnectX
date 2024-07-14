@@ -1,0 +1,72 @@
+.repair-services-image {
+    width: 70%;
+    height: 50%;
+    padding: 30px;
+}
+
+.repair-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: left;
+}
+
+.repair-service-item {
+    max-width: 450px;
+    height: 230px;
+    text-align: left;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
+    margin: 10px 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.repair-service-item:hover {
+    box-shadow: 0 4px 8px var(--light-black);
+}
+
+.repair-title {
+    color: var(--orange);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.repair-subtitle {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.services-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.repair-services-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.repair-services-description {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.repair-services-price {
+    font-weight: bold;
+    color: var(--orange);
+}
+
+@media (max-width: 768px) {
+
+    .repair-services {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
