@@ -67,19 +67,14 @@
     color: var(--orange);
 }
 
-/*@media (min-width: 768px) {*/
-/*    .we-repair {*/
-/*        flex-direction: column;*/
-/*        justify-content: space-between;*/
-/*    }*/
+@media (max-width: 768px) {
+    .we-repair {
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-/*    .repair-services {*/
-/*        flex-direction: row;*/
-/*        justify-content: space-between;*/
-/*    }*/
-
-/*    .repair-service-item {*/
-/*        flex: 1;*/
-/*        margin: 10px;*/
-/*    }*/
-/*}*/
+    .repair-services {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
