@@ -1,6 +1,11 @@
 $(document).ready(function () {
   $(".accordion-title").click(function () {
-    $(this).next(".accordion-content").slideToggle();
-    $(this).toggleClass("active");
+    $(".accordion-content").slideUp();
+    $(".accordion-title").removeClass("active");
+
+    if (!$(this).next(".accordion-content").is(":visible")) {
+      $(this).next(".accordion-content").slideDown();
+      $(this).addClass("active");
+    }
   });
 });
