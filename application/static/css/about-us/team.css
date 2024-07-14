@@ -74,7 +74,7 @@
 }
 
 .carousel-name {
-    color: #e64a19;
+    color: var(--orange);
     margin-bottom: 10px;
 }
 
