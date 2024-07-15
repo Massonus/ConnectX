@@ -26,25 +26,24 @@
 }
 
 .mission-vision-headline {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.3em;
 }
 
 .mission-vision-subheadline {
     font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .mission-vision-description {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 50px;
 }
 
 .mission-vision-button {
     display: inline-block;
     padding: 10px 20px;
-    color: #fff;
+    color: var(--white);
     background-color: var(--orange);
     text-decoration: none;
     border-radius: 5px;
