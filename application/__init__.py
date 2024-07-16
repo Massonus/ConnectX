@@ -12,9 +12,9 @@ def create_app():
     with app.app_context():
         initialize_tables()
         user_util.add_new_user('username', 'password', True)
-        rate_util.add_new({'name': 'Basic', 'speed': 80, 'price': 50, 'description': "Basic"})
-        rate_util.add_new({'name': 'Standart', 'speed': 100, 'price': 100, 'description': "Standart "})
-        rate_util.add_new({'name': 'Super', 'speed': 200, 'price': 150, 'description': "Super"})
+        rate_util.add_new({'name': 'Basic Connect', 'speed': 50, 'price': 29.99, 'description': "A reliable and affordable plan for everyday internet usage. Perfect for browsing, emailing, and staying connected with friends and family", 'superpower': "Super Speed — Delivers speeds up to 200 Mbps, ensuring fast downloads and high-quality video streaming without buffering."})
+        rate_util.add_new({'name': 'Standard Surf', 'speed': 100, 'price': 49.99, 'description': "A balanced plan for those who need a bit more speed and reliability. Suitable for streaming, online learning, and casual gaming.", 'superpower': "Enhanced Stability — Offers consistent speeds up to 100 Mbps, allowing for seamless streaming and multitasking."})
+        rate_util.add_new({'name': 'Advanced Stream', 'speed': 200, 'price': 69.99, 'description': "A high-performance plan for demanding users. Ideal for HD streaming, video conferencing, and heavy downloads.", 'superpower': "Super Speed — Delivers speeds up to 200 Mbps, ensuring fast downloads and high-quality video streaming without buffering."})
 
     from application.routes.main import bp as main_bp
     app.register_blueprint(main_bp)

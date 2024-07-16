@@ -8,6 +8,7 @@ class Rate(db.Model):
     speed = db.Column(db.Integer, nullable=False)
     price = db.Column(db.Float, nullable=False)
     description = db.Column(db.Text, nullable=True)
+    superpower = db.Column(db.Text, nullable=True)
 
     def __repr__(self):
         return f'<Rate {self.name}>'
