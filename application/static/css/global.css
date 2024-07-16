@@ -171,8 +171,18 @@ body {
 }
 
 .pre-footer-content {
-    flex: 1;
+    padding: 20px;
     margin-bottom: 20px;
+}
+
+.pre-footer-content h2 {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pre-footer-content p {
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .pre-footer-details {
