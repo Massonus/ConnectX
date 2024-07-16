@@ -1,6 +1,8 @@
 .faq-header {
     text-align: center;
     padding: 2em 0;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .faq-header-top-title {
@@ -21,6 +23,8 @@
 
 .faq {
     padding: 1em;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .faq-column {
