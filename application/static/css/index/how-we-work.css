@@ -1,21 +1,20 @@
 .how-we-work-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 20px 0 20px 20px;
+    padding: 0;
     background-color: var(--main-grey);
     color: var(--white);
-    max-height: 700px;
-    margin: 0;
+    margin: auto;
 }
 
 .how-we-work-content {
     text-align: left;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .how-we-work-content span {
@@ -24,7 +23,6 @@
     margin-bottom: 20px;
     color: var(--orange);
     display: block;
-    margin-top: 20px;
 }
 
 .how-we-work-content h2 {
@@ -54,45 +52,45 @@
     font-size: 1.5em;
     margin-bottom: 10px;
     color: var(--orange);
-    padding-left: 10px;
 }
 
 .step p {
     font-size: 1em;
-    margin: 0 0 0 10px;
+    margin: 0;
     color: var(--white);
 }
 
 .how-we-work-image {
-    max-width: 100%;
-    max-height: 700px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
 }
 
 .how-we-work-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     max-height: 700px;
-
 }
 
 @media (min-width: 768px) {
     .how-we-work-section {
         flex-direction: row;
-        justify-content: center;
-    }
-
-    .sub-how-we-work-container {
-        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
     }
 
     .how-we-work-content {
-        max-width: 50%;
+        width: 50%;
+        padding-right: 20px;
     }
 
     .how-we-work-image {
-        max-width: 45%;
+        width: 45%;
+        margin-top: 0;
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .step {
@@ -101,7 +99,6 @@
     }
 
     .step h3 {
-        padding-left: 0;
         margin-top: 0;
     }
 
