@@ -19,132 +19,138 @@
 </head>
 <body>
 
-<header>
-    <div class="header-top">
-        <div class="header-contacts">
-            <a class="phone" href="tel:+12345678900">+1 (234) 567 89 00</a>
-            <a class="email" href="mailto:techpro@email.com">connectX@email.com</a>
-        </div>
-        <div class="header-socials">
-            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
-            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
-            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
-            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
-            <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
-        </div>
-    </div>
-    <nav>
-        <div class="header-logo">
-            <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
-            <a class="logo-text" href="{{ url_for('main.index') }}">ConnectX</a>
-        </div>
-        <div class="burger-menu" id="burger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="header-links" id="header-links">
-            <li><a href="{{ url_for('about.index') }}">About us</a></li>
-            <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
-            <li><a href="{{ url_for('main.index', filename='main-page/cta-&-call-us.html', _anchor='call-us-block') }}">Testimonials</a></li>
-            <li><a href="{{ url_for('main.index', filename='main-page/news.html', _anchor='news-block') }}">News</a></li>
-            <li><a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a></li>
-            <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
-            {% if session.loggedin %}
-                <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
-            {% else %}
-                <li><a href="{{ url_for('user.login') }}">Login</a></li>
-            {% endif %}
-        </ul>
-        <a class="quote-button" href="#">Get a Quote</a>
-    </nav>
-</header>
-
-<div class="container">
-    {% block content %} {% endblock %}
-</div>
-
-<section class="pre-footer">
-    <div class="pre-footer-container">
-        <h2>Contact Us Now for Swift Repairs.</h2>
-        <p>Ready to experience the TechPro difference?</p>
-        <p>Don't let tech troubles hold you back – reach out to us today and let our expert team restore your devices to their full potential. Schedule our appointment with our experts!</p>
-        <div class="pre-footer-details">
-            <div class="link-title">
-                <h3 style="color: #ff4500">Support Team</h3>
-                <p>+1 (234) 567 89 00</p>
-                <p>techpro@email.com</p>
+<header class="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="header-contacts">
+                <a class="phone" href="tel:+12345678900">+1 (234) 567 89 00</a>
+                <a class="email" href="mailto:techpro@email.com">connectX@email.com</a>
             </div>
-            <div class="link-title">
-                <h3 style="color: #ff4500">Visit Us</h3>
-                <p>194 MacDonough St, Brooklyn, NY 11216</p>
-                <p>Mon - Fri: 8AM - 6PM</p>
-            </div>
-        </div>
-        <div class="pre-footer-icon">
-            <img src="{{ url_for('static', filename='img/global-network.png') }}" alt="Revive Icon">
-            <p>Want to Revive Your Device?<br> Fill out the form on the right.</p>
-        </div>
-    </div>
-    <div class="quote-form">
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name*" required>
-            <input type="tel" name="phone" placeholder="Phone Number*" required>
-            <input type="email" name="email" placeholder="Email*" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="request-quote-button">Request a Quote</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <div class="footer-logo">
-                <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
-                <a class="footer-logo-text" href="{{ url_for('main.index') }}">ConnectX</a>
-            </div>
-            <p>At TechPro, we're here to breathe new life into your devices, swiftly and seamlessly.</p>
-            <div class="footer-socials">
+            <div class="header-socials">
+                <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
-                <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
             </div>
         </div>
-        <div class="footer-section">
-            <h3 class="link-title">Useful Links</h3>
-            <ul class="footer-links">
+        <nav>
+            <div class="header-logo">
+                <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
+                <a class="logo-text" href="{{ url_for('main.index') }}">ConnectX</a>
+            </div>
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="header-links" id="header-links">
                 <li><a href="{{ url_for('about.index') }}">About us</a></li>
                 <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
                 <li><a href="{{ url_for('main.index', filename='main-page/cta-&-call-us.html', _anchor='call-us-block') }}">Testimonials</a></li>
                 <li><a href="{{ url_for('main.index', filename='main-page/news.html', _anchor='news-block') }}">News</a></li>
                 <li><a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3 class="link-title">Services</h3>
-            <ul class="footer-links">
-                <li><a href="#">Screen Repairs</a></li>
-                <li><a href="#">Battery Replacement</a></li>
-                <li><a href="#">Charging Port Repairs</a></li>
-                <li><a href="#">Water Damage Restoration</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3 class="link-title">Support</h3>
-            <ul class="footer-links">
-                <li><a href="#">Warranty</a></li>
-                <li><a href="#">Service Terms</a></li>
-                <li><a href="#">Help</a></li>
                 <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
+                {% if session.loggedin %}
+                    <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('user.login') }}">Login</a></li>
+                {% endif %}
             </ul>
+            <a class="quote-button" href="#">Get a Quote</a>
+        </nav>
+    </div>
+</header>
+
+<div class="block-container">
+    {% block content %} {% endblock %}
+</div>
+
+<section class="pre-footer">
+    <div class="container pre-footer-container">
+        <div class="pre-footer-content">
+            <h2>Contact Us Now for Swift Repairs.</h2>
+            <p>Ready to experience the TechPro difference?</p>
+            <p>Don't let tech troubles hold you back – reach out to us today and let our expert team restore your devices to their full potential. Schedule our appointment with our experts!</p>
+            <div class="pre-footer-details">
+                <div class="link-title">
+                    <h3 style="color: #ff4500">Support Team</h3>
+                    <p>+1 (234) 567 89 00</p>
+                    <p>techpro@email.com</p>
+                </div>
+                <div class="link-title">
+                    <h3 style="color: #ff4500">Visit Us</h3>
+                    <p>194 MacDonough St, Brooklyn, NY 11216</p>
+                    <p>Mon - Fri: 8AM - 6PM</p>
+                </div>
+            </div>
+            <div class="pre-footer-icon">
+                <img src="{{ url_for('static', filename='img/global-network.png') }}" alt="Revive Icon">
+                <p>Want to Revive Your Device?<br> Fill out the form on the right.</p>
+            </div>
+        </div>
+        <div class="quote-form">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name*" required>
+                <input type="tel" name="phone" placeholder="Phone Number*" required>
+                <input type="email" name="email" placeholder="Email*" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="request-quote-button">Request a Quote</button>
+            </form>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p class="copyright">© Created by Team 04</p>
-        <p class="rights">All rights Reserved</p>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <a href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/connectx-logo.png') }}" alt="ConnectX"></a>
+                    <a class="footer-logo-text" href="{{ url_for('main.index') }}">ConnectX</a>
+                </div>
+                <p>At TechPro, we're here to breathe new life into your devices, swiftly and seamlessly.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/social-icons/youtube-icon.svg') }}" alt="YouTube"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="link-title">Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="{{ url_for('about.index') }}">About us</a></li>
+                    <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+                    <li><a href="{{ url_for('main.index', filename='main-page/cta-&-call-us.html', _anchor='call-us-block') }}">Testimonials</a></li>
+                    <li><a href="{{ url_for('main.index', filename='main-page/news.html', _anchor='news-block') }}">News</a></li>
+                    <li><a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="link-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Screen Repairs</a></li>
+                    <li><a href="#">Battery Replacement</a></li>
+                    <li><a href="#">Charging Port Repairs</a></li>
+                    <li><a href="#">Water Damage Restoration</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="link-title">Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Service Terms</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© Created by Team 04</p>
+            <p class="rights">All rights Reserved</p>
+        </div>
     </div>
 </footer>
 
