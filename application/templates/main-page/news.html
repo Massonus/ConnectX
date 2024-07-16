@@ -1,62 +1,39 @@
-<div id="news-block" class=""> {#называем класс сами и работаем внутри этого div#}
-
-    <h2>News</h2>
-
-    <div>
-        <h3>Chapter 1</h3>
-        <p>
-            Опис першої новини.
-        <nav>
-            <a href="https://ces.org.ua/ukraine-economic-recovery-tracker/?gad_source=1&gclid=EAIaIQobChMIlcfozp6OhwMVfKWDBx3QuAaeEAAYASAAEgJs3PD_BwE">Know
-                more</a>
-        </nav>
-        </p>
-        <br/>
-    </div>
-
-    <div>
-        <h3>Chapter 2</h3>
-        <p>
-            Опис другої новини.
-        <nav>
-            <a href="https://ces.org.ua/ukraine-economic-recovery-tracker/?gad_source=1&gclid=EAIaIQobChMIlcfozp6OhwMVfKWDBx3QuAaeEAAYASAAEgJs3PD_BwE">Know
-                more</a>
-        </nav>
-        </p>
-        <br/>
-    </div>
-
-    <div>
-        <h3>Chapter 3</h3>
-        <p>
-            Опис третьої новини.
-        <nav>
-            <a href="https://ces.org.ua/ukraine-economic-recovery-tracker/?gad_source=1&gclid=EAIaIQobChMIlcfozp6OhwMVfKWDBx3QuAaeEAAYASAAEgJs3PD_BwE">Know
-                more</a>
-        </nav>
-        </p>
-        <br/>
-    </div>
-
-    <div class="slider-container">
-        <div class="slides">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-
-            <div class="slide" id="slide1">
-                <section>Slide 1</section>
-            </div>
-            <div class="slide" id="slide2">
-                <section>Slide 2</section>
-            </div>
-            <div class="slide" id="slide3">
-                <section>Slide 3</section>
+<div id="news-block" class="news-block">
+    <div class="carousel container">
+        <button class="carousel-button carousel-button--left">&lt;</button>
+        <div class="carousel-track-container">
+            <div class="carousel-track">
+                <div class="carousel-item news-card">
+                    <p class="date">02 FEBRUARY 2024 | NEWS</p>
+                    <h2>Water Damage: What to Do When Your Phone Takes a Dip</h2>
+                    <p>Has your phone suffered a watery mishap? Learn the essential steps to take when dealing with
+                        water damage.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="carousel-item news-card">
+                    <p class="date">22 FEBRUARY 2024 | NEWS</p>
+                    <h2>Cracked Screen Chronicles: The Importance of Timely Repairs</h2>
+                    <p>Ignoring that cracked screen? Think again. Explore the risks of delaying screen repairs and the
+                        potential consequences for your device.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="carousel-item news-card">
+                    <p class="date">03 MARCH 2024 | NEWS</p>
+                    <h2>Navigating Software Snags & Troubleshooting Phone Issues</h2>
+                    <p>Unravel the mysteries of common phone software issues and discover effective troubleshooting
+                        techniques.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="carousel-item news-card">
+                    <p class="date">12 JANUARY 2024 | NEWS</p>
+                    <h2>Our Guide to Prolonging Your Phone's Battery Life</h2>
+                    <p>Tired of constantly charging your phone? Discover tips and tricks to extend your device's battery
+                        life and maximize its performance.</p>
+                    <a href="#">Read More</a>
+                </div>
             </div>
         </div>
-
-
-        <label for="slide1" class="prev">&#10094;</label>
-        <label for="slide2" class="next">&#10095;</label>
+        <button class="carousel-button carousel-button--right">&gt;</button>
     </div>
+    <script src="{{ url_for('static', filename='js/news-carousel.js') }}"></script>
 </div>

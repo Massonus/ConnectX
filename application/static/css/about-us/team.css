@@ -2,6 +2,12 @@
     text-align: center;
     padding: 20px;
     background-color: var(--dark);
+    width: 100%;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .team-heading {
@@ -10,13 +16,13 @@
 }
 
 .team-title {
-    color: var(--white);
+    color: var(--grey-white);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .team-subtitle {
-    color: var(--white);
+    color: var(--grey-white);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -29,8 +35,8 @@
 }
 
 .carousel-button {
-    background-color: var(--white);
-    color: var(--dark);
+    background-color: var(--dark);
+    color: var(--grey-white);
     border: none;
     font-size: 2em;
     cursor: pointer;
@@ -60,7 +66,7 @@
 }
 
 .carousel-item {
-    color: var(--white);
+    color: var(--grey-white);
     background-color: var(--light-black);
     min-width: 100%;
     text-align: center;

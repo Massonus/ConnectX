@@ -1,20 +1,18 @@
 {% extends 'base.html' %}
 
 {% block links %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/reg-page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/login-reg.css') }}">
 {% endblock %}
 
 {% block content %}
-
-    <h3 class="word">Register</h3>
-    <form action="{{ url_for('user.register') }}" method="post">
-        <div class="msg">{{ msg }}</div>
-        <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/>
-        <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/>
-        <input type="submit" class="btn" value="Sign Up">
+<div class="auth-container">
+    <h3 class="auth-title">Register</h3>
+    <form action="{{ url_for('user.register') }}" method="post" class="auth-form">
+        <div class="auth-msg">{{ msg }}</div>
+        <input id="username" name="username" type="text" placeholder="Enter Your Username" class="auth-textbox"/>
+        <input id="password" name="password" type="password" placeholder="Enter Your Password" class="auth-textbox"/>
+        <input type="submit" class="auth-btn" value="Sign Up">
     </form>
-
-    <p class="bottom">Already have an account? <a class="bottom" href="{{ url_for('user.login') }}"> Sign In
-        here</a></p>
-
+    <p class="auth-bottom">Already have an account? <a class="auth-link" href="{{ url_for('user.login') }}"> Sign In here</a></p>
+</div>
 {% endblock %}
