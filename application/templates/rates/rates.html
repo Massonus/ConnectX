@@ -1,32 +1,36 @@
 {% extends 'base.html' %}
 
 {% block links %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rates-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rates-page.css') }}">
 {% endblock %}
 
 {% block content %}
-    {% if session.is_admin %}
-        <button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
-    {% endif %}
+{% if session.is_admin %}
+<button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
+{% endif %}
 
-    <div class="rates-container">
-        {% for rate in rates %}
-            <div class="tariff-container">
-                <div class="tariff-card">
-                    <h2>{{ rate.name }}</h2>
-                    <p><strong>Домашній інтернет</strong><br>до 100 Мбіт/с, безлім трафік</p>
-                    <p><strong>1 Суперсила на вибір</strong></p>
-                    <div class="icons">
-                        <span>🔍</span>
-                        <span>🎵</span>
-                        <span>🌐</span>
-                    </div>
-                    <p class="price">{{ rate.price }} грн/міс</p>
-                    <p class="condition">Якщо маєте на рахунку 900 грн кожні 6 місяців</p>
-                    <p class="description">{{ rate.description }}</p>
-                    <button><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Обрати тариф</a></button>
-                </div>
+<div class="rates-container">
+    {% for rate in rates %}
+    <div class="tariff-container">
+        <div class="tariff-card">
+            <h2>{{ rate.name }}</h2>
+            <p><strong>Home Internet</strong><br>Up to {{ rate.speed }} Mbps</p>
+            <p><strong>Superpower:</strong></p>
+            <div class="superpower-description">
+                {% if "Consistent Speed" in rate.superpower %}
+                <span>📈</span> <span>{{ rate.superpower }}}</span>
+                {% elif "Enhanced Stability" in rate.superpower %}
+                <span>🔒</span> <span>{{ rate.superpower }}}</span>
+                {% elif "Super Speed" in rate.superpower %}
+                <span>⚡</span> <span>{{ rate.superpower }}</span>
+                {% endif %}
             </div>
-        {% endfor %}
+            <p class="price">${{ rate.price }} per month</p>
+            <p class="condition">Information</p>
+            <p class="description">{{ rate.description }}</p>
+            <button><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Обрати тариф</a></button>
+        </div>
     </div>
+    {% endfor %}
+</div>
 {% endblock %}
