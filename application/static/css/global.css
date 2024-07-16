@@ -1,17 +1,34 @@
 @import url('variables.css');
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--white);
-    max-width: 1980px;
-    margin: auto;
     text-align: center;
 }
 
-header {
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
     padding: 20px;
     background-image: url("../img/header-background.jpg");
     color: var(--white);
+    background-size: 1700px;
+    background-clip: padding-box;
+    background-position-x: 40%;
 }
 
 .header-top {
@@ -29,7 +46,7 @@ header {
     margin: 5px;
 }
 
-header nav {
+.header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +135,7 @@ header nav {
         justify-content: space-between;
     }
 
-    header nav {
+    .header nav {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -145,12 +162,27 @@ header nav {
     background-color: var(--dark);
     color: var(--white);
     display: flex;
-    flex-direction: column;
     padding: 20px;
 }
 
 .pre-footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pre-footer-content {
+    padding: 20px;
     margin-bottom: 20px;
+}
+
+.pre-footer-content h2 {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pre-footer-content p {
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .pre-footer-details {
@@ -173,11 +205,17 @@ header nav {
 
 .quote-form {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .quote-form form {
+    background-color: var(--light-dark);
+    gap: 20px;
+    padding: 60px;
     display: flex;
     flex-direction: column;
+    width: 400px;
 }
 
 .quote-form input, .quote-form textarea {
@@ -208,14 +246,14 @@ header nav {
 }
 
 @media (min-width: 1090px) {
-    .pre-footer {
+    .pre-footer-container {
         flex-direction: row;
         justify-content: space-between;
-        padding: 50px;
     }
 
-    .pre-footer-container {
+    .pre-footer-content {
         max-width: 50%;
+        margin-bottom: 0;
     }
 
     .pre-footer-details {
@@ -228,7 +266,7 @@ header nav {
     }
 
     .quote-form {
-        width: 45%;
+        width: auto;
     }
 }
 

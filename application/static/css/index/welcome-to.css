@@ -2,10 +2,13 @@
     background-image: url("../../img/header-background.jpg");
     color: var(--white);
     padding: 50px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: -80px;
+    margin-bottom: -30px;
+}
+
+.sub-welcome-container {
+    display: flex;
 }
 
 .welcome-top {
@@ -99,8 +102,7 @@
 }
 
 @media (max-width: 768px) {
-
-    .welcome-container {
+    .sub-welcome-container {
         flex-direction: column;
     }
 
@@ -113,6 +115,6 @@
     }
 
     .welcome-img {
-        max-width: 400px;
+        max-width: 300px;
     }
 }

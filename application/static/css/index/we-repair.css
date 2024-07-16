@@ -1,7 +1,13 @@
+.repair-services {
+    padding: 0;
+}
+
 .repair-services-image {
     width: 70%;
-    height: 50%;
+    height: auto;
     padding: 30px;
+    display: block;
+    margin: 0 auto;
 }
 
 .repair-items-container {
@@ -13,8 +19,8 @@
 }
 
 .repair-service-item {
-    max-width: 450px;
-    height: 230px;
+    max-width: 376px;
+    height: 250px;
     text-align: left;
     background-color: var(--white);
     padding: 20px;
@@ -32,12 +38,14 @@
     color: var(--orange);
     font-size: 1.2em;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .repair-subtitle {
     font-size: 2em;
     font-weight: bold;
     color: var(--dark);
+    text-align: center;
 }
 
 .services-icon {
@@ -64,9 +72,8 @@
 }
 
 @media (max-width: 768px) {
-
     .repair-services {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 }
