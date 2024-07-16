@@ -270,7 +270,7 @@ body {
     }
 }
 
-footer {
+.footer {
     background-color: var(--light-black);
     color: var(--white);
     padding: 40px;
@@ -318,6 +318,10 @@ footer {
     border-bottom: 2px solid var(--link-hover);
     display: inline-block;
     padding-bottom: 5px;
+}
+
+.link-title h3 {
+    color: var(--orange);
 }
 
 .footer-links {

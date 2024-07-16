@@ -3,6 +3,18 @@
     padding: 50px 0;
 }
 
+.service-section p {
+    color: var(--orange);
+}
+
+.service-section h2 {
+    color: var(--dark);
+}
+
+.service-section strong {
+    color: var(--light-grey);
+}
+
 .services-container {
     display: flex;
     flex-wrap: wrap;
