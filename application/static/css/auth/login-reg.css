@@ -6,7 +6,7 @@
     padding: 50px;
     background-color: var(--light-black);
     border-radius: 10px;
-    color: var(--white);
+    color: var(--grey-white);
     text-align: center;
 }
 
@@ -28,7 +28,7 @@
     border-radius: 5px;
     font-size: 16px;
     background-color: var(--main-grey);
-    color: var(--white);
+    color: var(--grey-white);
 }
 
 .auth-btn {
@@ -36,7 +36,7 @@
     background-color: var(--orange);
     border: none;
     border-radius: 5px;
-    color: var(--white);
+    color: var(--grey-white);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;

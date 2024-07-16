@@ -35,7 +35,7 @@
     border-radius: 5px;
     text-align: left;
     background-color: var(--main-grey);
-    color: var(--white);
+    color: var(--grey-white);
     box-sizing: border-box;
     font-family:'Poppins', sans-serif;
 }
@@ -60,7 +60,7 @@
     display: inline-block;
     padding: 8px 12px;
     background-color: var(--orange);
-    color: var(--white);
+    color: var(--grey-white);
     text-decoration: none;
     border-radius: 5px;
     margin-top: auto;

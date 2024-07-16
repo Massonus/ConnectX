@@ -22,7 +22,7 @@
     max-width: 376px;
     height: 250px;
     text-align: left;
-    background-color: var(--white);
+    background-color: var(--grey-white);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow);

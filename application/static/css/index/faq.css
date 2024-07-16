@@ -37,13 +37,13 @@
 }
 
 .faq-headline {
-    color: var(--white);
+    color: var(--grey-white);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .faq-subheadline {
-    color: var(--white);
+    color: var(--grey-white);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -60,7 +60,7 @@
     padding: 15px;
     cursor: pointer;
     background-color: var(--light-black);
-    color: var(--white);
+    color: var(--grey-white);
     display: flex;
     justify-content: space-between;
     align-items: center;

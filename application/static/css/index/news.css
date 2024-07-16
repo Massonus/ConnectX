@@ -5,7 +5,7 @@
     height: 35vh;
     margin: 0;
     background-color: var(--orange);
-    color: var(--white);
+    color: var(--grey-white);
 }
 
 .carousel {
@@ -31,7 +31,7 @@
 .news-card {
     background-color: var(--orange);
     padding: 20px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--grey-white);
     border-radius: 5px;
     text-align: center;
 }
@@ -47,7 +47,7 @@
 }
 
 .news-card a {
-    color: var(--white);
+    color: var(--grey-white);
     font-weight: bold;
 }
 
@@ -62,7 +62,7 @@
     transform: translateY(-50%);
     background-color: var(--orange);
     border: none;
-    color: var(--white);
+    color: var(--grey-white);
     font-size: 2em;
     padding: 10px;
     margin-left: 10px;
