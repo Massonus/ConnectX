@@ -1,56 +1,80 @@
-.slider-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    min-width: 100%;
-    flex: 1;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.controls label {
-    cursor: pointer;
-    padding: 5px;
-    font-size: 24px;
-    user-select: none;
-}
-
-.prev {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.next {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.slide section {
-    height: 100px;
+.news-block {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    background-color: var(--white);
-    border: 1px solid var(--shadow);
+    height: 35vh;
+    margin: 0;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.news-card {
+    background-color: var(--orange);
+    padding: 20px;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.news-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.news-card a {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.news-card .date {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--orange);
+    border: none;
+    color: var(--white);
+    font-size: 2em;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button--left {
+    left: 10px;
+}
+
+.carousel-button--right {
+    right: 10px;
 }

@@ -29,8 +29,8 @@
 }
 
 .carousel-button {
-    background-color: var(--white);
-    color: var(--dark);
+    background-color: var(--dark);
+    color: var(--white);
     border: none;
     font-size: 2em;
     cursor: pointer;
