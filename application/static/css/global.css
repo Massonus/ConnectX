@@ -22,6 +22,20 @@ body {
     padding: 0 15px;
 }
 
+.block-title {
+    color: var(--orange);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.center-block-title {
+    color: var(--orange);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .header {
     padding: 20px;
     background-image: url("../img/header-background.jpg");

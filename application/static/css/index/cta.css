@@ -1,0 +1,107 @@
+.cta {
+    background: url('../../img/cta-images/cta-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--white);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    gap: 20px;
+}
+
+.cta-left, .cta-right {
+    text-align: left;
+    padding: 20px;
+}
+
+.cta-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.cta-highlight {
+    color: var(--orange);
+}
+
+.cta-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.cta-services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cta-service {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 20%;
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.service-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.service-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.service-description {
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 2em;
+    }
+
+    .cta-service {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-title {
+        font-size: 1.5em;
+    }
+
+    .cta-content {
+        flex-direction: column;
+    }
+
+    .cta-services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-service {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

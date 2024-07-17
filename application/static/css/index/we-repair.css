@@ -34,13 +34,6 @@
     box-shadow: 0 4px 8px var(--light-black);
 }
 
-.repair-title {
-    color: var(--orange);
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
 .repair-subtitle {
     font-size: 2em;
     font-weight: bold;
