@@ -1,63 +1,11 @@
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
 .custom-container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-.custom-header {
-    background-color: #121212;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.custom-header h1 {
-    color: #fff;
-    font-size: 36px;
-    margin: 0;
-}
-
-.custom-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.custom-header nav ul li {
-    display: inline;
-}
-
-.custom-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.custom-header nav ul li a:hover {
-    color: #e67e22;
-}
-
-.custom-main-content {
-    background-color: #fff;
-    padding: 40px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
 .custom-terms h2 {
-    color: #333;
+    color: var(--main-grey);
     font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
@@ -85,13 +33,13 @@ body {
 }
 
 .orange-text {
-    color: #e67e22;
+    color: var(--orange);
 }
 
 .custom-service-terms h3,
 .custom-warranty-policy h3,
 .custom-customer-satisfaction h3 {
-    color: #e67e22;
+    color: var(--orange);
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -107,7 +55,7 @@ ul.custom-list li {
 }
 
 ul.custom-list li strong {
-    color: #333;
+    color: var(--main-grey);
 }
 
 p {
