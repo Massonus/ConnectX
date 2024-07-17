@@ -3,6 +3,7 @@
   margin: 20px auto;
   font-family: 'Poppins', sans-serif;
   padding: 0 15px;
+  position: relative;
 }
 
 #service-block h3.center-block-title {
@@ -23,10 +24,10 @@
 
 #carousel-container {
   width: 100%;
-  position: relative;
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
 }
 
 .limited-width {
@@ -79,25 +80,46 @@
 }
 
 #controls {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 #controls span {
-  width: 50px;
+  width: 60px;
   cursor: pointer;
-  opacity: 0.4;
+  opacity: 0.7;
+  pointer-events: all;
+  transition: opacity 0.3s;
 }
 
 #controls span:hover {
   opacity: 1;
 }
 
+#controls span img {
+  width: 100%;
+}
+
+#prev {
+  left: 50px;
+}
+
+#next {
+  right: 50px;
+}
+
 @media (max-width: 768px) {
   .slide {
     width: 100%;
+  }
+
+  #controls span img {
+    filter: invert(100%);
   }
 }
