@@ -1,7 +1,7 @@
 .cta {
-    background: url("../../img/cta-background.jpg") no-repeat center center;
+    background: url("../../img/cta-images/cta-background.jpg") no-repeat center center;
     background-size: cover;
-    color: #fff;
+    color: var(--white);
     padding: 50px 20px;
     text-align: center;
 }
@@ -26,7 +26,7 @@
 }
 
 .cta-highlight {
-    color: #ff6600;
+    color: var(--orange);
 }
 
 .cta-description {
@@ -35,8 +35,8 @@
 }
 
 .cta-button {
-    background-color: #ff6600;
-    color: #fff;
+    background-color: var(--orange);
+    color: var(--white);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -51,7 +51,7 @@
     margin: 0 auto;
 }
 
-.service {
+.cta-service {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
@@ -62,8 +62,8 @@
 }
 
 .service-icon {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
 }
 
@@ -76,7 +76,6 @@
     font-size: 1em;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .cta-title {
         font-size: 2em;
