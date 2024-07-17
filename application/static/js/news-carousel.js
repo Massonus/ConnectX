@@ -1,42 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector('.carousel-track');
-    const items = document.querySelectorAll('.carousel-item');
-    const itemCount = items.length;
-    let currentIndex = 0;
+    const newsTrack = document.querySelector('.news-carousel-track');
+    const newsItems = document.querySelectorAll('.news-carousel-item');
+    const newsItemCount = newsItems.length;
+    let newsCurrentIndex = 0;
 
-    function updateCarousel(newIndex) {
+    function updateNewsCarousel(newIndex) {
         if (newIndex < 0) {
-            currentIndex = itemCount - 1;
-        } else if (newIndex >= itemCount) {
-            currentIndex = 0;
+            newsCurrentIndex = newsItemCount - 1;
+        } else if (newIndex >= newsItemCount) {
+            newsCurrentIndex = 0;
         } else {
-            currentIndex = newIndex;
+            newsCurrentIndex = newIndex;
         }
-        const newTransform = -currentIndex * 100;
-        track.style.transform = `translateX(${newTransform}%)`;
+        const newTransform = -newsCurrentIndex * 100;
+        newsTrack.style.transform = `translateX(${newTransform}%)`;
     }
 
-    function handleTransitionEnd() {
-        if (currentIndex === itemCount) {
-            track.style.transition = 'none';
-            track.style.transform = `translateX(0)`;
-            currentIndex = 0;
-            setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out', 50);
-        } else if (currentIndex === -1) {
-            track.style.transition = 'none';
-            track.style.transform = `translateX(${-(itemCount - 1) * 100}%)`;
-            currentIndex = itemCount - 1;
-            setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out', 50);
-        }
-    }
-
-    track.addEventListener('transitionend', handleTransitionEnd);
-
-    document.querySelector('.carousel-button--right').addEventListener('click', () => {
-        updateCarousel(currentIndex + 1);
+    document.querySelector('#news-carousel-button-right').addEventListener('click', () => {
+        updateNewsCarousel(newsCurrentIndex + 1);
     });
 
-    document.querySelector('.carousel-button--left').addEventListener('click', () => {
-        updateCarousel(currentIndex - 1);
+    document.querySelector('#news-carousel-button-left').addEventListener('click', () => {
+        updateNewsCarousel(newsCurrentIndex - 1);
     });
 });
