@@ -17,14 +17,6 @@
     box-sizing: border-box;
 }
 
-.how-we-work-content span {
-    text-transform: uppercase;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: var(--orange);
-    display: block;
-}
-
 .how-we-work-content h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
