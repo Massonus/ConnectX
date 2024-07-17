@@ -29,6 +29,10 @@
   border-radius: 10px;
 }
 
+.limited-width {
+  max-width: 1200px;
+}
+
 #carousel {
   display: flex;
   transition: transform 0.5s;
