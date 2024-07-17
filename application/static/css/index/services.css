@@ -23,43 +23,63 @@
 
 #carousel-container {
   width: 100%;
-  height: auto;
   position: relative;
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
 }
 
-#carousel-container > div:first-child {
-  overflow: hidden;
-  max-width: 100%;
-  margin: 0;
-}
-
 #carousel {
   display: flex;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
   transition: transform 0.5s;
 }
 
 .slide {
   list-style: none;
-  width: 100%;
-  flex-shrink: 0;
+  width: calc(100% / 3);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.service-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  background-color: var(--main-grey);
+  color: var(--grey-white);
+  text-align: left;
+  padding: 15px;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+}
+
+.service-item h3 {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.service-item p {
+  margin: 5px 0;
+}
+
+.service-item .btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: var(--orange);
+  color: var(--grey-white);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: auto;
 }
 
 #controls {
   position: relative;
   width: 100%;
-  margin: 20px auto 0;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 #controls span {
@@ -72,60 +92,9 @@
   opacity: 1;
 }
 
-.service-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 90%;
-  padding: 15px;
-  text-align: left;
-  background-color: var(--main-grey);
-  color: var(--grey-white);
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  margin: 0 auto 20px;
-}
-
-.service-item img {
-  width: 100%;
-  height: auto;
-}
-
-.service-item h3 {
-  margin-top: 10px;
-  font-size: 1em;
-  flex-shrink: 0;
-}
-
-.service-item p {
-  margin: 5px 0;
-  flex-grow: 1;
-}
-
-.service-item .btn {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: var(--orange);
-  color: var(--grey-white);
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-@media (min-width: 768px) {
-  #carousel-container {
-    width: 600px;
-    height: 500px;
-  }
-
-  #controls {
-    width: 700px;
-  }
-
-  .service-item {
-    width: 80%;
-    height: 80%;
+@media (max-width: 768px) {
+  .slide {
+    width: 100%;
   }
 
   .service-item h3 {

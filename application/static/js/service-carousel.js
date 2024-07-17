@@ -2,13 +2,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var carousel = document.getElementById('carousel');
     var slides = document.getElementsByClassName('slide');
     var amount = slides.length;
-    var moveOffset = document.getElementById('carousel-container').offsetWidth;
+    var moveOffset = document.getElementById('carousel-container').offsetWidth / 3;
 
-    for (var i = 0; i < amount; i++) {
-        slides[i].style.width = moveOffset + 'px';
+    function updateWidths() {
+        for (var i = 0; i < amount; i++) {
+            slides[i].style.width = moveOffset + 'px';
+        }
+        carousel.style.width = (amount * moveOffset) + 'px';
     }
 
-    document.getElementById('carousel').style.width = (amount * moveOffset) + 'px';
+    window.addEventListener('resize', function() {
+        moveOffset = document.getElementById('carousel-container').offsetWidth / 3;
+        updateWidths();
+    });
+
+    updateWidths();
 
     document.getElementById('prev').addEventListener('click', prev, true);
     document.getElementById('next').addEventListener('click', next, true);
