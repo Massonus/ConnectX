@@ -1,44 +1,40 @@
-<section class="team">
+<section class="team-section">
     <div class="team-container">
         <h3 class="center-block-title">TEAM</h3>
         <h3 class="team-title">Quick Fixes, Lasting Solutions.</h3>
-        <p class="team-subtitle">We hire only the best tech experts to ensure the best possible quality of our
-            services.</p>
-        <div class="carousel">
-            <div class="carousel-button carousel-button--left">&lt;</div>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="carousel-item">
-                        <img src="{{ url_for('static', filename='img/people/dean.png') }}" alt="Dean Elgrad" class="carousel-image">
-                        <h3 class="carousel-name">Dean Elgrad</h3>
-                        <p class="carousel-text">Dean is a seasoned software guru with a knack for troubleshooting complex issues.</p>
-                        <p class="carousel-text">With 8 years in the industry, he's your go-to for all software-related concerns.</p>
-                        <div class="carousel-socials">
+        <p class="team-subtitle">We hire only the best tech experts to ensure the best possible quality of our services.</p>
+        <div class="team-carousel">
+            <button id="team-carousel-button-left" class="team-carousel-button team-carousel-button--left">&lt;</button>
+            <div class="team-carousel-container">
+                <div class="team-carousel-track">
+                    <div class="team-carousel-item">
+                        <img src="{{ url_for('static', filename='img/people/dean.png') }}" alt="Dean Elgrad" class="team-carousel-image">
+                        <h3 class="team-carousel-name">Dean Elgrad</h3>
+                        <p class="team-carousel-text">Dean is a seasoned software guru with a knack for troubleshooting complex issues.</p>
+                        <p class="team-carousel-text">With 8 years in the industry, he's your go-to for all software-related concerns.</p>
+                        <div class="team-carousel-socials">
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{ url_for('static', filename='img/people/sam.png') }}" alt="Sam Kirth"
-                             class="carousel-image">
-                        <h3 class="carousel-name">Sam Kirth</h3>
-                        <p class="carousel-text">Sam's expertise lies in water damage restoration, honed over 6 years of
-                            hands-on experience.</p>
-                        <p class="carousel-text">His meticulous approach ensures devices are rescued from the depths
-                            effectively.</p>
-                        <div class="carousel-socials">
+                    <div class="team-carousel-item">
+                        <img src="{{ url_for('static', filename='img/people/sam.png') }}" alt="Sam Kirth" class="team-carousel-image">
+                        <h3 class="team-carousel-name">Sam Kirth</h3>
+                        <p class="team-carousel-text">Sam's expertise lies in water damage restoration, honed over 6 years of hands-on experience.</p>
+                        <p class="team-carousel-text">His meticulous approach ensures devices are rescued from the depths effectively.</p>
+                        <div class="team-carousel-socials">
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{ url_for('static', filename='img/people/james.png') }}" alt="James Smith" class="carousel-image">
-                        <h3 class="carousel-name">James Smith</h3>
-                        <p class="carousel-text">With a decade of experience, James specializes in intricate hardware repairs.</p>
-                        <p class="carousel-text">His attention to detail and passion for technology ensure top-notch results for every device.</p>
-                        <div class="carousel-socials">
+                    <div class="team-carousel-item">
+                        <img src="{{ url_for('static', filename='img/people/james.png') }}" alt="James Smith" class="team-carousel-image">
+                        <h3 class="team-carousel-name">James Smith</h3>
+                        <p class="team-carousel-text">With a decade of experience, James specializes in intricate hardware repairs.</p>
+                        <p class="team-carousel-text">His attention to detail and passion for technology ensure top-notch results for every device.</p>
+                        <div class="team-carousel-socials">
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/facebook-icon.svg') }}" alt="Facebook"></a>
                             <a href="#"><img src="{{ url_for('static', filename='img/social-icons/twitter-icon.svg') }}" alt="Twitter"></a>
@@ -46,8 +42,8 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-button carousel-button--right">&gt;</div>
+            <button id="team-carousel-button-right" class="team-carousel-button team-carousel-button--right">&gt;</button>
         </div>
     </div>
 </section>
-<script src="{{ url_for('static', filename='js/about-us-carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='js/team-carousel.js') }}"></script>

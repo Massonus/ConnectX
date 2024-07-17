@@ -1,4 +1,4 @@
-.team {
+.team-section {
     text-align: center;
     padding: 20px;
     background-color: var(--dark);
@@ -22,14 +22,14 @@
     margin-bottom: 20px;
 }
 
-.carousel {
+.team-carousel {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-.carousel-button {
+.team-carousel-button {
     background-color: var(--dark);
     color: var(--grey-white);
     border: none;
@@ -42,25 +42,25 @@
     z-index: 1000;
 }
 
-.carousel-button--left {
+.team-carousel-button--left {
     left: 10px;
 }
 
-.carousel-button--right {
+.team-carousel-button--right {
     right: 10px;
 }
 
-.carousel-container {
+.team-carousel-container {
     overflow: hidden;
     width: 100%;
 }
 
-.carousel-track {
+.team-carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
+.team-carousel-item {
     color: var(--grey-white);
     background-color: var(--light-black);
     min-width: 100%;
@@ -68,26 +68,26 @@
     padding: 0;
 }
 
-.carousel-image {
+.team-carousel-image {
     border-radius: 50%;
     margin-bottom: 20px;
     max-width: 160px;
 }
 
-.carousel-name {
+.team-carousel-name {
     color: var(--orange);
     margin-bottom: 10px;
 }
 
-.carousel-text {
+.team-carousel-text {
     margin-bottom: 20px;
 }
 
-.carousel-socials a {
+.team-carousel-socials a {
     margin: 0 10px;
 }
 
-.carousel-socials img {
+.team-carousel-socials img {
     width: 24px;
     height: 24px;
 }
@@ -97,11 +97,11 @@
         font-size: 2.5em;
     }
 
-    .carousel-container {
+    .team-carousel-container {
         width: 80%;
     }
 
-    .carousel-image {
+    .team-carousel-image {
         max-width: 200px;
     }
 }
