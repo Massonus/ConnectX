@@ -1,13 +1,13 @@
 #testimonial-block {
     text-align: center;
-    margin: 40px auto; /* Збільшення зовнішніх відступів */
+    margin: 40px auto;
     font-family: 'Poppins', sans-serif;
-    padding: 0 30px; /* Збільшення внутрішніх відступів */
+    padding: 0 30px;
     position: relative;
 }
 
 #testimonial-carousel-container {
-    width: 80%; /* Зменшення ширини для адаптації до екрану */
+    width: 80%;
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -15,7 +15,7 @@
 }
 
 .limited-width {
-    max-width: 1400px; /* Збільшення максимальної ширини */
+    max-width: 1400px;
 }
 
 #testimonial-carousel {
@@ -23,41 +23,47 @@
     transition: transform 0.5s;
 }
 
+.testimonial-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .slide {
     display: flex;
     list-style: none;
-    width: 100%; /* Зміна ширини слайда на 100% */
+    width: 100%;
     padding: 15px;
     box-sizing: border-box;
 }
 
 .testimonial-item {
     display: flex;
-    flex-direction: row; /* Розташування зображення та тексту в рядок */
-    align-items: center; /* Вирівнювання по центру */
-    background-color: #f9f9f9;
-    color: #333;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--main-grey);
     text-align: left;
-    padding: 30px; /* Збільшення внутрішніх відступів */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додавання тіні */
-    border-radius: 10px; /* Закруглення кутів */
+    padding: 30px;
+    box-shadow: 0 4px 8px var(--shadow);
+    border-radius: 10px;
 }
 
 .testimonial-item .slide-text, .testimonial-item .slide-image {
-    width: 50%; /* Встановлення однакової ширини для тексту та зображення */
-    padding: 0 15px; /* Внутрішні відступи для зручного читання */
+    width: 50%;
+    padding: 0 15px;
 }
 
 .testimonial-item img {
-    width: 100%; /* Ширина зображення відповідає ширині контейнера */
+    width: 100%;
     height: auto;
-    margin-left: 20px; /* Відступ між текстом та зображенням */
+    margin-left: 20px;
 }
 
 .testimonial-item blockquote {
     margin: 0;
     font-style: italic;
-    font-size: 1.1em; /* Збільшення розміру шрифту */
+    font-size: 1.1em;
 }
 
 .testimonial-item cite {
@@ -102,26 +108,59 @@
     right: 50px;
 }
 
+.contact-us-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--grey-white);
+    border-radius: 10px;
+}
+
+.call-us {
+    color: var(--orange);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.contact-us {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--main-grey);
+    margin: 10px 0;
+}
+
+.schedule-repair {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.schedule-repair a {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.schedule-repair a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .slide {
         width: 100%;
     }
 
-    #testimonial-controls span img {
-        filter: invert(100%);
-    }
-
     .testimonial-item {
-        flex-direction: column; /* Вертикальне розташування для мобільних пристроїв */
-        align-items: flex-start; /* Вирівнювання тексту та зображення по початку */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .testimonial-item .slide-text, .testimonial-item .slide-image {
-        width: 100%; /* Ширина тексту та зображення відповідає ширині контейнера */
+        width: 100%;
     }
 
     .testimonial-item img {
-        width: 100%; /* Збільшення ширини зображення на мобільних пристроях */
-        margin: 20px 0 0 0; /* Відступи зверху та знизу */
+        width: 100%;
+        margin: 20px 0 0 0;
     }
 }
