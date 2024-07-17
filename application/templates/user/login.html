@@ -5,14 +5,27 @@
 {% endblock %}
 
 {% block content %}
-<div class="auth-container">
-    <h3 class="auth-title">Login</h3>
-    <form action="{{ url_for('user.login') }}" method="post" class="auth-form">
-        <div class="auth-msg">{{ msg }}</div>
-        <input id="username" name="username" type="text" placeholder="Enter Your Username" class="auth-textbox"/>
-        <input id="password" name="password" type="password" placeholder="Enter Your Password" class="auth-textbox"/>
-        <input type="submit" class="auth-btn" value="Sign In">
-    </form>
-    <p class="auth-bottom">Don't have an account? <a class="auth-link" href="{{ url_for('user.register') }}"> Sign Up here</a></p>
-</div>
+    <header class="custom-header">
+        <div class="custom-header-content">
+            <h3 class="custom-header-title">Login.</h3>
+            <nav class="breadcrumb">
+                <a href="{{ url_for('main.index') }}" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Login</span>
+            </nav>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <h3 class="auth-title">Login</h3>
+        <form action="{{ url_for('user.login') }}" method="post" class="auth-form">
+            <div class="auth-msg">{{ msg }}</div>
+            <input id="username" name="username" type="text" placeholder="Enter Your Username" class="auth-textbox"/>
+            <input id="password" name="password" type="password" placeholder="Enter Your Password"
+                   class="auth-textbox"/>
+            <input type="submit" class="auth-btn" value="Sign In">
+        </form>
+        <p class="auth-bottom">Don't have an account? <a class="auth-link" href="{{ url_for('user.register') }}"> Sign
+            Up here</a></p>
+    </div>
 {% endblock %}

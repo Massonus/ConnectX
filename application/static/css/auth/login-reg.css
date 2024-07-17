@@ -1,4 +1,5 @@
 @import url('../global.css');
+@import url('../sub-header.css');
 
 .auth-container {
     max-width: 600px;
