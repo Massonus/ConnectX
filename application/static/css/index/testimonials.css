@@ -1,0 +1,127 @@
+#testimonial-block {
+    text-align: center;
+    margin: 40px auto; /* Збільшення зовнішніх відступів */
+    font-family: 'Poppins', sans-serif;
+    padding: 0 30px; /* Збільшення внутрішніх відступів */
+    position: relative;
+}
+
+#testimonial-carousel-container {
+    width: 80%; /* Зменшення ширини для адаптації до екрану */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.limited-width {
+    max-width: 1400px; /* Збільшення максимальної ширини */
+}
+
+#testimonial-carousel {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.slide {
+    display: flex;
+    list-style: none;
+    width: 100%; /* Зміна ширини слайда на 100% */
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.testimonial-item {
+    display: flex;
+    flex-direction: row; /* Розташування зображення та тексту в рядок */
+    align-items: center; /* Вирівнювання по центру */
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+    padding: 30px; /* Збільшення внутрішніх відступів */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додавання тіні */
+    border-radius: 10px; /* Закруглення кутів */
+}
+
+.testimonial-item .slide-text, .testimonial-item .slide-image {
+    width: 50%; /* Встановлення однакової ширини для тексту та зображення */
+    padding: 0 15px; /* Внутрішні відступи для зручного читання */
+}
+
+.testimonial-item img {
+    width: 100%; /* Ширина зображення відповідає ширині контейнера */
+    height: auto;
+    margin-left: 20px; /* Відступ між текстом та зображенням */
+}
+
+.testimonial-item blockquote {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1em; /* Збільшення розміру шрифту */
+}
+
+.testimonial-item cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#testimonial-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#testimonial-controls span {
+    width: 60px;
+    cursor: pointer;
+    opacity: 0.7;
+    pointer-events: all;
+    transition: opacity 0.3s;
+}
+
+#testimonial-controls span:hover {
+    opacity: 1;
+}
+
+#testimonial-controls span img {
+    width: 100%;
+}
+
+#testimonial-prev {
+    left: 50px;
+}
+
+#testimonial-next {
+    right: 50px;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        width: 100%;
+    }
+
+    #testimonial-controls span img {
+        filter: invert(100%);
+    }
+
+    .testimonial-item {
+        flex-direction: column; /* Вертикальне розташування для мобільних пристроїв */
+        align-items: flex-start; /* Вирівнювання тексту та зображення по початку */
+    }
+
+    .testimonial-item .slide-text, .testimonial-item .slide-image {
+        width: 100%; /* Ширина тексту та зображення відповідає ширині контейнера */
+    }
+
+    .testimonial-item img {
+        width: 100%; /* Збільшення ширини зображення на мобільних пристроях */
+        margin: 20px 0 0 0; /* Відступи зверху та знизу */
+    }
+}

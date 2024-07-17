@@ -12,24 +12,76 @@
     </div>
     <div class="cta-services">
         <div class="cta-service">
-            <img src="{{ url_for('static', filename='img/cta-images/warranty-service.png') }}" alt="Warranty Service" class="service-icon">
+            <img src="{{ url_for('static', filename='img/cta-images/warranty-service.png') }}" alt="Warranty Service"
+                 class="service-icon">
             <h4 class="service-title">Warranty Service</h4>
             <p class="service-description">Enjoy peace of mind with our warranty service.</p>
         </div>
         <div class="cta-service">
-            <img src="{{ url_for('static', filename='img/cta-images/quick-repairs.png') }}" alt="Quick Repairs" class="service-icon">
+            <img src="{{ url_for('static', filename='img/cta-images/quick-repairs.png') }}" alt="Quick Repairs"
+                 class="service-icon">
             <h4 class="service-title">Quick Repairs</h4>
             <p class="service-description">Swift turnaround times for efficient repairs.</p>
         </div>
         <div class="cta-service">
-            <img src="{{ url_for('static', filename='img/cta-images/free-diagnostics.png') }}" alt="Free Diagnostics" class="service-icon">
+            <img src="{{ url_for('static', filename='img/cta-images/free-diagnostics.png') }}" alt="Free Diagnostics"
+                 class="service-icon">
             <h4 class="service-title">Free Diagnostics</h4>
             <p class="service-description">We offer complimentary device assessments.</p>
         </div>
         <div class="cta-service">
-            <img src="{{ url_for('static', filename='img/cta-images/customer-service.png') }}" alt="Customer Service" class="service-icon">
+            <img src="{{ url_for('static', filename='img/cta-images/customer-service.png') }}" alt="Customer Service"
+                 class="service-icon">
             <h4 class="service-title">Customer Service</h4>
             <p class="service-description">Experience exceptional support and assistance.</p>
         </div>
     </div>
 </section>
+
+<div id="testimonial-block" class="testimonial-section">
+    <div id="testimonial-carousel-container" class="limited-width">
+        <ul id="testimonial-carousel" class="animate">
+            <li class="slide testimonial-item">
+                <div class="slide-text">
+                    <p>“TechPro is nothing short of amazing! My phone suffered water damage, and I was worried it was
+                        beyond repair. However, the professional team at TechPro worked their magic and restored my
+                        device to its former glory. They were efficient, communicative, and provided top-notch
+                        service.”</p>
+                    <cite>AMANDA WELSH</cite>
+                </div>
+                <div class="slide-image">
+                    <img src="{{ url_for('static', filename='img/testimonials/amanda.png') }}" alt="Amanda Welsh">
+                </div>
+            </li>
+            <li class="slide testimonial-item">
+                <div class="slide-text">
+                    <p>“I was in a rush with a cracked screen, and TechPro truly saved me! Their quick repair service
+                        had my phone looking brand new in no time. The staff was incredibly friendly and knowledgeable,
+                        answering my questions with patience. I highly recommend their services to anyone in need of
+                        reliable mobile repairs.”</p>
+                    <cite>JACK PETERSON</cite>
+                </div>
+                <div class="slide-image">
+                    <img src="{{ url_for('static', filename='img/testimonials/jack.png') }}" alt="Jack Peterson">
+                </div>
+            </li>
+            <li class="slide testimonial-item">
+                <div class="slide-text">
+                    <p>“I can't thank TechPro enough for their exceptional service! When my phone started acting up, I
+                        was worried about the potential costs of repairs. However, the free diagnostics put my mind at
+                        ease. They quickly identified the issue and provided a transparent breakdown of the repair
+                        process and costs involved.”</p>
+                    <cite>SUSAN TIVOLI</cite>
+                </div>
+                <div class="slide-image">
+                    <img src="{{ url_for('static', filename='img/testimonials/susan.png') }}" alt="Susan Tivoli">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="{{ url_for('static', filename='js/testimonial-carousel.js') }}"></script>
+    <div id="testimonial-controls">
+        <span id="testimonial-prev"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/prev.png" alt="Previous"></span>
+        <span id="testimonial-next"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/next.png" alt="Next"></span>
+    </div>
+</div>

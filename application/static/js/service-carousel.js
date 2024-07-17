@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     var carousel = document.getElementById('carousel');
     var slides = document.getElementsByClassName('slide');
     var amount = slides.length;
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('next').addEventListener('click', next, true);
 
     function prev() {
-        carousel.insertBefore(carousel.children[amount-1], carousel.children[0]);
+        carousel.insertBefore(carousel.children[amount - 1], carousel.children[0]);
         carousel.style.transition = 'none';
         carousel.style.transform = 'translateX(-' + moveOffset + 'px)';
-        setTimeout(function() {
+        setTimeout(function () {
             carousel.style.transition = 'transform 0.5s';
             carousel.style.transform = 'translateX(0)';
         }, 20);
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function next() {
         carousel.style.transition = 'transform 0.5s';
         carousel.style.transform = 'translateX(-' + moveOffset + 'px)';
-        setTimeout(function() {
+        setTimeout(function () {
             carousel.appendChild(carousel.children[0]);
             carousel.style.transition = 'none';
             carousel.style.transform = 'translateX(0)';
