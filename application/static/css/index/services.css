@@ -1,11 +1,33 @@
+#service-block {
+  text-align: center;
+  margin: 20px auto;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 15px;
+}
+
+#service-block h3.center-block-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#service-block h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#service-block strong {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
 #carousel-container {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
   position: relative;
-  margin: 50px auto 0;
-  border: 10px solid #000;
+  margin: 0 auto;
+  overflow: hidden;
   border-radius: 10px;
-  overflow: hidden; /* Додаємо overflow: hidden для обрізання зайвих елементів */
 }
 
 #carousel-container > div:first-child {
@@ -16,16 +38,16 @@
 
 #carousel {
   display: flex;
-  width: 100%; /* Змінюємо ширину каруселі на 100% від контейнера */
-  height: 100%; /* Змінюємо висоту каруселі на 100% від контейнера */
+  width: 100%;
+  height: auto;
   padding: 0;
   margin: 0;
-  transition: transform 0.5s; /* Додаємо плавний перехід */
+  transition: transform 0.5s;
 }
 
 .slide {
   list-style: none;
-  width: 100%; /* Змінюємо ширину слайда на 100% від контейнера */
+  width: 100%;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -33,11 +55,11 @@
 }
 
 #controls {
-  position: absolute;
-  width: 100%; /* Додаємо ширину контролів на 100% від контейнера */
-  top: calc(50% - 25px);
+  position: relative;
+  width: 100%;
+  margin: 20px auto 0;
   display: flex;
-  justify-content: space-between; /* Додаємо розміщення контролів по краях */
+  justify-content: space-between;
 }
 
 #controls span {
@@ -54,26 +76,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 80%; /* Змінюємо ширину елементів всередині каруселі */
-  height: 80%; /* Змінюємо висоту елементів всередині каруселі */
+  width: 90%;
   padding: 15px;
-  border: 1px solid var(--light-white);
-  border-radius: 5px;
   text-align: left;
   background-color: var(--main-grey);
   color: var(--grey-white);
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  margin: 0 auto 20px;
 }
 
 .service-item img {
   width: 100%;
-  height: 360px;
+  height: auto;
 }
 
 .service-item h3 {
   margin-top: 10px;
-  font-size: 1.2em;
+  font-size: 1em;
   flex-shrink: 0;
 }
 
@@ -91,4 +111,28 @@
   border-radius: 5px;
   margin-top: auto;
   align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+  #carousel-container {
+    width: 500px;
+    height: 500px;
+  }
+
+  #controls {
+    width: 500px;
+  }
+
+  .service-item {
+    width: 80%;
+    height: 80%;
+  }
+
+  .service-item h3 {
+    font-size: 1.2em;
+  }
+
+  .service-item img {
+    height: 370px;
+  }
 }
