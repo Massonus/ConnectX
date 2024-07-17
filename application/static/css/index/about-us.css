@@ -46,7 +46,7 @@
 }
 
 .about-us-button:hover {
-    background-color: var(--dark);
+    background-color: var(--quote-button-hover);
 }
 
 @media (max-width: 768px) {

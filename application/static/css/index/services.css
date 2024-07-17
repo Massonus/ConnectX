@@ -79,6 +79,10 @@
   margin-top: auto;
 }
 
+.service-item .btn:hover {
+    background-color: var(--quote-button-hover);
+}
+
 #controls {
   position: absolute;
   top: 50%;

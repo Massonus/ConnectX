@@ -43,6 +43,10 @@
     font-size: 1em;
 }
 
+.cta-button:hover {
+    background-color: var(--quote-button-hover);
+}
+
 .cta-services {
     display: flex;
     justify-content: space-around;
