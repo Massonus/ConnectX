@@ -239,6 +239,7 @@ body {
     margin-bottom: 10px;
     color: var(--grey-white);
     border-radius: 5px;
+    resize: vertical;
 }
 
 .quote-form input::placeholder, .quote-form textarea::placeholder {
