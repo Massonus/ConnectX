@@ -1,75 +1,94 @@
-.service-section {
-    text-align: center;
-    padding: 50px 0;
+#carousel-container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: 50px auto 0;
+  border: 10px solid #000;
+  border-radius: 10px;
+  overflow: hidden; /* Додаємо overflow: hidden для обрізання зайвих елементів */
 }
 
-.service-section p {
-    color: var(--orange);
+#carousel-container > div:first-child {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0;
 }
 
-.service-section h2 {
-    color: var(--dark);
+#carousel {
+  display: flex;
+  width: 100%; /* Змінюємо ширину каруселі на 100% від контейнера */
+  height: 100%; /* Змінюємо висоту каруселі на 100% від контейнера */
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s; /* Додаємо плавний перехід */
 }
 
-.service-section strong {
-    color: var(--light-grey);
+.slide {
+  list-style: none;
+  width: 100%; /* Змінюємо ширину слайда на 100% від контейнера */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 100%;
-    overflow-x: hidden;
+#controls {
+  position: absolute;
+  width: 100%; /* Додаємо ширину контролів на 100% від контейнера */
+  top: calc(50% - 25px);
+  display: flex;
+  justify-content: space-between; /* Додаємо розміщення контролів по краях */
+}
+
+#controls span {
+  width: 50px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+#controls span:hover {
+  opacity: 1;
 }
 
 .service-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 300px;
-    height: 450px;
-    padding: 15px;
-    border: 1px solid var(--light-white);
-    border-radius: 5px;
-    text-align: left;
-    background-color: var(--main-grey);
-    color: var(--grey-white);
-    box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%; /* Змінюємо ширину елементів всередині каруселі */
+  height: 80%; /* Змінюємо висоту елементів всередині каруселі */
+  padding: 15px;
+  border: 1px solid var(--light-white);
+  border-radius: 5px;
+  text-align: left;
+  background-color: var(--main-grey);
+  color: var(--grey-white);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .service-item img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: 360px;
 }
 
 .service-item h3 {
-    margin-top: 10px;
-    font-size: 1.2em;
-    flex-shrink: 0;
+  margin-top: 10px;
+  font-size: 1.2em;
+  flex-shrink: 0;
 }
 
 .service-item p {
-    margin: 5px 0;
-    flex-grow: 1;
+  margin: 5px 0;
+  flex-grow: 1;
 }
 
 .service-item .btn {
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: var(--orange);
-    color: var(--grey-white);
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: auto;
-    align-self: flex-start;
-}
-
-@media (max-width: 768px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: var(--orange);
+  color: var(--grey-white);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: auto;
+  align-self: flex-start;
 }
