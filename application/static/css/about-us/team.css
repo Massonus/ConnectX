@@ -10,11 +10,6 @@
     margin: 0 auto;
 }
 
-.team-heading {
-    color: var(--orange);
-    margin-bottom: 10px;
-}
-
 .team-title {
     color: var(--grey-white);
     font-size: 2em;

@@ -20,14 +20,8 @@
     margin: 0.5em 0;
 }
 
-.welcome-subtitle {
-    font-size: 1.2em;
-    margin: 0.5em 0;
-    color: var(--orange);
-}
-
 .welcome-text {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 0.5em 0;
 }
 
