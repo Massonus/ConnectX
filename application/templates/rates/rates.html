@@ -1,36 +1,46 @@
 {% extends 'base.html' %}
 
 {% block links %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rates-page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rates-page.css') }}">
 {% endblock %}
 
 {% block content %}
-{% if session.is_admin %}
-<button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
-{% endif %}
-
-<div class="rates-container">
-    {% for rate in rates %}
-    <div class="tariff-container">
-        <div class="tariff-card">
-            <h2>{{ rate.name }}</h2>
-            <p><strong>Home Internet</strong><br>Up to {{ rate.speed }} Mbps</p>
-            <p><strong>Superpower:</strong></p>
-            <div class="superpower-description">
-                {% if "Consistent Speed" in rate.superpower %}
-                <span>📈</span> <span>{{ rate.superpower }}}</span>
-                {% elif "Enhanced Stability" in rate.superpower %}
-                <span>🔒</span> <span>{{ rate.superpower }}}</span>
-                {% elif "Super Speed" in rate.superpower %}
-                <span>⚡</span> <span>{{ rate.superpower }}</span>
-                {% endif %}
-            </div>
-            <p class="price">${{ rate.price }} per month</p>
-            <p class="condition">Information</p>
-            <p class="description">{{ rate.description }}</p>
-            <button><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Обрати тариф</a></button>
+    <header class="custom-header">
+        <div class="custom-header-content">
+            <h3 class="custom-header-title">Rates</h3>
+            <nav class="breadcrumb">
+                <a href="{{ url_for('main.index') }}" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Rates</span>
+            </nav>
         </div>
+    </header>
+    {% if session.is_admin %}
+        <button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
+    {% endif %}
+
+    <div class="rates-container">
+        {% for rate in rates %}
+            <div class="tariff-container">
+                <div class="tariff-card">
+                    <h2>{{ rate.name }}</h2>
+                    <p><strong>Home Internet</strong><br>Up to {{ rate.speed }} Mbps</p>
+                    <p><strong>Superpower:</strong></p>
+                    <div class="superpower-description">
+                        {% if "Consistent Speed" in rate.superpower %}
+                            <span>📈</span> <span>{{ rate.superpower }}}</span>
+                        {% elif "Enhanced Stability" in rate.superpower %}
+                            <span>🔒</span> <span>{{ rate.superpower }}}</span>
+                        {% elif "Super Speed" in rate.superpower %}
+                            <span>⚡</span> <span>{{ rate.superpower }}</span>
+                        {% endif %}
+                    </div>
+                    <p class="price">${{ rate.price }} per month</p>
+                    <p class="condition">Information</p>
+                    <p class="description">{{ rate.description }}</p>
+                    <button><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Обрати тариф</a></button>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 {% endblock %}
