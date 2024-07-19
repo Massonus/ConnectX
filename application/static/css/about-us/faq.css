@@ -26,7 +26,7 @@
 }
 
 .faq-item {
-    border-bottom: 1px solid var(--shadow);
+    border-bottom: 1px solid var(--box-shadow);
     padding: 1em 0;
 }
 

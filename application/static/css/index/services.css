@@ -82,7 +82,7 @@
 }
 
 .service-item .btn:hover {
-    background-color: var(--quote-button-hover);
+    background-color: var(--button-hover);
 }
 
 #controls {

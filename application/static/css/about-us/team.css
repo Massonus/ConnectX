@@ -1,7 +1,7 @@
 .team-section {
     text-align: center;
     padding: 20px;
-    background-color: var(--dark);
+    background-color: var(--pre-footer-and-dark-titles);
     width: 100%;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .team-carousel-button {
-    background-color: var(--dark);
+    background-color: var(--pre-footer-and-dark-titles);
     color: var(--grey-white);
     border: none;
     font-size: 2em;

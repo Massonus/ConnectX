@@ -45,7 +45,7 @@
     color: var(--main-grey);
     text-align: left;
     padding: 30px;
-    box-shadow: 0 4px 8px var(--shadow);
+    box-shadow: 0 4px 8px var(--box-shadow);
     border-radius: 10px;
 }
 

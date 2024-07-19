@@ -17,7 +17,7 @@
     max-width: 325px;
     background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 0 4px 6px var(--shadow);
+    box-shadow: 0 4px 6px var(--box-shadow);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -25,7 +25,7 @@
 
 .tariff-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px var(--shadow);
+    box-shadow: 0 8px 16px var(--box-shadow);
 }
 
 .tariff-card h2 {

@@ -13,7 +13,7 @@
 .service {
     background-color: var(--grey-white);
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--shadow);
+    box-shadow: 0 4px 8px var(--box-shadow);
     text-align: center;
     max-width: 100%;
     margin: 10px 0;

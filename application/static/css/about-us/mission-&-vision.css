@@ -45,7 +45,7 @@
 }
 
 .mission-vision-button:hover {
-    background-color: var(--quote-button-hover);
+    background-color: var(--button-hover);
 }
 
 @media (max-width: 768px) {

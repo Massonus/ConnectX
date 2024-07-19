@@ -121,7 +121,7 @@ body {
 
 .quote-button:hover,
 .quote-button:focus {
-    background-color: var(--quote-button-hover);
+    background-color: var(--button-hover);
 }
 
 .burger-menu {
@@ -173,7 +173,7 @@ body {
 }
 
 .pre-footer {
-    background-color: var(--dark);
+    background-color: var(--pre-footer-and-dark-titles);
     color: var(--grey-white);
     display: flex;
     padding: 20px;
@@ -257,7 +257,7 @@ body {
 }
 
 .request-quote-button:hover {
-    background-color: var(--quote-button-hover);
+    background-color: var(--button-hover);
 }
 
 @media (min-width: 1090px) {

@@ -44,7 +44,7 @@
 }
 
 .cta-button:hover {
-    background-color: var(--quote-button-hover);
+    background-color: var(--button-hover);
 }
 
 .cta-services {
