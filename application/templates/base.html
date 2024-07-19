@@ -52,11 +52,13 @@
                 <li><a href="{{ url_for('main.index', filename='main-page/news.html', _anchor='news-block') }}">News</a></li>
                 <li><a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a></li>
                 <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
+
                 {% if session.loggedin %}
                     <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
                 {% else %}
                     <li><a href="{{ url_for('user.login') }}">Login</a></li>
                 {% endif %}
+
             </ul>
             <a class="quote-button" href="#pre-footer">Get a Quote</a>
         </nav>
@@ -168,7 +170,6 @@
         document.getElementById('header-links').classList.toggle('active');
     });
 </script>
-
 
 </body>
 </html>

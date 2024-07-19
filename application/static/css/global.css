@@ -143,7 +143,7 @@ body {
 }
 
 .header-links.active {
-    max-height: 500px; /* Adjust this value based on the height of your menu */
+    max-height: 500px;
     padding: 10px 0;
 }
 
