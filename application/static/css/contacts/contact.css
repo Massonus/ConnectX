@@ -1,64 +1,77 @@
-.custom-container {
+.custom-terms {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-.custom-terms h2 {
-    color: var(--main-grey);
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
+.custom-main-content {
+    margin-top: 70px;
 }
 
-.custom-terms .intro-text,
-.custom-terms .closing-text {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.custom-terms-content {
+.custom-terms-container {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
-    justify-content: space-between;
 }
 
-.custom-column {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
+.terms-left, .terms-right {
+    width: 100%;
+    text-align: left;
+}
+
+.terms-left p, li .terms-right p, li {
+    color: var(--contact-text-grey);
+    font-size: 1.5em;
+}
+
+.terms-heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.terms-tagline {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.terms-container {
+    list-style-type: none;
+    padding: 0;
+}
+
+.terms-container li {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.terms-container li strong {
+    color: var(--light-white);
+    font-weight: bold;
+}
+
+.orange-point {
+    color: var(--orange);
 }
 
 .orange-text {
     color: var(--orange);
-}
-
-.custom-service-terms h3,
-.custom-warranty-policy h3,
-.custom-customer-satisfaction h3 {
-    color: var(--orange);
-    font-size: 24px;
+    font-size: 1.75rem;
     margin-bottom: 10px;
+    text-decoration-line: underline;
 }
 
-ul.custom-list {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-ul.custom-list li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-ul.custom-list li strong {
-    color: var(--main-grey);
-}
-
-p {
-    font-size: 16px;
+.closing-text {
+    color: var(--contact-text-grey);
+    font-size: 1.25rem;
     line-height: 1.5;
+    margin-top: 30px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .custom-terms-container {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
