@@ -1,80 +1,142 @@
 {% extends 'base.html' %}
 
 {% block links %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/contacts/contacts-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contacts/contacts-page.css') }}">
 {% endblock %}
 
 {% block content %}
-    <header class="custom-header">
-        <div class="custom-header-content">
-            <h3 class="custom-header-title">Contacts.</h3>
-            <nav class="breadcrumb">
-                <a href="{{ url_for('main.index') }}" class="breadcrumb-link">Home</a>
-                <span class="breadcrumb-separator">→</span>
-                <span class="breadcrumb-current">Contacts</span>
-            </nav>
-        </div>
-    </header>
+<header class="custom-header">
+    <div class="custom-header-content">
+        <h3 class="custom-header-title">Contacts.</h3>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('main.index') }}" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">Contacts</span>
+        </nav>
+    </div>
+</header>
 
-    <main class="custom-main-content">
-        <div class="custom-container">
-            <section class="custom-terms">
-                <h2>Terms & Warranty</h2>
+<main class="custom-main-content">
+    <section class="custom-terms">
+        <div class="custom-flex-container">
+            <div class="terms-left">
+                <h3 class="block-title">TERMS</h3>
+                <h3 class="about-us-heading">Terms & Warranty</h3>
                 <p class="intro-text">At TechPro, we prioritize your satisfaction and stand behind the quality of our
                     repairs. Here's what you need to know.</p>
-                <div class="custom-terms-content">
-                    <div class="custom-column">
-                        <div class="custom-service-terms">
-                            <h3 class="orange-text">Service Terms</h3>
-                            <ul>
-                                <li><strong>Free Diagnostics:</strong> Every repair begins with a complimentary diagnostic
-                                    assessment to identify the issue accurately.
-                                </li>
-                                <li><strong>Transparent Pricing:</strong> You'll receive a detailed quote before any repair
-                                    work begins, ensuring clarity and transparency.
-                                </li>
-                                <li><strong>Quality Parts:</strong> We use only high-quality parts in our repairs to ensure optimal performance and longevity.
-                                </li>
-                                <li><strong>Quick Repairs:</strong> Repair times vary depending on the issue.
-                                    Our technicians strive to complete repairs swiftly, typically within 1-2 days.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="custom-warranty-policy">
-                            <h3 class="orange-text">Warranty Policy</h3>
-                            <ul>
-                                <li><strong>Quality Guarantee:</strong> We stand by the quality of our repairs. If you
-                                    experience any issues related to the repaired component, simply bring your device back within 14 days for a complimentary reevaluation.
-                                </li>
-                                <li><strong>Parts Warranty:</strong> Parts used in our repairs are covered under a 3-month warranty against defects.
-                                </li>
-                                <li><strong>Exclusions:</strong> Our warranty does not cover damages resulting from
-                                    accidents, misuse, or unauthorized modifications.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="custom-column">
-                        <div class="custom-customer-satisfaction">
-                            <h3 class="orange-text">Customer Satisfaction</h3>
-                            <ul>
-                                <li><strong>Dedicated Support:</strong> Our friendly and knowledgeable staff are always
-                                    available to address any questions or concerns you may have before, during, or after the repair process.
-                                </li>
-                                <li><strong>Feedback Welcome:</strong> We value your feedback and strive to continuously
-                                    improve our services. Feel free to share your experience with us.
-                                </li>
-                            </ul>
-                        </div>
+                <div class="custom-service-terms">
+                    <h3 class="orange-text">Service Terms</h3>
+                    <ul>
+                        <li><strong>Free Diagnostics:</strong> Every repair begins with a complimentary diagnostic
+                            assessment to identify the issue accurately.
+                        </li>
+                        <li><strong>Transparent Pricing:</strong> You'll receive a detailed quote before any repair
+                            work begins, ensuring clarity and transparency.
+                        </li>
+                        <li><strong>Quality Parts:</strong> We use only high-quality parts in our repairs to ensure
+                            optimal performance and longevity.
+                        </li>
+                        <li><strong>Quick Repairs:</strong> Repair times vary depending on the issue.
+                            Our technicians strive to complete repairs swiftly, typically within 1-2 days.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="terms-right">
+                <div class="custom-column">
+                    <h3 class="orange-text">Warranty Policy</h3>
+                    <ul>
+                        <li><strong>Quality Guarantee:</strong> We stand by the quality of our repairs. If you
+                            experience any issues related to the repaired component, simply bring your device back
+                            within 14 days for a complimentary reevaluation.
+                        </li>
+                        <li><strong>Parts Warranty:</strong> Parts used in our repairs are covered under a 3-month
+                            warranty against defects.
+                        </li>
+                        <li><strong>Exclusions:</strong> Our warranty does not cover damages resulting from
+                            accidents, misuse, or unauthorized modifications.
+                        </li>
+                    </ul>
+                </div>
+                <div class="custom-column">
+                    <div class="custom-customer-satisfaction">
+                        <h3 class="orange-text">Customer Satisfaction</h3>
+                        <ul>
+                            <li><strong>Dedicated Support:</strong> Our friendly and knowledgeable staff are always
+                                available to address any questions or concerns you may have before, during, or after the
+                                repair process.
+                            </li>
+                            <li><strong>Feedback Welcome:</strong> We value your feedback and strive to continuously
+                                improve our services. Feel free to share your experience with us.
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <p class="closing-text">If you have any questions, concerns, or need expert guidance, our dedicated team is
-                    just a message or call away. Feel free to reach out for any post-repair support, device-related
-                    inquiries, or simply to share your experience. We're committed to delivering not only exceptional
-                    repairs but also unparalleled customer service. Your trust in TechPro is valued, and we're here to make
-                    your mobile repair journey smooth and stress-free. Contact us today, and let us continue to exceed your
-                    expectations!</p>
-            </section>
+            </div>
         </div>
-    </main>
+
+        <p class="closing-text">If you have any questions, concerns, or need expert guidance, our dedicated team
+            is
+            just a message or call away. Feel free to reach out for any post-repair support, device-related
+            inquiries, or simply to share your experience. We're committed to delivering not only exceptional
+            repairs but also unparalleled customer service. Your trust in TechPro is valued, and we're here to
+            make
+            your mobile repair journey smooth and stress-free. Contact us today, and let us continue to exceed
+            your
+            expectations!</p>
+
+
+    </section>
+    <div style="filter: grayscale(100%);">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21075.29423728743!2d-121.7216698679833!3d48.67849131335027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5484e4a314d33881%3A0xf787c4b2030f68cd!2sNF-1118%2C%20Washington%2098237%2C%20USA!5e0!3m2!1sen!2spl!4v1720099063177!5m2!1sen!2spl"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+    </div>
+</main>
+
+<main class="about-us-block-content">
+    <section class="about-us-block-container">
+        <div class="about-us-left">
+            <h3 class="block-title">ABOUT US</h3>
+            <h3 class="about-us-heading">We Fix Gadgets.</h3>
+            <p class="about-us-tagline">Trust TechPro – Where Tech Meets Pro!</p>
+            <p class="about-us-description">
+                At TechPro, we are dedicated to being your go-to destination for all things mobile repair in New York.
+                With years of expertise under our belt, our team of skilled technicians excels in diagnosing and
+                resolving a
+                wide array of issues plaguing your devices.
+            </p>
+            <img src="{{ url_for('static', filename='img/about-us-page/shop.png') }}" alt="Repair Shop"
+                 class="about-us-image">
+            <p class="about-us-description">
+                We understand the frustration that comes with a malfunctioning device, which is why we strive to provide
+                swift and reliable solutions that get you back to enjoying your gadgets in no time.
+            </p>
+        </div>
+        <div class="about-us-right">
+            <img src="{{ url_for('static', filename='img/about-us-page/tech.png') }}" alt="Technician"
+                 class="about-us-image">
+            <p class="about-us-description">
+                We're not just another mobile repair service – we're your trusted partners in keeping your devices
+                running smoothly.
+                With over 25 years of experience serving the New York community, our mission is simple: to provide
+                top-quality
+                repairs and exceptional customer service.
+            </p>
+            <p class="about-us-description">
+                Our team of 15 dedicated technicians brings a wealth of expertise to every repair job, ensuring that
+                your devices
+                are in capable hands. From cracked screens to water damage, battery issues to software glitches, we've
+                seen it all
+                and fixed it all.
+            </p>
+        </div>
+    </section>
+</main>
 {% endblock %}

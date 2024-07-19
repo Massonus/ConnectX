@@ -4,16 +4,58 @@
     padding: 20px;
 }
 
-.custom-terms h2 {
+.custom-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.custom-header-title {
+    font-size: 2.5rem;
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.breadcrumb-link {
     color: var(--main-grey);
-    font-size: 28px;
+    text-decoration: none;
+}
+
+.breadcrumb-separator {
+    margin: 0 5px;
+    color: var(--main-grey);
+}
+
+.breadcrumb-current {
+    color: var(--light-grey);
+}
+
+.custom-main-content {
+    padding: 20px 0;
+}
+
+.custom-flex-container {
+    display: flex;
+}
+
+.custom-terms h2 {
+    font-size: 2.5rem;
+    color: var(--orange);
     margin-bottom: 20px;
     text-align: center;
 }
 
 .custom-terms .intro-text,
 .custom-terms .closing-text {
-    font-size: 16px;
+    font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: 20px;
     text-align: center;
@@ -21,44 +63,45 @@
 
 .custom-terms-content {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .custom-column {
     flex: 1;
     min-width: 300px;
-    max-width: 600px;
 }
 
 .orange-text {
     color: var(--orange);
-}
-
-.custom-service-terms h3,
-.custom-warranty-policy h3,
-.custom-customer-satisfaction h3 {
-    color: var(--orange);
-    font-size: 24px;
+    font-size: 1.75rem;
     margin-bottom: 10px;
 }
 
-ul.custom-list {
-    list-style-type: disc;
-    padding-left: 20px;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-ul.custom-list li {
+ul li {
+    font-size: 1rem;
     margin-bottom: 10px;
-    font-size: 16px;
 }
 
-ul.custom-list li strong {
+ul li strong {
     color: var(--main-grey);
+    font-weight: bold;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.5;
+@media (max-width: 768px) {
+    .custom-terms-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-column {
+        min-width: 100%;
+    }
 }
+
