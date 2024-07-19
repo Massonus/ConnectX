@@ -77,6 +77,8 @@
   text-decoration: none;
   border-radius: 5px;
   margin-top: auto;
+  align-self: start;
+  width: auto;
 }
 
 .service-item .btn:hover {
