@@ -164,9 +164,11 @@
 
 <script>
     document.getElementById('burger-menu').addEventListener('click', function () {
+        this.classList.toggle('open');
         document.getElementById('header-links').classList.toggle('active');
     });
 </script>
+
 
 </body>
 </html>

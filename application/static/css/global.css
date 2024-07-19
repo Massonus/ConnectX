@@ -147,7 +147,7 @@ body {
     padding: 10px 0;
 }
 
-@media (min-width: 1090px) {
+@media (min-width: 1160px) {
     .header-top {
         flex-direction: row;
         justify-content: space-between;
@@ -177,7 +177,6 @@ body {
         margin: 0 20px;
     }
 }
-
 
 .pre-footer {
     background-color: var(--pre-footer-and-dark-titles);
