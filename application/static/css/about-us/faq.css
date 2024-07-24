@@ -47,10 +47,11 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    overflow-y: auto;
 }
 
 .faq-item-open .faq-answer {
-    max-height: 500px;
+    max-height: 2000px;
     padding-top: 1em;
 }
 
