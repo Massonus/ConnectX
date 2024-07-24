@@ -1,9 +1,12 @@
 import re
 
+import requests
 from flask import Blueprint
-from flask import render_template, request, session
+from flask import render_template, request, jsonify
+from flask import session
 
 import application.util.user_util as user_util
+from application.config import RECAPTCHA_SECRET_KEY, RECAPTCHA_SITE_KEY
 
 bp = Blueprint('user', __name__)
 
@@ -44,9 +47,10 @@ def logout():
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
     msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-        username = request.form['username']
-        password = request.form['password']
+    if request.method == 'POST':
+        data = request.get_json()
+        username = data.get('username')
+        password = data.get('password')
         is_username_exist = user_util.is_username_already_exists(username)
 
         if is_username_exist:
@@ -55,5 +59,15 @@ def register():
             msg = 'Username must contain only characters and numbers !'
         else:
             user_util.add_new_user(username, password, False)
-            msg = 'You have successfully registered !'
-    return render_template('user/register.html', msg=msg)
+            return jsonify({'registered': True})
+    return render_template('user/register.html', msg=msg, site_key=RECAPTCHA_SITE_KEY)
+
+
+@bp.route('/verify-captcha', methods=['POST'])
+def verify_captcha():
+    response = request.json.get('response')
+    verify_url = f'https://www.google.com/recaptcha/api/siteverify?secret={RECAPTCHA_SECRET_KEY}&response={response}'
+    verification_response = requests.post(verify_url)
+    verification_result = verification_response.json()
+    verification_result.update({'username': request.json.get('username'), 'password': request.json.get('password')})
+    return jsonify(verification_result)
