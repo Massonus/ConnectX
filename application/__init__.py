@@ -1,12 +1,16 @@
 from flask import Flask
-from application.util import user_util, rate_util
+
+from application.config import SECRET_KEY, SQLALCHEMY_DATABASE_URI
 from application.extension import db
+from application.extension import db
+from application.util import user_util, rate_util
+from application.util import user_util, rate_util
 
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'super secret key'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg://postgres:root@localhost/ConnectX'
+    app.config['SECRET_KEY'] = SECRET_KEY
+    app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 
     db.init_app(app)
     with app.app_context():
