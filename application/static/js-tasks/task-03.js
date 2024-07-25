@@ -11,25 +11,25 @@ function circleCircumference(circle) {
 
 // https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
 function giveMeFive(obj) {
-    const resultArray = [];
+    const objKeyArray = [];
     for (const objKey in obj) {
-        if (objKey.length === 5) resultArray.push(objKey);
-        if (obj[objKey].length === 5) resultArray.push(obj[objKey]);
+        if (objKey.length === 5) objKeyArray.push(objKey);
+        if (obj[objKey].length === 5) objKeyArray.push(obj[objKey]);
     }
-    return resultArray;
+    return objKeyArray;
 }
 
 // https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
 function buildFun(n) {
-    const res = [];
+    const resultArray = [];
 
     for (let i = 0; i < n; i++) {
-        res.push(function () {
+        resultArray.push(function () {
             console.log(i);
             return i;
         });
     }
-    return res;
+    return resultArray;
 }
 
 // https://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance/train/javascript
