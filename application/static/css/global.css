@@ -152,6 +152,50 @@ body {
     padding: 10px 0;
 }
 
+.day-night-toggle {
+    margin-top: 10px;
+}
+
+#toggle {
+    display: none;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    background: var(--grey-white);
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-on, .toggle-off {
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.toggle-on {
+    background: var(--grey-white);
+    color: black;
+}
+
+.toggle-off {
+    background: black;
+    color: var(--grey-white);
+}
+
+#toggle:checked + .toggle-label .toggle-on {
+    background: black;
+    color: var(--grey-white);
+}
+
+#toggle:checked + .toggle-label .toggle-off {
+    background: var(--grey-white);
+    color: black;
+}
+
 @media (min-width: 1160px) {
     .header-top {
         flex-direction: row;
