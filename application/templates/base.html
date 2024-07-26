@@ -8,6 +8,8 @@
 
     {% block links %} {% endblock %}
 
+    <script defer src="{{ url_for('static', filename='js/base.js') }}"></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
@@ -34,6 +36,17 @@
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
             </div>
+            <div class="day-night-toggle">
+                <input type="checkbox" id="toggle" />
+                <label for="toggle" class="toggle-label">
+                    <div class="toggle-slider">
+                        <span id="toggle-text" class="toggle-text">DAYMODE</span>
+                        <div class="slider-thumb">
+                            <img id="toggle-icon" src="{{ url_for('static', filename='img/sun-icon.svg') }}" alt="Icon">
+                        </div>
+                    </div>
+                </label>
+            </div>
         </div>
         <nav>
             <div class="header-logo">
@@ -58,7 +71,6 @@
                 {% else %}
                     <li><a href="{{ url_for('user.login') }}">Login</a></li>
                 {% endif %}
-
             </ul>
             <a class="quote-button" href="#quote-form">Get a Quote</a>
         </nav>
@@ -164,13 +176,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-    document.getElementById('burger-menu').addEventListener('click', function () {
-        this.classList.toggle('open');
-        document.getElementById('header-links').classList.toggle('active');
-    });
-</script>
 
 </body>
 </html>
