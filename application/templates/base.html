@@ -37,8 +37,12 @@
             <div class="day-night-toggle">
                 <input type="checkbox" id="toggle" />
                 <label for="toggle" class="toggle-label">
-                    <span class="toggle-on">DAYMODE</span>
-                    <span class="toggle-off">NIGHTMODE</span>
+                    <div class="toggle-slider">
+                        <span id="toggle-text" class="toggle-text">DAYMODE</span>
+                        <div class="slider-thumb">
+                            <img id="toggle-icon" src="{{ url_for('static', filename='img/sun-icon.svg') }}" alt="Icon">
+                        </div>
+                    </div>
                 </label>
             </div>
         </div>
@@ -176,6 +180,28 @@
         this.classList.toggle('open');
         document.getElementById('header-links').classList.toggle('active');
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('toggle');
+    const toggleIcon = document.getElementById('toggle-icon');
+    const toggleText = document.getElementById('toggle-text');
+
+    toggle.addEventListener('change', function () {
+        if (this.checked) {
+            toggleIcon.src = "{{ url_for('static', filename='img/moon-icon.svg') }}";
+            toggleText.textContent = 'NIGHTMODE';
+            toggleText.style.color = 'white'
+            toggleText.style.left = '5px';
+            toggleText.style.right = 'auto';
+        } else {
+            toggleIcon.src = "{{ url_for('static', filename='img/sun-icon.svg') }}";
+            toggleText.textContent = 'DAYMODE';
+            toggleText.style.color = 'black'
+            toggleText.style.right = '10px';
+            toggleText.style.left = 'auto';
+        }
+    });
+});
 </script>
 
 </body>

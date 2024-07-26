@@ -154,6 +154,9 @@ body {
 
 .day-night-toggle {
     margin-top: 10px;
+    position: relative;
+    width: 160px;
+    height: 60px;
 }
 
 #toggle {
@@ -161,39 +164,63 @@ body {
 }
 
 .toggle-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid var(--main-grey);
+    overflow: hidden;
+}
+
+.toggle-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    background: var(--grey-white);
-    border-radius: 50px;
+    justify-content: space-between;
     padding: 5px;
-    cursor: pointer;
-    user-select: none;
+    transition: background-color 0.3s ease;
 }
 
-.toggle-on, .toggle-off {
-    padding: 5px 10px;
-    border-radius: 50px;
-    transition: background 0.3s ease, color 0.3s ease;
+.slider-thumb {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.toggle-on {
-    background: var(--grey-white);
-    color: black;
+.toggle-text {
+    font-size: 14px;
+    color: var(--main-grey);
+    position: absolute;
+    right: 10px;
 }
 
-.toggle-off {
-    background: black;
-    color: var(--grey-white);
+#toggle-icon {
+    width: 24px;
+    height: 24px;
 }
 
-#toggle:checked + .toggle-label .toggle-on {
-    background: black;
-    color: var(--grey-white);
+#toggle:checked + .toggle-label .toggle-slider {
+    background-color: #333;
 }
 
-#toggle:checked + .toggle-label .toggle-off {
-    background: var(--grey-white);
-    color: black;
+#toggle:checked + .toggle-label .toggle-slider .slider-thumb {
+    transform: translateX(90px);
+    background-color: #333;
+}
+
+#toggle:checked + .toggle-label .toggle-slider .slider-thumb img {
+    filter: invert(1);
 }
 
 @media (min-width: 1160px) {
