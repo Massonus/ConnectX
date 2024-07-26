@@ -8,6 +8,8 @@
 
     {% block links %} {% endblock %}
 
+    <script defer src="{{ url_for('static', filename='js/base.js') }}"></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
@@ -174,38 +176,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-    document.getElementById('burger-menu').addEventListener('click', function () {
-        this.classList.toggle('open');
-        document.getElementById('header-links').classList.toggle('active');
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('toggle');
-    const toggleIcon = document.getElementById('toggle-icon');
-    const toggleText = document.getElementById('toggle-text');
-    const toggleLabel = document.querySelector('.toggle-label')
-
-    toggle.addEventListener('change', function () {
-        if (this.checked) {
-            toggleIcon.src = "{{ url_for('static', filename='img/moon-icon.svg') }}";
-            toggleText.textContent = 'NIGHTMODE';
-            toggleText.style.color = 'white'
-            toggleText.style.left = '5px';
-            toggleText.style.right = 'auto';
-            toggleLabel.style.background = 'black';
-        } else {
-            toggleIcon.src = "{{ url_for('static', filename='img/sun-icon.svg') }}";
-            toggleText.textContent = 'DAYMODE';
-            toggleText.style.color = 'black'
-            toggleText.style.right = '10px';
-            toggleText.style.left = 'auto';
-            toggleLabel.style.background = 'white';
-        }
-    });
-});
-</script>
 
 </body>
 </html>
