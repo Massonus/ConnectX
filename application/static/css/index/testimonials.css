@@ -101,11 +101,11 @@
 }
 
 #testimonial-prev {
-    left: 50px;
+    margin-left: 7%;
 }
 
 #testimonial-next {
-    right: 50px;
+    margin-right: 7%;
 }
 
 .contact-us-section {

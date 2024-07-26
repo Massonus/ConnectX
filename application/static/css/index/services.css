@@ -1,84 +1,84 @@
 #service-block {
-  text-align: center;
-  margin: 20px auto;
-  font-family: 'Poppins', sans-serif;
-  padding: 0 15px;
-  position: relative;
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 15px;
+    position: relative;
 }
 
 #service-block h3.center-block-title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 #service-block h2 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 #service-block strong {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 #carousel-container {
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
 }
 
 .limited-width {
-  max-width: 1200px;
+    max-width: 1200px;
 }
 
 #carousel {
-  display: flex;
-  transition: transform 0.5s;
+    display: flex;
+    transition: transform 0.5s;
 }
 
 .slide {
-  list-style: none;
-  width: calc(100% / 3);
-  padding: 15px;
-  box-sizing: border-box;
+    list-style: none;
+    width: calc(100% / 3);
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .service-item {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--main-grey);
-  color: var(--grey-white);
-  text-align: left;
-  padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-grey);
+    color: var(--grey-white);
+    text-align: left;
+    padding: 15px;
 }
 
 .service-item img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .service-item h3 {
-  margin-top: 10px;
-  font-size: 1em;
+    margin-top: 10px;
+    font-size: 1em;
 }
 
 .service-item p {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 .service-item .btn {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: var(--orange);
-  color: var(--grey-white);
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: auto;
-  align-self: start;
-  width: auto;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: var(--orange);
+    color: var(--grey-white);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    align-self: start;
+    width: auto;
 }
 
 .service-item .btn:hover {
@@ -86,46 +86,44 @@
 }
 
 #controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 #controls span {
-  width: 60px;
-  cursor: pointer;
-  opacity: 0.7;
-  pointer-events: all;
-  transition: opacity 0.3s;
+    width: 60px;
+    cursor: pointer;
+    opacity: 0.7;
+    pointer-events: all;
+    transition: opacity 0.3s;
 }
 
 #controls span:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 #controls span img {
-  width: 100%;
+    width: 100%;
 }
 
-#prev {
-  left: 50px;
-}
-
-#next {
-  right: 50px;
+@media (max-width: 1450px) {
+    #controls span img {
+        filter: invert(100%);
+    }
 }
 
 @media (max-width: 768px) {
-  .slide {
-    width: 100%;
-  }
+    .slide {
+        width: 100%;
+    }
 
-  #controls span img {
-    filter: invert(100%);
-  }
+    #controls span img {
+        filter: invert(100%);
+    }
 }
