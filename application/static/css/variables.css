@@ -15,3 +15,29 @@
     --sub-header: #141318;
     --style-button-grey: #333;
 }
+
+.light-theme {
+    --main-grey-background-and-shadow: #f5f5f5;
+    --dark-text: #222;
+    --light-grey: rgb(200, 200, 200);
+    --light-black-background: #ffffff;
+    --dark-background-and-titles: #f5f5f5;
+    --dark-white-text-and-borders: #000000;
+    --grey-white-background-and-text: #222;
+    --white-background-and-text: #ffffff;
+    --sub-header: #f5f5f5;
+    --style-button-grey: #ccc;
+}
+
+.dark-theme {
+    --main-grey-background-and-shadow: #222;
+    --dark-text: #121212;
+    --light-grey: rgb(78, 78, 78);
+    --light-black-background: #1c1c1c;
+    --dark-background-and-titles: #121212;
+    --dark-white-text-and-borders: #777777;
+    --grey-white-background-and-text: #f5f5f5;
+    --white-background-and-text: white;
+    --sub-header: #141318;
+    --style-button-grey: #333;
+}
