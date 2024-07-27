@@ -11,7 +11,7 @@
 }
 
 .service {
-    background-color: var(--grey-white);
+    background-color: var(--grey-white-background-and-text);
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--box-shadow);
     text-align: center;
@@ -28,12 +28,12 @@
 .service h2 {
     font-size: 1.7em;
     margin-top: 20px;
-    color: var(--main-grey);
+    color: var(--dark-text);
 }
 
 .service p {
     font-size: 1.5em;
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
 }
 
 .highlight {
@@ -47,8 +47,8 @@
 }
 
 .stat {
-    background-color: var(--main-grey);
-    color: var(--grey-white);
+    background-color: var(--main-grey-background-and-shadow);
+    color: var(--grey-white-background-and-text);
     padding: 20px;
     border-radius: 10px;
     margin: 10px 0;

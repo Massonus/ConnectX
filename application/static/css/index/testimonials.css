@@ -41,8 +41,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--white);
-    color: var(--main-grey);
+    background-color: var(--white-background-and-text);
+    color: var(--dark-text);
     text-align: left;
     padding: 30px;
     box-shadow: 0 4px 8px var(--box-shadow);
@@ -112,7 +112,7 @@
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: var(--grey-white);
+    background-color: var(--grey-white-background-and-text);
     border-radius: 10px;
 }
 
@@ -126,7 +126,7 @@
 .contact-us {
     font-size: 1.5em;
     font-weight: bold;
-    color: var(--main-grey);
+    color: var(--dark-text);
     margin: 10px 0;
 }
 

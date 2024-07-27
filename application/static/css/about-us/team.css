@@ -1,7 +1,7 @@
 .team-section {
     text-align: center;
     padding: 20px;
-    background-color: var(--pre-footer-and-dark-titles);
+    background-color: var(--dark-background-and-titles);
     width: 100%;
 }
 
@@ -11,13 +11,13 @@
 }
 
 .team-title {
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .team-subtitle {
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -30,8 +30,8 @@
 }
 
 .team-carousel-button {
-    background-color: var(--pre-footer-and-dark-titles);
-    color: var(--grey-white);
+    background-color: var(--dark-background-and-titles);
+    color: var(--grey-white-background-and-text);
     border: none;
     font-size: 2em;
     cursor: pointer;
@@ -61,8 +61,8 @@
 }
 
 .team-carousel-item {
-    color: var(--grey-white);
-    background-color: var(--light-black);
+    color: var(--grey-white-background-and-text);
+    background-color: var(--light-black-background);
     min-width: 100%;
     text-align: center;
     padding: 0;

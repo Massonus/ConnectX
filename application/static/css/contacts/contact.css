@@ -20,7 +20,7 @@
 }
 
 .terms-left p, .terms-left li .terms-right p, .terms-right li {
-    color: var(--contact-text-grey);
+    color: var(--dark-text);
     font-size: 1.5em;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .terms-container li strong {
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
     font-weight: bold;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .closing-text {
-    color: var(--contact-text-grey);
+    color: var(--dark-text);
     font-size: 1.25rem;
     line-height: 1.5;
     margin-top: 30px;

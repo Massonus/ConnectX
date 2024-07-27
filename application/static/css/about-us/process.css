@@ -18,7 +18,7 @@
 .process-tagline {
     font-size: 1.25em;
     margin-bottom: 40px;
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
 }
 
 .process-steps {
@@ -29,7 +29,7 @@
 
 .process-step {
     text-align: left;
-    background-color: var(--white);
+    background-color: var(--white-background-and-text);
     padding: 20px;
     border: 1px solid var(--box-shadow);
     border-radius: 10px;
@@ -49,7 +49,7 @@
 
 .process-step-description {
     font-size: 1.2em;
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
 }
 
 @media (min-width: 768px) {

@@ -15,7 +15,7 @@
 }
 
 .about-us-left p, .about-us-right p {
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
     font-size: 1.2em;
 }
 

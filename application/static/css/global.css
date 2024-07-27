@@ -11,12 +11,12 @@
 
 html {
     height: 100%;
-    background-color: var(--light-black);
+    background-color: var(--light-black-background);
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--grey-white);
+    background-color: var(--grey-white-background-and-text);
     text-align: center;
 }
 
@@ -44,7 +44,7 @@ body {
 .header {
     padding: 20px;
     background-image: url("../img/header-background.jpg");
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     background-size: 1700px;
     background-clip: padding-box;
     background-position-x: 40%;
@@ -55,12 +55,12 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid var(--main-grey);
+    border-bottom: 1px solid var(--main-grey-background-and-shadow);
 }
 
 .header-contacts a,
 .header-socials a {
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     text-decoration: none;
     margin: 5px;
 }
@@ -82,7 +82,7 @@ body {
 
 .logo-text {
     text-decoration: none;
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     font-size: 3.2em;
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 .header-links a {
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     text-decoration: none;
     font-size: 16px;
 }
@@ -120,7 +120,7 @@ body {
 
 .quote-button {
     background-color: var(--orange);
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
@@ -142,7 +142,7 @@ body {
 .burger-menu span {
     height: 3px;
     width: 25px;
-    background: var(--grey-white);
+    background: var(--grey-white-background-and-text);
     margin: 4px;
     border-radius: 5px;
 }
@@ -170,7 +170,7 @@ body {
     background: #fff;
     cursor: pointer;
     position: relative;
-    border: 1px solid var(--main-grey);
+    border: 1px solid var(--main-grey-background-and-shadow);
     overflow: hidden;
 }
 
@@ -199,7 +199,7 @@ body {
 
 .toggle-text {
     font-size: 14px;
-    color: var(--main-grey);
+    color: var(--dark-text);
     position: absolute;
     right: 10px;
 }
@@ -254,8 +254,8 @@ body {
 }
 
 .pre-footer {
-    background-color: var(--pre-footer-and-dark-titles);
-    color: var(--grey-white);
+    background-color: var(--dark-background-and-titles);
+    color: var(--grey-white-background-and-text);
     display: flex;
     padding: 20px;
 }
@@ -305,7 +305,7 @@ body {
 }
 
 .quote-form form {
-    background-color: var(--light-dark);
+    background-color: var(--dark-background-and-titles);
     gap: 20px;
     padding: 60px;
     display: flex;
@@ -314,17 +314,17 @@ body {
 }
 
 .quote-form input, .quote-form textarea {
-    background-color: var(--light-black);
-    border: 1px solid var(--main-grey);
+    background-color: var(--light-black-background);
+    border: 1px solid var(--main-grey-background-and-shadow);
     padding: 10px;
     margin-bottom: 10px;
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     border-radius: 5px;
     resize: vertical;
 }
 
 .quote-form input::placeholder, .quote-form textarea::placeholder {
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
 }
 
 .request-quote-button {
@@ -367,8 +367,8 @@ body {
 }
 
 .footer {
-    background-color: var(--light-black);
-    color: var(--grey-white);
+    background-color: var(--light-black-background);
+    color: var(--grey-white-background-and-text);
     padding: 40px;
 }
 
@@ -393,7 +393,7 @@ body {
 
 .footer-logo-text {
     text-decoration: none;
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     font-size: 2.5em;
 }
 
@@ -431,7 +431,7 @@ body {
 }
 
 .footer-links a {
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -444,7 +444,7 @@ body {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
-    border-top: 1px solid var(--main-grey);
+    border-top: 1px solid var(--main-grey-background-and-shadow);
     padding-top: 20px;
 }
 

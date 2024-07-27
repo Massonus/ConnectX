@@ -49,8 +49,8 @@
 .service-item {
     display: flex;
     flex-direction: column;
-    background-color: var(--main-grey);
-    color: var(--grey-white);
+    background-color: var(--main-grey-background-and-shadow);
+    color: var(--grey-white-background-and-text);
     text-align: left;
     padding: 15px;
 }
@@ -73,7 +73,7 @@
     display: inline-block;
     padding: 8px 12px;
     background-color: var(--orange);
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     text-decoration: none;
     border-radius: 5px;
     margin-top: auto;

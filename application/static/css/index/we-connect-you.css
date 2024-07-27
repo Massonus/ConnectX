@@ -22,7 +22,7 @@
     max-width: 376px;
     height: 250px;
     text-align: left;
-    background-color: var(--grey-white);
+    background-color: var(--grey-white-background-and-text);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--box-shadow);
@@ -31,13 +31,13 @@
 }
 
 .repair-service-item:hover {
-    box-shadow: 0 4px 8px var(--light-black);
+    box-shadow: 0 4px 8px var(--main-grey-background-and-shadow);
 }
 
 .repair-subtitle {
     font-size: 2em;
     font-weight: bold;
-    color: var(--pre-footer-and-dark-titles);
+    color: var(--dark-background-and-titles);
     text-align: center;
 }
 
@@ -50,13 +50,13 @@
 .repair-services-title {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: var(--pre-footer-and-dark-titles);
+    color: var(--dark-background-and-titles);
 }
 
 .repair-services-description {
     font-size: 1em;
     margin-bottom: 10px;
-    color: var(--pre-footer-and-dark-titles);
+    color: var(--dark-background-and-titles);
 }
 
 .repair-services-price {

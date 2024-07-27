@@ -1,6 +1,6 @@
 .welcome-container {
     background-image: url("../../img/header-background.jpg");
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     padding: 50px;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +37,7 @@
 }
 
 .welcome-links a {
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     text-decoration: none;
     font-size: 0.9em;
 }
@@ -55,7 +55,7 @@
 
 .stats-number {
     font-size: 3.5em;
-    color: var(--grey-white);
+    color: var(--grey-white-background-and-text);
     padding: 0;
     margin: 0;
 }

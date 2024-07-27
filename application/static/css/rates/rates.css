@@ -15,7 +15,7 @@
 .tariff-card {
     width: 100%;
     max-width: 325px;
-    background-color: var(--white);
+    background-color: var(--white-background-and-text);
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--box-shadow);
     padding: 20px;
@@ -29,13 +29,13 @@
 }
 
 .tariff-card h2 {
-    color: var(--main-grey);
+    color: var(--dark-text);
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 .tariff-card p {
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
     font-size: 16px;
     margin: 10px 0;
 }
@@ -47,8 +47,8 @@
 }
 
 .condition, .discount {
-    background-color: var(--grey-white);
-    color: var(--main-grey);
+    background-color: var(--grey-white-background-and-text);
+    color: var(--dark-text);
     padding: 5px 10px;
     border-radius: 5px;
     margin: 10px 0;
@@ -57,7 +57,7 @@
 .superpower-description {
     margin-top: 10px;
     margin-bottom: 10px;
-    color: var(--main-grey);
+    color: var(--dark-text);
 }
 
 .superpower-description span:first-child {
@@ -69,7 +69,7 @@
 button {
     background-color: var(--orange);
     border: none;
-    color: var(--white);
+    color: var(--white-background-and-text);
     padding: 10px 20px;
     margin-top: 10px;
     border-radius: 5px;
@@ -83,7 +83,7 @@ button:hover {
 }
 
 button a {
-    color: var(--white);
+    color: var(--white-background-and-text);
     text-decoration: none;
 }
 
