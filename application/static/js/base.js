@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('toggle');
     const toggleIcon = document.getElementById('toggle-icon');
     const toggleText = document.getElementById('toggle-text');
+    const servicesIcons = document.getElementsByClassName('services-icon');
     const toggleLabel = document.querySelector('.toggle-label');
     const body = document.body;
     const savedTheme = localStorage.getItem('theme');
@@ -22,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleText.style.left = '5px';
             toggleText.style.right = 'auto';
             toggleLabel.style.background = 'black';
+
+            for (const icon of servicesIcons) {
+                icon.style.filter = 'invert(0%)';
+            }
         } else {
             body.classList.add('light-theme');
             body.classList.remove('dark-theme');
@@ -32,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleText.style.right = '10px';
             toggleText.style.left = 'auto';
             toggleLabel.style.background = 'white';
+
+            for (const icon of servicesIcons) {
+                icon.style.filter = 'invert(100%)';
+            }
         }
     };
 
