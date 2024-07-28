@@ -43,7 +43,7 @@
 .about-us-button {
     display: inline-block;
     padding: 10px 20px;
-    color: var(--static-white);
+    color: var(--neutral-white-color);
     background-color: var(--highlight-color);
     text-decoration: none;
     border-radius: 5px;
@@ -51,7 +51,7 @@
 }
 
 .about-us-button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-hover-color);
 }
 
 @media (max-width: 768px) {

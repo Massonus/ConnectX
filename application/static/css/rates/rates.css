@@ -70,7 +70,7 @@
 button {
     background-color: var(--highlight-color);
     border: none;
-    color: var(--white-background-and-text);
+    color: var(--text-white-color);
     padding: 10px 20px;
     margin-top: 10px;
     border-radius: 5px;
@@ -80,11 +80,11 @@ button {
 }
 
 button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-hover-color);
 }
 
 button a {
-    color: var(--white-background-and-text);
+    color: var(--text-white-color);
     text-decoration: none;
 }
 

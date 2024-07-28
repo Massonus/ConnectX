@@ -11,13 +11,13 @@
 }
 
 .team-title {
-    color: var(--grey-white-background-and-text);
+    color: var(--background-light-grey-color);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .team-subtitle {
-    color: var(--grey-white-background-and-text);
+    color: var(--background-light-grey-color);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -70,8 +70,8 @@
 }
 
 .team-carousel-item {
-    color: var(--grey-white-background-and-text);
-    background-color: var(--light-black-background);
+    color: var(--background-light-grey-color);
+    background-color: var(--background-light-color);
     min-width: 100%;
     text-align: center;
     padding: 0;
@@ -84,7 +84,7 @@
 }
 
 .team-carousel-name {
-    color: var(--orange);
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 

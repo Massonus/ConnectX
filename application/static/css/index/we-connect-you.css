@@ -62,7 +62,7 @@
 
 .repair-services-price {
     font-weight: bold;
-    color: var(--orange);
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

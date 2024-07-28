@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--light-black-background);
+    background-color: var(--background-light-color);
 }
 
 .faq-container {
@@ -33,30 +33,30 @@
 }
 
 .faq-headline {
-    color: var(--grey-white-background-and-text);
+    color: var(--background-light-grey-color);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .faq-subheadline {
-    color: var(--grey-white-background-and-text);
+    color: var(--background-light-grey-color);
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .accordion {
-    border-top: 1px solid var(--dark-white-text-and-borders);
+    border-top: 1px solid var(--text-dark-subtle-color);
 }
 
 .accordion-item {
-    border-bottom: 1px solid var(--dark-white-text-and-borders);
+    border-bottom: 1px solid var(--text-dark-subtle-color);
 }
 
 .accordion-title {
     padding: 15px;
     cursor: pointer;
-    background-color: var(--light-black-background);
-    color: var(--grey-white-background-and-text);
+    background-color: var(--background-light-color);
+    color: var(--background-light-grey-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,8 +77,8 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     padding: 0 10px;
-    background-color: var(--light-black-background);
-    color: var(--dark-white-text-and-borders);
+    background-color: var(--background-light-color);
+    color: var(--text-dark-subtle-color);
 }
 
 .accordion-content p {

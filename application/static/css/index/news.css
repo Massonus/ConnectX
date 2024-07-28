@@ -4,8 +4,8 @@
     align-items: center;
     height: 35vh;
     margin: 0;
-    background-color: var(--orange);
-    color: var(--static-white);
+    background-color: var(--primary-color);
+    color: var(--neutral-white-color);
     position: relative;
 }
 
@@ -29,9 +29,9 @@
 }
 
 .news-card {
-    background-color: var(--orange);
+    background-color: var(--primary-color);
     padding: 20px;
-    border: 1px solid var(--static-white);
+    border: 1px solid var(--neutral-white-color);
     border-radius: 5px;
     text-align: center;
     max-height: 260px;
@@ -48,7 +48,7 @@
 }
 
 .news-card a {
-    color: var(--static-white);
+    color: var(--neutral-white-color);
     font-weight: bold;
 }
 

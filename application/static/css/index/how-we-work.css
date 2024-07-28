@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     padding: 0;
-    background-color: var(--main-grey-background-and-shadow);
-    color: var(--grey-white-background-and-text);
+    background-color: var(--background-dark-color);
+    color: var(--background-light-grey-color);
     margin: auto;
 }
 
@@ -43,13 +43,13 @@
 .step h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: var(--orange);
+    color: var(--primary-color);
 }
 
 .step p {
     font-size: 1em;
     margin: 0;
-    color: var(--grey-white-background-and-text);
+    color: var(--background-light-grey-color);
 }
 
 .how-we-work-image {

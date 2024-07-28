@@ -38,14 +38,14 @@
     background-color: var(--highlight-color);
     border: none;
     border-radius: 5px;
-    color: var(--white-background-and-text);
+    color: var(--text-white-color);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .auth-btn:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-hover-color);
 }
 
 .auth-bottom {
@@ -64,5 +64,5 @@
 
 .auth-msg {
     margin-bottom: 10px;
-    color: var(--red);
+    color: var(--error-color);
 }

@@ -72,8 +72,8 @@
 .service-item {
     display: flex;
     flex-direction: column;
-    background-color: var(--main-grey-background-and-shadow);
-    color: var(--grey-white-background-and-text);
+    background-color: var(--background-dark-color);
+    color: var(--background-light-grey-color);
     text-align: left;
     padding: 15px;
     border-radius: 10px;
@@ -99,8 +99,8 @@
 .service-item .btn {
     display: inline-block;
     padding: 8px 12px;
-    background-color: var(--orange);
-    color: var(--static-white);
+    background-color: var(--primary-color);
+    color: var(--neutral-white-color);
     text-decoration: none;
     border-radius: 5px;
     margin-top: auto;
@@ -109,7 +109,7 @@
 }
 
 .service-item .btn:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-hover-color);
 }
 
 #controls {
