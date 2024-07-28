@@ -12,7 +12,7 @@
 .custom-header-title {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: var(--white-background-and-text);
+    color: var(--text-color);
 }
 
 .breadcrumb {
@@ -29,7 +29,7 @@
 }
 
 .breadcrumb-link:hover {
-    color: var(--white-background-and-text);
+    color: var(--button-hover);
 }
 
 .breadcrumb-separator {

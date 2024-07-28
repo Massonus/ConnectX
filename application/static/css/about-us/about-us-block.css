@@ -2,12 +2,14 @@
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+    background-color: var(--background-color);
 }
 
 .about-us-block-container {
     display: flex;
     align-items: center;
     gap: 20px;
+    color: var(--text-color);
 }
 
 .about-us-left, .about-us-right {
@@ -15,24 +17,27 @@
 }
 
 .about-us-left p, .about-us-right p {
-    color: var(--dark-white-text-and-borders);
+    color: var(--subtle-text-color);
     font-size: 1.2em;
 }
 
 .about-us-heading {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 .about-us-tagline {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .about-us-description {
     font-size: 1rem;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .about-us-image {
@@ -45,4 +50,30 @@
         flex-direction: column;
         justify-content: center;
     }
+}
+
+.light-theme .about-us-block-content,
+.dark-theme .about-us-block-content {
+    background-color: var(--background-color);
+}
+
+.light-theme .about-us-block-container,
+.dark-theme .about-us-block-container {
+    color: var(--text-color);
+}
+
+.light-theme .about-us-left p,
+.dark-theme .about-us-left p,
+.light-theme .about-us-right p,
+.dark-theme .about-us-right p {
+    color: var(--subtle-text-color);
+}
+
+.light-theme .about-us-heading,
+.dark-theme .about-us-heading,
+.light-theme .about-us-tagline,
+.dark-theme .about-us-tagline,
+.light-theme .about-us-description,
+.dark-theme .about-us-description {
+    color: var(--text-color);
 }
