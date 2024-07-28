@@ -1,20 +1,22 @@
+.news-carousel-wrapper {
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
 .news-carousel-block {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 35vh;
-    margin: 0;
-    background-color: var(--primary-color);
+    margin: auto;
     color: var(--neutral-white-color);
     position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .news-carousel-container {
     width: 80%;
-    overflow: hidden;
-}
-
-.news-carousel-track-container {
     overflow: hidden;
 }
 
