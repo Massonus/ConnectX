@@ -2,6 +2,7 @@
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+    color: var(--dark-text); /* Основной цвет текста */
 }
 
 .custom-main-content {
@@ -17,52 +18,57 @@
 .terms-left, .terms-right {
     width: 100%;
     text-align: left;
+    color: var(--dark-text); /* Цвет текста внутри колонок */
 }
 
-.terms-left p, .terms-left li .terms-right p, .terms-right li {
-    color: var(--dark-text);
+.terms-left p, .terms-left li, .terms-right p, .terms-right li {
+    color: var(--text-color); /* Основной цвет текста */
     font-size: 1.5em;
 }
 
 .terms-heading {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: var(--text-color); /* Цвет заголовков */
 }
 
 .terms-tagline {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 20px;
+    color: var(--text-color); /* Цвет для подзаголовков */
 }
 
 .terms-container {
     list-style-type: none;
     padding: 0;
+    color: var(--dark-text); /* Цвет для элементов списка */
 }
 
 .terms-container li {
     font-size: 1.3rem;
     margin-bottom: 30px;
+    color: var(--text-color); /* Основной цвет текста */
 }
 
 .terms-container li strong {
-    color: var(--dark-white-text-and-borders);
+    color: var(--dark-white-text-and-borders); /* Цвет для выделенного текста */
     font-weight: bold;
 }
 
 .orange-point {
-    color: var(--orange);
+    color: var(--orange); /* Акцентный цвет */
 }
 
 .orange-text {
-    color: var(--orange);
+    color: var(--orange); /* Акцентный цвет для текста */
     font-size: 1.75rem;
     margin-bottom: 10px;
     text-decoration-line: underline;
 }
 
 .closing-text {
-    color: var(--dark-text);
+    color: var(--text-color); /* Основной цвет для заключительного текста */
     font-size: 1.25rem;
     line-height: 1.5;
     margin-top: 30px;
