@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {% block links %} {% endblock %}
@@ -137,14 +136,22 @@
             <div class="footer-section">
                 <h3 class="link-title">Useful Links</h3>
                 <ul class="footer-links">
-                    <li><a href="{{ url_for('about.index') }}">About us</a></li>
-                    <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+                    <li>
+                        <a href="{{ url_for('about.index') }}">About us</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('rate.show_rates') }}">Rate</a>
+                    </li>
+
                     <li>
                         <a href="{{ url_for('main.index', filename='main-page/cta-and-testimonials.html', _anchor='testimonial-block') }}">Testimonials</a>
                     </li>
+
                     <li>
                         <a href="{{ url_for('main.index', filename='main-page/news.html', _anchor='news-block') }}">News</a>
                     </li>
+
                     <li>
                         <a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a>
                     </li>
