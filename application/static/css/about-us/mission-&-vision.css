@@ -5,6 +5,8 @@
     justify-content: center;
     text-align: left;
     padding: 20px;
+    background-color: var(--background-color); /* Фон для всего блока */
+    color: var(--text-color); /* Основной цвет текста */
 }
 
 .mission-vision-image {
@@ -12,6 +14,7 @@
     min-width: 320px;
     max-width: 600px;
     height: auto;
+    border-radius: 10px; /* Добавим радиус для фото */
 }
 
 .mission-vision-content {
@@ -21,31 +24,34 @@
 
 .mission-vision-headline {
     font-size: 2.3em;
+    color: var(--text-color); /* Цвет заголовка */
 }
 
 .mission-vision-subheadline {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 50px;
+    color: var(--subtle-text-color); /* Цвет подзаголовка */
 }
 
 .mission-vision-description {
     font-size: 1.2em;
     margin-bottom: 50px;
+    color: var(--text-color); /* Цвет основного текста */
 }
 
 .mission-vision-button {
     display: inline-block;
     padding: 10px 20px;
-    color: var(--grey-white-background-and-text);
-    background-color: var(--orange);
+    color: var(--white-background-and-text); /* Цвет текста на кнопке */
+    background-color: var(--highlight-color); /* Фон кнопки */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .mission-vision-button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-hover); /* Цвет кнопки при наведении */
 }
 
 @media (max-width: 768px) {

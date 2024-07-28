@@ -7,18 +7,18 @@
 .process {
     text-align: center;
     padding: 40px 20px;
-
 }
 
 .process-heading {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: var(--text-color); /* Основной цвет текста */
 }
 
 .process-tagline {
     font-size: 1.25em;
     margin-bottom: 40px;
-    color: var(--dark-white-text-and-borders);
+    color: var(--subtle-text-color); /* Цвет для менее значимых текстов */
 }
 
 .process-steps {
@@ -29,15 +29,15 @@
 
 .process-step {
     text-align: left;
-    background-color: var(--white-background-and-text);
+    background-color: var(--item-background-color); /* Фон для элементов */
     padding: 20px;
-    border: 1px solid var(--box-shadow);
+    border: 1px solid var(--box-shadow-color); /* Цвет тени для рамки */
     border-radius: 10px;
     height: 220px;
 }
 
 .process-step-number {
-    color: var(--orange);
+    color: var(--highlight-color); /* Основной акцентный цвет */
     font-size: 2em;
     margin-bottom: 10px;
 }
@@ -45,11 +45,12 @@
 .process-step-title {
     font-size: 1.25em;
     margin-bottom: 10px;
+    color: var(--text-color); /* Основной цвет текста */
 }
 
 .process-step-description {
     font-size: 1.2em;
-    color: var(--dark-white-text-and-borders);
+    color: var(--subtle-text-color); /* Цвет для описаний */
 }
 
 @media (min-width: 768px) {
