@@ -71,3 +71,11 @@
         align-items: center;
     }
 }
+
+@media (max-width: 550px) {
+    .repair-services-image {
+        width: 300px;
+        height: auto;
+        padding-top: 30px;
+    }
+}
