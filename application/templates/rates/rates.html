@@ -16,7 +16,7 @@
         </div>
     </header>
     {% if session.is_admin %}
-        <button><a href="{{ url_for('rate.add_page') }}">Add</a></button>
+        <button class="rates-button"><a href="{{ url_for('rate.add_page') }}">Add</a></button>
     {% endif %}
 
     <div class="rates-container">
@@ -38,7 +38,7 @@
                     <p class="price">${{ rate.price }} per month</p>
                     <p class="condition">Information</p>
                     <p class="description">{{ rate.description }}</p>
-                    <button><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Обрати тариф</a></button>
+                    <button class="rates-button"><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Обрати тариф</a></button>
                 </div>
             </div>
         {% endfor %}

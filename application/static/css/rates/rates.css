@@ -1,14 +1,18 @@
+.rates-wrapper {
+    width: 100%;
+    background-color: var(--background-color);
+}
+
 .rates-container {
     margin: auto;
     padding: 20px;
     max-width: 1200px;
-    background-color: var(--background-color);
 }
 
 .tariff-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     margin-top: 20px;
 }
@@ -67,7 +71,7 @@
     vertical-align: middle;
 }
 
-button {
+.rates-button {
     background-color: var(--highlight-color);
     border: none;
     color: var(--text-white-color);
@@ -79,11 +83,11 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.rates-button:hover {
     background-color: var(--button-hover-color);
 }
 
-button a {
+.rates-button a {
     color: var(--text-white-color);
     text-decoration: none;
 }
