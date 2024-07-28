@@ -85,11 +85,11 @@
 }
 
 .news-carousel-button--left {
-    left: 10px;
+    left: 1%;
 }
 
 .news-carousel-button--right {
-    right: 10px;
+    right: 1%;
 }
 
 @media (max-width: 768px) {
