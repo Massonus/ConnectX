@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const accordionTitles = document.querySelectorAll(".accordion-title");
+    const ACCORDION_PADDING_CLOSED = "0 10px";
+    const ACCORDION_PADDING_OPEN = "10px";
 
     accordionTitles.forEach(title => {
         title.addEventListener("click", () => {
@@ -9,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 activeTitle.classList.remove("active");
                 const activeContent = activeTitle.nextElementSibling;
                 activeContent.style.maxHeight = null;
-                activeContent.style.padding = "0 10px";
+                activeContent.style.padding = ACCORDION_PADDING_CLOSED;
             }
 
             const content = title.nextElementSibling;
@@ -17,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (isOpen) {
                 content.style.maxHeight = null;
-                content.style.padding = "0 10px";
+                content.style.padding = ACCORDION_PADDING_CLOSED;
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
-                content.style.padding = "10px";
+                content.style.padding = ACCORDION_PADDING_OPEN;
             }
 
             title.classList.toggle("active", !isOpen);
