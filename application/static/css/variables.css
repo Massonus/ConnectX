@@ -43,7 +43,7 @@
     --background-color: #ffffff;
     --item-background-color: #f5f5f5;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
-    --item-hover-shadow-color: #e0e0e0;
+    --item-hover-shadow-color: #000000;
     --text-color: #222;
     --subtle-text-color: #666;
     --highlight-color: #ff4500;
@@ -55,7 +55,7 @@
     --main-grey-background-and-shadow: #222;
     --dark-text: #121212;
     --light-grey: rgb(78, 78, 78);
-    --light-black-background: #1c1c1c;
+    --light-black-background: #181818;
     --dark-background-and-titles: #121212;
     --dark-white-text-and-borders: #777777;
     --grey-white-background-and-text: #f5f5f5;

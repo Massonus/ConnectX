@@ -6,20 +6,17 @@
     position: relative;
 }
 
-#service-block h3.center-block-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
 #service-block h2 {
     font-size: 1.2em;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 #service-block strong {
     display: block;
     margin-bottom: 20px;
     font-weight: bold;
+    color: var(--text-color);
 }
 
 #carousel-container {
@@ -28,6 +25,7 @@
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+    background-color: var(--item-background-color);
 }
 
 .limited-width {
@@ -46,6 +44,31 @@
     box-sizing: border-box;
 }
 
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    width: 60px;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+#prev:hover,
+#next:hover {
+    opacity: 1;
+}
+
 .service-item {
     display: flex;
     flex-direction: column;
@@ -53,27 +76,31 @@
     color: var(--grey-white-background-and-text);
     text-align: left;
     padding: 15px;
+    border-radius: 10px;
 }
 
 .service-item img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .service-item h3 {
     margin-top: 10px;
     font-size: 1em;
+    color: var(--text-color);
 }
 
 .service-item p {
     margin: 5px 0;
+    color: var(--subtle-text-color);
 }
 
 .service-item .btn {
     display: inline-block;
     padding: 8px 12px;
     background-color: var(--orange);
-    color: var(--grey-white-background-and-text);
+    color: var(--static-white);
     text-decoration: none;
     border-radius: 5px;
     margin-top: auto;
@@ -97,10 +124,9 @@
 }
 
 #controls span {
-    width: 60px;
     cursor: pointer;
-    opacity: 0.7;
     pointer-events: all;
+    opacity: 0.7;
     transition: opacity 0.3s;
 }
 
@@ -112,18 +138,13 @@
     width: 100%;
 }
 
-@media (max-width: 1450px) {
-    #controls span img {
-        filter: invert(100%);
-    }
-}
-
 @media (max-width: 768px) {
     .slide {
         width: 100%;
     }
+}
 
-    #controls span img {
-        filter: invert(100%);
-    }
+.dark-theme #prev,
+.dark-theme #next {
+    filter: invert(100%);
 }

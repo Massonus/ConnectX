@@ -305,7 +305,7 @@ body {
 }
 
 .quote-form form {
-    background-color: var(--dark-background-and-titles);
+    background-color: var(--light-black-background);
     gap: 20px;
     padding: 60px;
     display: flex;
