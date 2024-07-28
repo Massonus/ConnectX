@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleLabel.style.background = 'black';
 
             for (const icon of servicesIcons) {
-                icon.style.filter = 'invert(0%)';
+                icon.style.filter = 'invert(100%)';
             }
         } else {
             body.classList.add('light-theme');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleLabel.style.background = 'white';
 
             for (const icon of servicesIcons) {
-                icon.style.filter = 'invert(100%)';
+                icon.style.filter = 'invert(0%)';
             }
         }
     };
