@@ -2,6 +2,7 @@
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+    color: var(--dark-text);
 }
 
 .custom-main-content {
@@ -17,36 +18,41 @@
 .terms-left, .terms-right {
     width: 100%;
     text-align: left;
+    color: var(--dark-text);
 }
 
-.terms-left p, .terms-left li .terms-right p, .terms-right li {
-    color: var(--contact-text-grey);
+.terms-left p, .terms-left li, .terms-right p, .terms-right li {
+    color: var(--text-color);
     font-size: 1.5em;
 }
 
 .terms-heading {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 .terms-tagline {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .terms-container {
     list-style-type: none;
     padding: 0;
+    color: var(--dark-text);
 }
 
 .terms-container li {
     font-size: 1.3rem;
     margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .terms-container li strong {
-    color: var(--light-white);
+    color: var(--dark-white-text-and-borders);
     font-weight: bold;
 }
 
@@ -62,7 +68,7 @@
 }
 
 .closing-text {
-    color: var(--contact-text-grey);
+    color: var(--text-color);
     font-size: 1.25rem;
     line-height: 1.5;
     margin-top: 30px;

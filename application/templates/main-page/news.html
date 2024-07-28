@@ -1,6 +1,5 @@
 <div id="news-block" class="news-carousel-block">
     <div class="news-carousel-container">
-        <button id="news-carousel-button-left" class="news-carousel-button news-carousel-button--left">&lt;</button>
         <div class="news-carousel-track-container">
             <div class="news-carousel-track">
                 <div class="news-carousel-item news-card">
@@ -29,7 +28,12 @@
                 </div>
             </div>
         </div>
-        <button id="news-carousel-button-right" class="news-carousel-button news-carousel-button--right">&gt;</button>
+    </div>
+    <div id="news-carousel-button-left" class="news-carousel-button news-carousel-button--left">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/prev.png" alt="Previous">
+    </div>
+    <div id="news-carousel-button-right" class="news-carousel-button news-carousel-button--right">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/next.png" alt="Next">
     </div>
     <script src="{{ url_for('static', filename='js/news-carousel.js') }}"></script>
 </div>

@@ -5,11 +5,11 @@
     height: 35vh;
     margin: 0;
     background-color: var(--orange);
-    color: var(--grey-white);
+    color: var(--static-white);
+    position: relative;
 }
 
 .news-carousel-container {
-    position: relative;
     width: 80%;
     overflow: hidden;
 }
@@ -31,7 +31,7 @@
 .news-card {
     background-color: var(--orange);
     padding: 20px;
-    border: 1px solid var(--grey-white);
+    border: 1px solid var(--static-white);
     border-radius: 5px;
     text-align: center;
     max-height: 260px;
@@ -48,7 +48,7 @@
 }
 
 .news-card a {
-    color: var(--grey-white);
+    color: var(--static-white);
     font-weight: bold;
 }
 
@@ -61,15 +61,25 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--orange);
+    background-color: transparent;
     border: none;
-    color: var(--grey-white);
-    font-size: 2em;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
     cursor: pointer;
     z-index: 1;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.news-carousel-button img {
+    filter: invert(100%);
+    width: 100%;
+    height: 100%;
+}
+
+.news-carousel-button:hover {
+    opacity: 1;
 }
 
 .news-carousel-button--left {
@@ -78,4 +88,15 @@
 
 .news-carousel-button--right {
     right: 10px;
+}
+
+@media (max-width: 768px) {
+    .news-carousel-block {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .news-card {
+        max-height: none;
+    }
 }
