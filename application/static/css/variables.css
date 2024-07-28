@@ -22,6 +22,8 @@
     --box-shadow-color: var(--box-shadow);
     --item-hover-shadow-color: var(--main-grey-background-and-shadow);
     --text-color: var(--dark-background-and-titles); /* Default text color */
+    --button-text-color: var(--grey-white-background-and-text); /* Button text color */
+    --button-background-color: var(--orange); /* Button background color */
 }
 
 .light-theme {
@@ -39,8 +41,10 @@
     --background-color: #ffffff;
     --item-background-color: #f5f5f5;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
-    --item-hover-shadow-color: #121212;
+    --item-hover-shadow-color: #e0e0e0;
     --text-color: #222;
+    --button-text-color: #ffffff;
+    --button-background-color: #ff4500;
 }
 
 .dark-theme {
@@ -60,4 +64,6 @@
     --box-shadow-color: rgba(0, 0, 0, 0.5);
     --item-hover-shadow-color: #444;
     --text-color: #f5f5f5;
+    --button-text-color: #222;
+    --button-background-color: #ff4500;
 }
