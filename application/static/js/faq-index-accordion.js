@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const content = document.querySelector('.content');
+    content.classList.add('visible');
+
     const accordionTitles = document.querySelectorAll(".accordion-title");
     const ACCORDION_PADDING_CLOSED = "0 10px";
     const ACCORDION_PADDING_OPEN = "10px";
