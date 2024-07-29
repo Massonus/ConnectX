@@ -1,17 +1,23 @@
 .news-carousel-wrapper {
     width: 100%;
     background-color: var(--primary-color);
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
 }
 
 .news-carousel-block {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: auto;
+    max-height: 500px;
     margin: auto;
     color: var(--neutral-white-color);
     position: relative;
     max-width: 1400px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .news-carousel-container {
