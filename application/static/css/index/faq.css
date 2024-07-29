@@ -27,6 +27,7 @@
     border-radius: 10px;
     display: block;
     margin: auto;
+    min-height: 600px;
 }
 
 .faq-content {
@@ -89,6 +90,12 @@
 
 .accordion-content p {
     margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .faq-image {
+        min-height: 0;
+    }
 }
 
 @media (min-width: 768px) {
