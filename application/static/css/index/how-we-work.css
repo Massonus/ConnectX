@@ -69,6 +69,12 @@
     min-height: 550px;
 }
 
+@media (max-width: 768px) {
+    .how-we-work-image img {
+        min-height: 0;
+    }
+}
+
 @media (min-width: 768px) {
     .how-we-work-container {
         flex-direction: row;
