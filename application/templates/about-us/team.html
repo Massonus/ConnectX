@@ -5,7 +5,7 @@
         <p class="team-subtitle">We hire only the best network experts to ensure the highest quality of our services.</p>
         <div class="team-carousel">
             <button id="team-carousel-button-left" class="team-carousel-button team-carousel-button--left">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/prev.png" alt="Left">
+                <img src="{{ url_for('static', filename='img/carousel-prev.png') }}" alt="Left">
             </button>
             <div class="team-carousel-container">
                 <div class="team-carousel-track">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <button id="team-carousel-button-right" class="team-carousel-button team-carousel-button--right">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/next.png" alt="Right">
+                <img src="{{ url_for('static', filename='img/carousel-next.png') }}" alt="Right">
             </button>
         </div>
     </div>
