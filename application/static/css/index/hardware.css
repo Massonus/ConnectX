@@ -2,7 +2,7 @@
     max-width: 2000px;
     margin: auto;
     padding: 20px;
-    background-color: var(--background-color);
+    background-color: var(--background-light-color);
 }
 
 .hardware-service-section {
