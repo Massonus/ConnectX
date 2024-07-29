@@ -1,10 +1,23 @@
+.content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .welcome-container {
     background-image: url("../../img/header-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--neutral-white-color);
     padding: 50px;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: -30px;
     position: relative;
 }
 
