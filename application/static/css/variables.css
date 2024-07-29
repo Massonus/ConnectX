@@ -1,18 +1,75 @@
 :root {
-    --link-hover: #e65100;
-    --orange: #ff4500;
-    --button-hover: #F01D09;
-    --red: #ff0000;
-    --main-grey: #222;
-    --light-grey: rgb(78, 78, 78);
-    --light-black: #1c1c1c;
-    --pre-footer-and-dark-titles: #121212;
-    --light-dark: #181818;
-    --contact-text-grey: #727289;
-    --light-white: #777777;
-    --grey-white: #f5f5f5;
-    --white: white;
+    --link-hover-color: #e65100;
+    --primary-color: #ff4500;
+    --button-hover-color: #F01D09;
+    --error-color: #ff0000;
+    --neutral-white-color: white;
+    --neutral-grey-color: #222;
+    --background-dark-color: #222;
+    --text-dark-color: #121212;
+    --text-light-color: rgb(78, 78, 78);
+    --background-light-color: #1c1c1c;
+    --dark-background-and-titles: #121212;
+    --text-dark-subtle-color: #777777;
+    --background-light-grey-color: #f5f5f5;
+    --white-grey-background-and-text: #f5f5f5;
+    --text-white-color: white;
     --box-shadow: rgba(0, 0, 0, 0.1);
-    --yellow: #d1f543;
-    --sub-header: #141318;
+    --sub-header-color: #141318;
+    ---button-grey-color: #333;
+    --background-color: var(--background-light-grey-color);
+    --item-background-color: var(--background-light-grey-color);
+    --box-shadow-color: var(--box-shadow);
+    --item-hover-shadow-color: var(--background-dark-color);
+    --text-color: var(--text-dark-color);
+    --subtle-text-color: var(--text-dark-subtle-color);
+    --highlight-color: var(--primary-color);
+    --stat-background-color: var(--background-dark-color);
+    --stat-text-color: var(--background-light-grey-color);
+}
+
+.light-theme {
+    --background-dark-color: #f5f5f5;
+    --text-dark-color: #222;
+    --text-light-color: rgb(200, 200, 200);
+    --background-light-color: #ffffff;
+    --dark-background-and-titles: #f5f5f5;
+    --text-dark-subtle-color: #000000;
+    --background-light-grey-color: #222;
+    --white-grey-background-and-text: #f5f5f5;
+    --text-white-color: #ffffff;
+    --sub-header-color: #f5f5f5;
+    ---button-grey-color: #ccc;
+    --background-color: #ffffff;
+    --item-background-color: #f5f5f5;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --item-hover-shadow-color: #000000;
+    --text-color: #222;
+    --subtle-text-color: #666;
+    --highlight-color: #ff4500;
+    --stat-background-color: #f5f5f5;
+    --stat-text-color: #222;
+}
+
+.dark-theme {
+    --background-dark-color: #222;
+    --text-dark-color: #121212;
+    --text-light-color: rgb(78, 78, 78);
+    --background-light-color: #181818;
+    --dark-background-and-titles: #121212;
+    --text-dark-subtle-color: #777777;
+    --background-light-grey-color: #f5f5f5;
+    --white-grey-background-and-text: #222;
+    --text-white-color: white;
+    --sub-header-color: #141318;
+    ---button-grey-color: #333;
+    --background-color: #1c1c1c;
+    --item-background-color: #222;
+    --box-shadow-color: rgba(0, 0, 0, 0.5);
+    --item-hover-shadow-color: #444;
+    --text-color: #f5f5f5;
+    --subtle-text-color: #aaa;
+    --highlight-color: #ff4500;
+    --stat-background-color: #222;
+    --stat-text-color: #f5f5f5;
 }

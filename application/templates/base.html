@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {% block links %} {% endblock %}
+
+    <script defer src="{{ url_for('static', filename='js/base.js') }}"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
@@ -34,6 +35,17 @@
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/instagram-icon.svg') }}" alt="Instagram"></a>
                 <a href="#"><img src="{{ url_for('static', filename='img/social-icons/telegram-icon.svg') }}" alt="Telegram"></a>
             </div>
+            <div class="day-night-toggle">
+                <input type="checkbox" id="toggle" />
+                <label for="toggle" class="toggle-label">
+                    <div class="toggle-slider">
+                        <span id="toggle-text" class="toggle-text">DAYMODE</span>
+                        <div class="slider-thumb">
+                            <img id="toggle-icon" src="{{ url_for('static', filename='img/sun-icon.svg') }}" alt="Icon">
+                        </div>
+                    </div>
+                </label>
+            </div>
         </div>
         <nav>
             <div class="header-logo">
@@ -58,7 +70,6 @@
                 {% else %}
                     <li><a href="{{ url_for('user.login') }}">Login</a></li>
                 {% endif %}
-
             </ul>
             <a class="quote-button" href="#quote-form">Get a Quote</a>
         </nav>
@@ -125,14 +136,22 @@
             <div class="footer-section">
                 <h3 class="link-title">Useful Links</h3>
                 <ul class="footer-links">
-                    <li><a href="{{ url_for('about.index') }}">About us</a></li>
-                    <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+                    <li>
+                        <a href="{{ url_for('about.index') }}">About us</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('rate.show_rates') }}">Rate</a>
+                    </li>
+
                     <li>
                         <a href="{{ url_for('main.index', filename='main-page/cta-and-testimonials.html', _anchor='testimonial-block') }}">Testimonials</a>
                     </li>
+
                     <li>
                         <a href="{{ url_for('main.index', filename='main-page/news.html', _anchor='news-block') }}">News</a>
                     </li>
+
                     <li>
                         <a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a>
                     </li>
@@ -164,13 +183,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-    document.getElementById('burger-menu').addEventListener('click', function () {
-        this.classList.toggle('open');
-        document.getElementById('header-links').classList.toggle('active');
-    });
-</script>
 
 </body>
 </html>

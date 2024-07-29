@@ -120,9 +120,10 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 dev.env
 deploy.env
+deploytest.env
+.env
 .venv
 .idea
 env/

@@ -1,20 +1,27 @@
+.news-carousel-wrapper {
+    width: 100%;
+    background-color: var(--primary-color);
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
 .news-carousel-block {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
-    margin: 0;
-    background-color: var(--orange);
-    color: var(--grey-white);
+    height: auto;
+    max-height: 500px;
+    margin: auto;
+    color: var(--neutral-white-color);
+    position: relative;
+    max-width: 1400px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .news-carousel-container {
-    position: relative;
     width: 80%;
-    overflow: hidden;
-}
-
-.news-carousel-track-container {
     overflow: hidden;
 }
 
@@ -29,9 +36,9 @@
 }
 
 .news-card {
-    background-color: var(--orange);
+    background-color: var(--primary-color);
     padding: 20px;
-    border: 1px solid var(--grey-white);
+    border: 1px solid var(--neutral-white-color);
     border-radius: 5px;
     text-align: center;
     max-height: 260px;
@@ -48,7 +55,7 @@
 }
 
 .news-card a {
-    color: var(--grey-white);
+    color: var(--neutral-white-color);
     font-weight: bold;
 }
 
@@ -61,21 +68,42 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--orange);
+    background-color: transparent;
     border: none;
-    color: var(--grey-white);
-    font-size: 2em;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
     cursor: pointer;
     z-index: 1;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.news-carousel-button img {
+    filter: invert(100%);
+    width: 100%;
+    height: 100%;
+}
+
+.news-carousel-button:hover {
+    opacity: 1;
 }
 
 .news-carousel-button--left {
-    left: 10px;
+    left: 1%;
 }
 
 .news-carousel-button--right {
-    right: 10px;
+    right: 1%;
+}
+
+@media (max-width: 768px) {
+    .news-carousel-block {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .news-card {
+        max-height: none;
+    }
 }

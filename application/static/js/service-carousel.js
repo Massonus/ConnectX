@@ -1,53 +1,52 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-    let carousel = document.getElementById('carousel');
-    let slides = document.getElementsByClassName('slide');
-    let moveOffset = document.getElementById('carousel-container').offsetWidth;
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById('carousel');
+    const slides = document.getElementsByClassName('slide');
+    const carouselContainer = document.getElementById('carousel-container');
+
+    let moveOffset = carouselContainer.offsetWidth;
+    const SLIDE_DURATION = 500;
+    const MIN_WINDOW_WIDTH = 768;
+    const TRANSITION_NONE = 'none';
+    const TRANSITION_NORMAL = 'transform 0.5s';
 
     function updateWidths() {
-        if (window.innerWidth <= 768) {
-            moveOffset = document.getElementById('carousel-container').offsetWidth;
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.width = moveOffset + 'px';
-            }
-        } else {
-            moveOffset = document.getElementById('carousel-container').offsetWidth / 3;
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.width = moveOffset + 'px';
-            }
+        moveOffset = window.innerWidth <= MIN_WINDOW_WIDTH ? carouselContainer.offsetWidth : carouselContainer.offsetWidth / 3;
+
+        for (const slide of slides) {
+            slide.style.width = `${moveOffset}px`
         }
-        carousel.style.width = (slides.length * moveOffset) + 'px';
+
+        carousel.style.width = `${slides.length * moveOffset}px`;
     }
+
+    function moveSlide(direction) {
+        if (direction === 1) {
+            carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);
+
+            carousel.style.transition = TRANSITION_NONE;
+            carousel.style.transform = `translateX(-${moveOffset}px)`;
+
+            setTimeout(() => {
+                carousel.style.transition = TRANSITION_NORMAL;
+                carousel.style.transform = 'translateX(0)';
+            }, 20);
+        } else {
+            carousel.style.transition = TRANSITION_NORMAL;
+            carousel.style.transform = `translateX(-${moveOffset}px)`;
+
+            setTimeout(() => {
+                carousel.appendChild(carousel.firstElementChild);
+
+                carousel.style.transition = TRANSITION_NONE;
+                carousel.style.transform = 'translateX(0)';
+            }, SLIDE_DURATION);
+        }
+    }
+
+    document.getElementById('prev').addEventListener('click', () => moveSlide(1));
+    document.getElementById('next').addEventListener('click', () => moveSlide(-1));
 
     window.addEventListener('resize', updateWidths);
 
     updateWidths();
-
-    document.getElementById('prev').addEventListener('click', prev, true);
-    document.getElementById('next').addEventListener('click', next, true);
-
-    function prev() {
-        if (carousel.children.length > 0) {
-            carousel.insertBefore(carousel.children[carousel.children.length - 1], carousel.children[0]);
-            carousel.style.transition = 'none';
-            carousel.style.transform = 'translateX(-' + moveOffset + 'px)';
-            setTimeout(function () {
-                carousel.style.transition = 'transform 0.5s';
-                carousel.style.transform = 'translateX(0)';
-            }, 20);
-        }
-    }
-
-    function next() {
-        if (carousel.children.length > 0) {
-            carousel.style.transition = 'transform 0.5s';
-            carousel.style.transform = 'translateX(-' + moveOffset + 'px)';
-            setTimeout(function () {
-                if (carousel.children.length > 0) {
-                    carousel.appendChild(carousel.children[0]);
-                    carousel.style.transition = 'none';
-                    carousel.style.transform = 'translateX(0)';
-                }
-            }, 500);
-        }
-    }
 });

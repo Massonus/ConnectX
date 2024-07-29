@@ -5,13 +5,16 @@
     justify-content: center;
     text-align: left;
     padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .mission-vision-image {
     width: 50%;
-    min-width: 320px;
+    min-width: 270px;
     max-width: 600px;
     height: auto;
+    border-radius: 10px;
 }
 
 .mission-vision-content {
@@ -21,31 +24,34 @@
 
 .mission-vision-headline {
     font-size: 2.3em;
+    color: var(--text-color);
 }
 
 .mission-vision-subheadline {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 50px;
+    color: var(--subtle-text-color);
 }
 
 .mission-vision-description {
     font-size: 1.2em;
     margin-bottom: 50px;
+    color: var(--text-color);
 }
 
 .mission-vision-button {
     display: inline-block;
     padding: 10px 20px;
-    color: var(--grey-white);
-    background-color: var(--orange);
+    color: var(--text-white-color);
+    background-color: var(--highlight-color);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .mission-vision-button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-hover-color);
 }
 
 @media (max-width: 768px) {

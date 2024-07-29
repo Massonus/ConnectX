@@ -1,131 +1,143 @@
 #service-block {
-  text-align: center;
-  margin: 20px auto;
-  font-family: 'Poppins', sans-serif;
-  padding: 0 15px;
-  position: relative;
-}
-
-#service-block h3.center-block-title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 15px;
+    position: relative;
 }
 
 #service-block h2 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 #service-block strong {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
 }
 
 #carousel-container {
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
-}
-
-.limited-width {
-  max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--item-background-color);
 }
 
 #carousel {
-  display: flex;
-  transition: transform 0.5s;
+    display: flex;
+    transition: transform 0.5s;
 }
 
 .slide {
-  list-style: none;
-  width: calc(100% / 3);
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-.service-item {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--main-grey);
-  color: var(--grey-white);
-  text-align: left;
-  padding: 15px;
-}
-
-.service-item img {
-  width: 100%;
-  height: auto;
-}
-
-.service-item h3 {
-  margin-top: 10px;
-  font-size: 1em;
-}
-
-.service-item p {
-  margin: 5px 0;
-}
-
-.service-item .btn {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: var(--orange);
-  color: var(--grey-white);
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: auto;
-  align-self: start;
-  width: auto;
-}
-
-.service-item .btn:hover {
-    background-color: var(--button-hover);
+    list-style: none;
+    width: calc(100% / 3);
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 #controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
-#controls span {
-  width: 60px;
-  cursor: pointer;
-  opacity: 0.7;
-  pointer-events: all;
-  transition: opacity 0.3s;
-}
-
-#controls span:hover {
-  opacity: 1;
-}
-
-#controls span img {
-  width: 100%;
+#prev,
+#next {
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0;
 }
 
 #prev {
-  left: 50px;
+    left: -15px;
 }
 
 #next {
-  right: 50px;
+    right: -15px;
+}
+
+#prev:hover,
+#next:hover {
+    opacity: 1;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-dark-color);
+    color: var(--background-light-grey-color);
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.service-item h3 {
+    margin-top: 10px;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.service-item p {
+    margin: 5px 0;
+    color: var(--subtle-text-color);
+}
+
+.service-item .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: var(--neutral-white-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    align-self: start;
+    width: auto;
+}
+
+.service-item .btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+#controls span img {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
-  .slide {
-    width: 100%;
-  }
+    .slide {
+        width: 100%;
+    }
+}
 
-  #controls span img {
+.dark-theme #prev,
+.dark-theme #next {
     filter: invert(100%);
-  }
 }

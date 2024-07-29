@@ -1,27 +1,32 @@
 .faq {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: var(--light-black);
+    background-color: var(--background-light-color);
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .faq-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 2100px;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .faq-image-container {
     width: 100%;
+    max-width: 100%;
 }
 
 .faq-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    display: flex;
+    display: block;
+    margin: auto;
 }
 
 .faq-content {
@@ -29,34 +34,35 @@
     width: 90%;
     max-width: 1000px;
     margin: auto;
-    padding: 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .faq-headline {
-    color: var(--grey-white);
+    color: var(--background-light-grey-color);
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 .faq-subheadline {
-    color: var(--grey-white);
+    color: var(--background-light-grey-color);
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .accordion {
-    border-top: 1px solid var(--light-white);
+    border-top: 1px solid var(--text-dark-subtle-color);
 }
 
 .accordion-item {
-    border-bottom: 1px solid var(--light-white);
+    border-bottom: 1px solid var(--text-dark-subtle-color);
 }
 
 .accordion-title {
     padding: 15px;
     cursor: pointer;
-    background-color: var(--light-black);
-    color: var(--grey-white);
+    background-color: var(--background-light-color);
+    color: var(--background-light-grey-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,8 +83,8 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     padding: 0 10px;
-    background-color: var(--light-black);
-    color: var(--light-white);
+    background-color: var(--background-light-color);
+    color: var(--text-dark-subtle-color);
 }
 
 .accordion-content p {
@@ -86,13 +92,10 @@
 }
 
 @media (min-width: 768px) {
-    .faq {
-        text-align: left;
-    }
-
     .faq-container {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     .faq-content {

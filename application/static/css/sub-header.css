@@ -1,5 +1,5 @@
 .custom-header {
-    background-color: var(--sub-header);
+    background-color: var(--sub-header-color);
     text-align: center;
     padding: 50px 20px;
 }
@@ -12,7 +12,7 @@
 .custom-header-title {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: var(--white);
+    color: var(--text-color);
 }
 
 .breadcrumb {
@@ -20,16 +20,16 @@
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    color: var(--light-white);
+    color: var(--text-dark-subtle-color);
 }
 
 .breadcrumb-link {
-    color: var(--light-white);
+    color: var(--text-dark-subtle-color);
     text-decoration: none;
 }
 
 .breadcrumb-link:hover {
-    color: var(--white);
+    color: var(--button-hover-color);
 }
 
 .breadcrumb-separator {
@@ -38,7 +38,7 @@
 
 .breadcrumb-current {
     font-weight: bold;
-    color: var(--orange);
+    color: var(--primary-color);
 }
 
 @media (min-width: 768px) {

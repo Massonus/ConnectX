@@ -1,7 +1,7 @@
 .cta {
     background: url('../../img/main-page/cta-images/cta-background.jpg') no-repeat center center;
     background-size: cover;
-    color: var(--white);
+    color: var(--text-white-color);
     padding: 50px 20px;
     text-align: center;
 }
@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto 30px auto;
+    margin: auto;
     gap: 20px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .cta-highlight {
-    color: var(--orange);
+    color: var(--primary-color);
 }
 
 .cta-description {
@@ -35,8 +35,8 @@
 }
 
 .cta-button {
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: var(--primary-color);
+    color: var(--text-white-color);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -44,7 +44,7 @@
 }
 
 .cta-button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-hover-color);
 }
 
 .cta-services {
@@ -80,6 +80,31 @@
     font-size: 1em;
 }
 
+.countdown-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-segment {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.time-segment span {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
 @media (max-width: 768px) {
     .cta-title {
         font-size: 2em;
@@ -87,6 +112,16 @@
 
     .cta-service {
         width: 45%;
+    }
+
+    #countdown {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .time-segment {
+        width: 80%;
     }
 }
 
@@ -107,5 +142,9 @@
     .cta-service {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .time-segment {
+        width: 90%;
     }
 }

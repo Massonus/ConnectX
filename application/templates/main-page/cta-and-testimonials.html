@@ -10,6 +10,27 @@
             <a href="{{ url_for('contact.index') }}" class="cta-button">Contact Us</a>
         </div>
     </div>
+    <div class="countdown-container">
+        <h3>Offer Ends In:</h3>
+        <div id="countdown">
+            <div class="time-segment">
+                <span id="days"></span>
+                <p>Days</p>
+            </div>
+            <div class="time-segment">
+                <span id="hours"></span>
+                <p>Hours</p>
+            </div>
+            <div class="time-segment">
+                <span id="minutes"></span>
+                <p>Minutes</p>
+            </div>
+            <div class="time-segment">
+                <span id="seconds"></span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
     <div class="cta-services">
         <div class="cta-service">
             <img src="{{ url_for('static', filename='img/main-page/cta-images/warranty-service.png') }}" alt="Warranty Service" class="service-icon">
@@ -35,56 +56,58 @@
 </section>
 
 <div id="testimonial-block" class="testimonial-section">
-    <div id="testimonial-carousel-container" class="limited-width">
-        <ul id="testimonial-carousel" class="animate">
-            <li class="slide testimonial-item">
-                <div class="slide-text">
-                    <h3 class="testimonial-title">"ConnectX Transformed My Internet Experience!"</h3>
-                    <p>“ConnectX has been a game-changer for me! I was struggling with slow internet speeds and frequent
-                        disconnections, which made working from home extremely difficult. However, the expert team at
-                        ConnectX quickly diagnosed the issues and provided a seamless installation of high-speed internet.
-                        Their service was prompt, professional, and exceeded my expectations. Now, my connection is stable
-                        and super-fast, making my online tasks effortless.”</p>
-                    <cite>AMANDA WELSH</cite>
-                </div>
-                <div class="slide-image">
-                    <img src="{{ url_for('static', filename='img/main-page/testimonials/amanda.png') }}" alt="Amanda Welsh">
-                </div>
-            </li>
-            <li class="slide testimonial-item">
-                <div class="slide-text">
-                    <h3 class="testimonial-title">"Amazing Service!"</h3>
-                    <p>“I was struggling with intermittent internet issues, and ConnectX truly saved me! Their quick
-                        installation service had my connection running flawlessly in no time. The staff was incredibly
-                        friendly and knowledgeable, answering my questions with patience. I highly recommend their
-                        services to anyone in need of a reliable and fast internet connection.”</p>
-                    <cite>JACK PETERSON</cite>
-                </div>
-                <div class="slide-image">
-                    <img src="{{ url_for('static', filename='img/main-page/testimonials/jack.png') }}" alt="Jack Peterson">
-                </div>
-            </li>
-            <li class="slide testimonial-item">
-                <div class="slide-text">
-                    <h3 class="testimonial-title">"Five Stars Without a Doubt!"</h3>
-                    <p>“I can't thank ConnectX enough for their exceptional service! When my internet started acting up,
-                        I was worried about the potential costs of repairs. However, the free diagnostics put my mind at
-                        ease. They quickly identified the issue and provided a transparent breakdown of the repair
-                        process and costs involved.”</p>
-                    <cite>SUSAN TIVOLI</cite>
-                </div>
-                <div class="slide-image">
-                    <img src="{{ url_for('static', filename='img/main-page/testimonials/susan.png') }}" alt="Susan Tivoli">
-                </div>
-            </li>
-        </ul>
+    <h3 class="center-block-title">TESTIMONIALS</h3>
+    <h2>What Our Customers Say</h2>
+    <div class="carousel-wrapper">
+        <div id="testimonial-carousel-container" class="limited-width">
+            <ul id="testimonial-carousel" class="animate">
+                <li class="slide testimonial-item">
+                    <div class="slide-text">
+                        <h3 class="testimonial-title">"ConnectX Transformed My Internet Experience!"</h3>
+                        <p>“ConnectX has been a game-changer for me! I was struggling with slow internet speeds and
+                            frequent disconnections, which made working from home extremely difficult. However, the
+                            expert team at ConnectX quickly diagnosed the issues and provided a seamless installation of
+                            high-speed internet. Their service was prompt, professional, and exceeded my expectations.
+                            Now, my connection is stable and superfast, making my online tasks effortless.”</p>
+                        <cite>AMANDA WELSH</cite>
+                    </div>
+                    <div class="slide-image">
+                        <img src="{{ url_for('static', filename='img/main-page/testimonials/amanda.png') }}" alt="Amanda Welsh">
+                    </div>
+                </li>
+                <li class="slide testimonial-item">
+                    <div class="slide-text">
+                        <h3 class="testimonial-title">"Amazing Service!"</h3>
+                        <p>“I was struggling with intermittent internet issues, and ConnectX truly saved me! Their quick
+                            installation service had my connection running flawlessly in no time. The staff was
+                            incredibly friendly and knowledgeable, answering my questions with patience. I highly
+                            recommend their services to anyone in need of a reliable and fast internet connection.”</p>
+                        <cite>JACK PETERSON</cite>
+                    </div>
+                    <div class="slide-image">
+                        <img src="{{ url_for('static', filename='img/main-page/testimonials/jack.png') }}" alt="Jack Peterson">
+                    </div>
+                </li>
+                <li class="slide testimonial-item">
+                    <div class="slide-text">
+                        <h3 class="testimonial-title">"Five Stars Without a Doubt!"</h3>
+                        <p>“I can't thank ConnectX enough for their exceptional service! When my internet started acting
+                            up, I was worried about the potential costs of repairs. However, the free diagnostics put my
+                            mind at ease. They quickly identified the issue and provided a transparent breakdown of the
+                            repair process and costs involved.”</p>
+                        <cite>SUSAN TIVOLI</cite>
+                    </div>
+                    <div class="slide-image">
+                        <img src="{{ url_for('static', filename='img/main-page/testimonials/susan.png') }}" alt="Susan Tivoli">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="testimonial-controls">
+            <span id="testimonial-prev"><img src="{{ url_for('static', filename='img/carousel-prev.png') }}" alt="Previous"></span>
+            <span id="testimonial-next"><img src="{{ url_for('static', filename='img/carousel-next.png') }}" alt="Next"></span>
+        </div>
     </div>
-    <div id="testimonial-controls">
-        <span id="testimonial-prev"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/prev.png"
-                                         alt="Previous"></span>
-        <span id="testimonial-next"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1014830/next.png" alt="Next"></span>
-    </div>
-    <script src="{{ url_for('static', filename='js/testimonial-carousel.js') }}"></script>
 </div>
 
 <div class="contact-us-section">
@@ -92,3 +115,4 @@
     <p class="contact-us">Contact us now for fast and reliable service!</p>
     <p class="schedule-repair">Schedule your installation today: <a href="tel:+12345678900">+1 (234) 567 890</a></p>
 </div>
+

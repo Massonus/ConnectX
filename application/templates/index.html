@@ -2,6 +2,11 @@
 
 {% block links %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index/index-page.css') }}">
+    <script src="{{ url_for('static', filename='js/service-carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/faq-index-accordion.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/news-carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/testimonial-carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cta-countdown.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -9,7 +14,7 @@
     {% include 'main-page/welcome-to-connectx.html' %}
     {% include 'main-page/we-connect-you.html' %}
     {% include 'main-page/about-us.html' %}
-    {% include 'main-page/router-installation.html' %}
+    {% include 'main-page/hardware.html' %}
     {% include 'main-page/how-we-work.html' %}
     {% include 'main-page/services.html' %}
     {% include 'main-page/cta-and-testimonials.html' %}

@@ -7,18 +7,18 @@
 .process {
     text-align: center;
     padding: 40px 20px;
-
 }
 
 .process-heading {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 .process-tagline {
     font-size: 1.25em;
     margin-bottom: 40px;
-    color: var(--light-white);
+    color: var(--subtle-text-color);
 }
 
 .process-steps {
@@ -29,15 +29,14 @@
 
 .process-step {
     text-align: left;
-    background-color: var(--white);
+    background-color: var(--item-background-color);
     padding: 20px;
-    border: 1px solid var(--box-shadow);
+    border: 1px solid var(--box-shadow-color);
     border-radius: 10px;
-    height: 220px;
 }
 
 .process-step-number {
-    color: var(--orange);
+    color: var(--highlight-color);
     font-size: 2em;
     margin-bottom: 10px;
 }
@@ -45,11 +44,12 @@
 .process-step-title {
     font-size: 1.25em;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 .process-step-description {
     font-size: 1.2em;
-    color: var(--light-white);
+    color: var(--subtle-text-color);
 }
 
 @media (min-width: 768px) {
