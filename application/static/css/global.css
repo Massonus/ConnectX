@@ -25,46 +25,6 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
-.promo-section {
-    color: #000; /* Черный текст */
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.promo-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.promo-details {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.promo-item {
-    flex: 1;
-    max-width: 300px;
-    margin: 10px;
-    text-align: center;
-}
-
-.promo-item img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-.promo-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.promo-item p {
-    font-size: 1em;
-    line-height: 1.5;
-}
 
 .block-title {
     color: var(--primary-color);
