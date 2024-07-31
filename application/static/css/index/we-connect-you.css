@@ -65,6 +65,28 @@
     color: var(--primary-color);
 }
 
+/* Начальное состояние */
+.fade-in-left, .fade-in-right {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-right {
+    transform: translateX(100%);
+}
+
+.animate-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 @media (max-width: 768px) {
     .repair-services {
         flex-direction: column;
