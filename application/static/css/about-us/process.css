@@ -35,6 +35,10 @@
     border-radius: 10px;
 }
 
+.process-step:hover {
+    box-shadow: 0 4px 8px var(--item-hover-shadow-color);
+}
+
 .process-step-number {
     color: var(--highlight-color);
     font-size: 2em;
