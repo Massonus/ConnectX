@@ -84,3 +84,11 @@
         width: 45%;
     }
 }
+
+.accordion-content-open {
+    padding: 10px;
+}
+
+.accordion-content-closed {
+    padding: 0 10px;
+}
