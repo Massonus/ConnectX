@@ -13,34 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedTheme = localStorage.getItem('theme');
 
     const applyTheme = (theme) => {
-        if (theme === 'dark-theme') {
-            body.classList.add('dark-theme');
-            body.classList.remove('light-theme');
-            toggle.checked = true;
-            toggleIcon.src = "/static/img/moon-icon.svg";
-            toggleText.textContent = 'NIGHTMODE';
-            toggleText.style.color = 'white';
-            toggleText.style.left = '5px';
-            toggleText.style.right = 'auto';
-            toggleLabel.style.background = 'black';
+        body.classList.toggle('dark-theme', theme === 'dark-theme');
+        body.classList.toggle('light-theme', theme === 'light-theme');
+        toggle.checked = theme === 'dark-theme';
+        toggleIcon.src = theme === 'dark-theme' ? "/static/img/moon-icon.svg" : "/static/img/sun-icon.svg";
+        toggleText.textContent = theme === 'dark-theme' ? 'NIGHTMODE' : 'DAYMODE';
+        toggleText.classList.toggle('dark', theme === 'dark-theme');
+        toggleText.classList.toggle('light', theme === 'light-theme');
+        toggleLabel.classList.toggle('dark', theme === 'dark-theme');
+        toggleLabel.classList.toggle('light', theme === 'light-theme');
 
-            for (const icon of servicesIcons) {
-                icon.style.filter = 'invert(100%)';
-            }
-        } else {
-            body.classList.add('light-theme');
-            body.classList.remove('dark-theme');
-            toggle.checked = false;
-            toggleIcon.src = "/static/img/sun-icon.svg";
-            toggleText.textContent = 'DAYMODE';
-            toggleText.style.color = 'black';
-            toggleText.style.right = '10px';
-            toggleText.style.left = 'auto';
-            toggleLabel.style.background = 'white';
-
-            for (const icon of servicesIcons) {
-                icon.style.filter = 'invert(0%)';
-            }
+        for (const icon of servicesIcons) {
+            icon.classList.toggle('dark', theme === 'dark-theme');
+            icon.classList.toggle('light', theme === 'light-theme');
         }
     };
 
@@ -51,12 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     toggle.addEventListener('change', function () {
-        if (this.checked) {
-            applyTheme('dark-theme');
-            localStorage.setItem('theme', 'dark-theme');
-        } else {
-            applyTheme('light-theme');
-            localStorage.setItem('theme', 'light-theme');
-        }
+        const theme = this.checked ? 'dark-theme' : 'light-theme';
+        applyTheme(theme);
+        localStorage.setItem('theme', theme);
     });
 });
