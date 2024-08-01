@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const faqItems = document.querySelectorAll(".faq-item");
-    const FAQ_PADDING_CLOSED = "0";
-    const FAQ_PADDING_OPEN = "1em 0";
 
     faqItems.forEach((item) => {
         const question = item.querySelector(".faq-question");
@@ -12,16 +10,25 @@ document.addEventListener("DOMContentLoaded", () => {
             if (openItem && openItem !== item) {
                 openItem.classList.remove("faq-item-open");
                 const openAnswer = openItem.querySelector(".faq-answer");
-                openAnswer.style.padding = FAQ_PADDING_CLOSED;
+                openAnswer.classList.remove('accordion-content-open');
+                openAnswer.classList.add('accordion-content-closed');
+                openAnswer.style.maxHeight = null;
             }
 
-            item.classList.toggle("faq-item-open");
             const answer = item.querySelector(".faq-answer");
-            if (item.classList.contains("faq-item-open")) {
-                answer.style.padding = FAQ_PADDING_OPEN;
+            const isOpen = answer.style.maxHeight;
+
+            if (isOpen) {
+                answer.classList.remove('accordion-content-open');
+                answer.classList.add('accordion-content-closed');
+                answer.style.maxHeight = null;
             } else {
-                answer.style.padding = FAQ_PADDING_CLOSED;
+                answer.classList.add('accordion-content-open');
+                answer.classList.remove('accordion-content-closed');
+                answer.style.maxHeight = answer.scrollHeight + "px";
             }
+
+            item.classList.toggle("faq-item-open", !isOpen);
         });
     });
 });

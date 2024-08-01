@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const amount = slides.length;
     const carouselContainer = document.getElementById('testimonial-carousel-container');
 
-    const SLIDE_DURATION = 500;
-    const TRANSITION_NONE = 'none';
-    const TRANSITION_NORMAL = `transform ${SLIDE_DURATION}ms`;
+    const slideDuration = 500;
+    const transitionNone = 'none';
+    const transitionNormal = `transform ${slideDuration}ms`;
 
     let moveOffset = carouselContainer.offsetWidth;
 
@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (amount > 0) {
             carousel.insertBefore(slides[amount - 1], slides[0]);
 
-            carousel.style.transition = TRANSITION_NONE;
+            carousel.style.transition = transitionNone;
             carousel.style.transform = `translateX(-${moveOffset}px)`;
 
             setTimeout(() => {
-                carousel.style.transition = TRANSITION_NORMAL;
+                carousel.style.transition = transitionNormal;
                 carousel.style.transform = 'translateX(0)';
                 slides = Array.from(carousel.children);
             }, 20);
@@ -33,16 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function next() {
         if (amount > 0) {
-            carousel.style.transition = TRANSITION_NORMAL;
+            carousel.style.transition = transitionNormal;
             carousel.style.transform = `translateX(-${moveOffset}px)`;
 
             setTimeout(() => {
                 carousel.appendChild(slides[0]);
-                carousel.style.transition = TRANSITION_NONE;
+                carousel.style.transition = transitionNone;
                 carousel.style.transform = 'translateX(0)';
 
                 slides = Array.from(carousel.children);
-            }, SLIDE_DURATION);
+            }, slideDuration);
         }
     }
 

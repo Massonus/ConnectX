@@ -2,41 +2,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const steps = document.querySelectorAll('.step');
     const progressBar = document.getElementById('progress-bar');
     const progressInfo = document.getElementById('progress-info');
-    const startStatus = document.getElementById('start-status');
-    const initStatus = document.getElementById('init-status');
-    const midStatus = document.getElementById('mid-status');
-    const endStatus = document.getElementById('end-status');
+    const statusElements = {
+        start: document.getElementById('start-status'),
+        init: document.getElementById('init-status'),
+        mid: document.getElementById('mid-status'),
+        end: document.getElementById('end-status')
+    };
+
+    const updateStatus = (stepNumber, totalSteps) => {
+        progressBar.style.width = `${(stepNumber / totalSteps) * 100}%`;
+        progressInfo.textContent = `Step ${stepNumber} of ${totalSteps}`;
+
+        Object.values(statusElements).forEach(element => element.style.opacity = '0');
+        if (stepNumber === 1) {
+            statusElements.init.style.opacity = '1';
+        } else if (stepNumber === 2) {
+            statusElements.mid.style.opacity = '1';
+        } else if (stepNumber === totalSteps) {
+            statusElements.end.style.opacity = '1';
+        }
+    };
 
     steps.forEach((step, index) => {
         step.addEventListener('mouseenter', () => {
-            const stepNumber = index + 1;
-            const totalSteps = steps.length;
-            progressBar.style.width = `${(stepNumber / totalSteps) * 100}%`;
-            progressInfo.textContent = `Step ${stepNumber} of ${totalSteps}`;
-
-            // Change status text based on progress
-            if (stepNumber === 1) {
-                startStatus.style.opacity = '0';
-                initStatus.style.opacity = '1';
-                midStatus.style.opacity = '0';
-                endStatus.style.opacity = '0';
-            } else if (stepNumber === 2) {
-                startStatus.style.opacity = '0';
-                initStatus.style.opacity = '0';
-                midStatus.style.opacity = '1';
-                endStatus.style.opacity = '0';
-            } else if (stepNumber === totalSteps) {
-                startStatus.style.opacity = '0';
-                initStatus.style.opacity = '0';
-                midStatus.style.opacity = '0';
-                endStatus.style.opacity = '1';
-            }
+            updateStatus(index + 1, steps.length);
         });
     });
 
     // Initial status
-    startStatus.style.opacity = '1';
-    initStatus.style.opacity = '0';
-    midStatus.style.opacity = '0';
-    endStatus.style.opacity = '0';
+    statusElements.start.style.opacity = '1';
 });

@@ -28,11 +28,11 @@
                     <p class="stats-number">500k <strong class="services-link">+</strong></p>
                     <p class="stats-text">Clients in NY.</p>
                 </div>
-                <img src="{{ url_for('static', filename='img/main-page/connect-icons/expert.png') }}" alt="Expert"
+                <img src="{{ url_for('static', filename='img/about-us-page/team/james.png') }}" alt="Expert"
                      class="expert-img">
                 <p class="welcome-text">Our experts are ready to assist you with any internet-related issues for free.
-                    <a href="#" class="services-link">Contact us.</a></p>
-                <p class="welcome-text">Get the best internet services<a href="#" class="services-link"> here</a></p>
+                    <a href="{{ url_for('contact.index') }}" class="services-link">Contact us.</a></p>
+                <p class="welcome-text">Get the best internet services<a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}" class="services-link"> here</a></p>
             </div>
         </div>
     </div>

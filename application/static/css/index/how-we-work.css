@@ -99,9 +99,6 @@
 .progress-status span {
     font-size: 1em;
     color: var(--background-light-grey-color);
-}
-
-#init-status, #mid-status, #end-status {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
