@@ -1,6 +1,7 @@
 .repair-services {
     background-color: var(--background-color);
     padding: 0;
+    overflow: hidden;
 }
 
 .repair-services-image {
