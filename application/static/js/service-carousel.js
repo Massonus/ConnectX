@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const carouselContainer = document.getElementById('carousel-container');
 
     let moveOffset = carouselContainer.offsetWidth;
-    const SLIDE_DURATION = 500;
-    const MIN_WINDOW_WIDTH = 768;
-    const TRANSITION_NONE = 'none';
-    const TRANSITION_NORMAL = 'transform 0.5s';
+    const slideDuration = 500;
+    const minWindowWidth = 768;
+    const transitionNone = 'none';
+    const transitionNormal = 'transform 0.5s';
 
     function updateWidths() {
-        moveOffset = window.innerWidth <= MIN_WINDOW_WIDTH ? carouselContainer.offsetWidth : carouselContainer.offsetWidth / 3;
+        moveOffset = window.innerWidth <= minWindowWidth ? carouselContainer.offsetWidth : carouselContainer.offsetWidth / 3;
 
         for (const slide of slides) {
             slide.style.width = `${moveOffset}px`
@@ -23,23 +23,23 @@ document.addEventListener("DOMContentLoaded", function () {
         if (direction === 1) {
             carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);
 
-            carousel.style.transition = TRANSITION_NONE;
+            carousel.style.transition = transitionNone;
             carousel.style.transform = `translateX(-${moveOffset}px)`;
 
             setTimeout(() => {
-                carousel.style.transition = TRANSITION_NORMAL;
+                carousel.style.transition = transitionNormal;
                 carousel.style.transform = 'translateX(0)';
             }, 20);
         } else {
-            carousel.style.transition = TRANSITION_NORMAL;
+            carousel.style.transition = transitionNormal;
             carousel.style.transform = `translateX(-${moveOffset}px)`;
 
             setTimeout(() => {
                 carousel.appendChild(carousel.firstElementChild);
 
-                carousel.style.transition = TRANSITION_NONE;
+                carousel.style.transition = transitionNone;
                 carousel.style.transform = 'translateX(0)';
-            }, SLIDE_DURATION);
+            }, slideDuration);
         }
     }
 
