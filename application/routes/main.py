@@ -13,6 +13,6 @@ def index():
 
 @bp.route('/get_end_date')
 def get_end_date():
-    end_date = datetime(2024, 8, 1, 15, 30, 0)
+    end_date = datetime(2024, 8, 8, 15, 30, 0)
     end_date_str = end_date.strftime('%Y-%m-%d %H:%M:%S')
     return jsonify({'end_date': end_date_str})
