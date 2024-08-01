@@ -51,8 +51,8 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    overflow-y: auto;
     color: var(--subtle-text-color);
+    padding: 0;
 }
 
 .faq-item-open .faq-answer {
