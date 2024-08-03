@@ -61,3 +61,6 @@ ConnectX is an internet provider project utilizing technologies such as Python, 
 ## License
 
 This project is licensed under the MIT License.
+
+## Deployment Link
+## <a href="https://www.connectx.free.nf/" target="_blank">Click here to see the deployment</a>
