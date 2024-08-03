@@ -1,4 +1,4 @@
-document.addEventListener('scroll', function() {
+document.addEventListener('DOMContentLoaded', function() {
       const steps = document.querySelectorAll('.step');
       const options = {
           root: null,
