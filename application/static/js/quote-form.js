@@ -28,13 +28,15 @@ document.getElementById('request-quote-form').addEventListener('submit', async (
         valid = false;
     }
 
-    if (!form.phone.value.trim()) {
-        showAlert('Phone Number is required', 'danger', 'alert-phone');
+    const phonePattern = /^\+38\(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+    if (!phonePattern.test(form.phone.value.trim())) {
+        showAlert('Phone Number must be in the format +38(XXX) XXX-XX-XX', 'danger', 'alert-phone');
         valid = false;
     }
 
-    if (!form.email.value.trim()) {
-        showAlert('Email is required', 'danger', 'alert-email');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(form.email.value.trim())) {
+        showAlert('Invalid Email format', 'danger', 'alert-email');
         valid = false;
     }
 
@@ -50,6 +52,7 @@ document.getElementById('request-quote-form').addEventListener('submit', async (
         phone: form.phone.value,
         email: form.email.value,
         message: form.message.value,
+        to_email: 'recipient1@example.com,recipient2@example.com'
     };
 
     try {
@@ -68,10 +71,33 @@ document.getElementById('request-quote-form').addEventListener('submit', async (
     }
 });
 
+document.getElementById('phone').addEventListener('input', formatPhone);
+
+function formatPhone(event) {
+    const input = event.target;
+    let value = input.value.replace(/\D/g, '');
+
+    if (value.startsWith('38')) {
+        value = '+38' + value.slice(2);
+    } else if (value.startsWith('0')) {
+        value = '+38' + value.slice(1);
+    } else {
+        value = '+38' + value;
+    }
+
+    let formatted = value.slice(0, 3); // +38
+    if (value.length > 3) formatted += `(${value.slice(3, 6)}`;
+    if (value.length > 6) formatted += `) ${value.slice(6, 9)}`;
+    if (value.length > 9) formatted += `-${value.slice(9, 11)}`;
+    if (value.length > 11) formatted += `-${value.slice(11, 13)}`;
+
+    input.value = formatted;
+}
+
 function showAlert(message, type, containerId) {
     const alert = document.createElement('div');
     alert.className = `alert alert-${type}`;
-    alert.textContent = message;
+    alert.innerHTML = `${message} <span class="close-alert" onclick="this.parentElement.style.display='none';">&times;</span>`;
     document.getElementById(containerId).appendChild(alert);
 }
 
