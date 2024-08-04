@@ -1,21 +1,3 @@
-let publicKey, serviceId, templateId;
-
-async function fetchKeys() {
-    try {
-        const response = await fetch('/api/keys');
-        const keys = await response.json();
-        publicKey = keys.public_key;
-        serviceId = keys.service_id;
-        templateId = keys.template_id;
-
-        emailjs.init(publicKey);
-    } catch (error) {
-        console.error('Error fetching keys:', error);
-    }
-}
-
-fetchKeys();
-
 document.getElementById('request-quote-form').addEventListener('submit', async (event) => {
     event.preventDefault();
     clearAlerts();
@@ -51,8 +33,7 @@ document.getElementById('request-quote-form').addEventListener('submit', async (
         name: form.name.value,
         phone: form.phone.value,
         email: form.email.value,
-        message: form.message.value,
-        to_email: 'recipient1@example.com,recipient2@example.com'
+        message: form.message.value
     };
 
     try {
@@ -77,19 +58,15 @@ function formatPhone(event) {
     const input = event.target;
     let value = input.value.replace(/\D/g, '');
 
-    if (value.startsWith('38')) {
-        value = '+38' + value.slice(2);
-    } else if (value.startsWith('0')) {
-        value = '+38' + value.slice(1);
-    } else {
-        value = '+38' + value;
+    if (value.length > 0 && !value.startsWith('38')) {
+        value = '38' + value;
     }
 
-    let formatted = value.slice(0, 3); // +38
-    if (value.length > 3) formatted += `(${value.slice(3, 6)}`;
-    if (value.length > 6) formatted += `) ${value.slice(6, 9)}`;
-    if (value.length > 9) formatted += `-${value.slice(9, 11)}`;
-    if (value.length > 11) formatted += `-${value.slice(11, 13)}`;
+    let formatted = '+38';
+    if (value.length > 2) formatted += `(${value.slice(2, 5)}`; // +38(XXX
+    if (value.length > 5) formatted += `) ${value.slice(5, 8)}`; // +38(XXX) XXX
+    if (value.length > 8) formatted += `-${value.slice(8, 10)}`; // +38(XXX) XXX-XX
+    if (value.length > 10) formatted += `-${value.slice(10, 12)}`; // +38(XXX) XXX-XX-XX
 
     input.value = formatted;
 }
