@@ -2,8 +2,8 @@
 
 {% block links %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/login-reg.css') }}">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="{{ url_for('static', filename='js/user-auth.js') }}" defer></script>
+    <script async defer src="https://www.google.com/recaptcha/api.js"></script>
+    <script defer type="module" src="{{ url_for('static', filename='js/user-registration.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -22,8 +22,10 @@
         <h3 class="auth-title">Registration</h3>
         <form id="captcha-form" class="auth-form">
             <div class="auth-msg">{{ msg }}</div>
-            <input id="username" name="username" type="text" placeholder="Enter Your Username" class="auth-textbox" required/>
-            <input id="password" name="password" type="password" placeholder="Enter Your Password" class="auth-textbox" required/>
+            <input id="username" name="username" type="text" placeholder="Enter Your Username" class="auth-textbox"/>
+            <div class="alert-container" id="alert-username"></div>
+            <input id="password" name="password" type="password" placeholder="Enter Your Password" class="auth-textbox"/>
+            <div class="alert-container" id="alert-password"></div>
             <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
             <p id="captcha-message"></p>
             <input type="submit" class="auth-btn" value="Sign Up">

@@ -71,14 +71,14 @@ function formatPhone(event) {
     input.value = formatted;
 }
 
-function showAlert(message, type, containerId) {
+export function showAlert(message, type, containerId) {
     const alert = document.createElement('div');
     alert.className = `alert alert-${type}`;
     alert.innerHTML = `${message} <span class="close-alert" onclick="this.parentElement.style.display='none';">&times;</span>`;
     document.getElementById(containerId).appendChild(alert);
 }
 
-function clearAlerts() {
+export function clearAlerts() {
     const alertElements = document.querySelectorAll('.alert-container .alert');
     alertElements.forEach(alert => alert.remove());
 }

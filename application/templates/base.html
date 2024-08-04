@@ -8,7 +8,7 @@
     {% block links %} {% endblock %}
 
     <script defer src="{{ url_for('static', filename='js/change-theme-and-burger-menu.js') }}"></script>
-    <script defer src="{{ url_for('static', filename='js/quote-form.js') }}"></script>
+    <script defer type="module" src="{{ url_for('static', filename='js/quote-form.js') }}"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
