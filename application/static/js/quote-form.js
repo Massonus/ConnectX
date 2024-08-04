@@ -1,3 +1,21 @@
+let publicKey, serviceId, templateId;
+
+async function fetchKeys() {
+    try {
+        const response = await fetch('/api/keys');
+        const keys = await response.json();
+        publicKey = keys.public_key;
+        serviceId = keys.service_id;
+        templateId = keys.template_id;
+
+        emailjs.init(publicKey);
+    } catch (error) {
+        console.error('Error fetching keys:', error);
+    }
+}
+
+fetchKeys();
+
 document.getElementById('request-quote-form').addEventListener('submit', async (event) => {
     event.preventDefault();
     clearAlerts();
@@ -63,10 +81,10 @@ function formatPhone(event) {
     }
 
     let formatted = '+38';
-    if (value.length > 2) formatted += `(${value.slice(2, 5)}`; // +38(XXX
-    if (value.length > 5) formatted += `) ${value.slice(5, 8)}`; // +38(XXX) XXX
-    if (value.length > 8) formatted += `-${value.slice(8, 10)}`; // +38(XXX) XXX-XX
-    if (value.length > 10) formatted += `-${value.slice(10, 12)}`; // +38(XXX) XXX-XX-XX
+    if (value.length > 2) formatted += `(${value.slice(2, 5)}`;
+    if (value.length > 5) formatted += `) ${value.slice(5, 8)}`;
+    if (value.length > 8) formatted += `-${value.slice(8, 10)}`;
+    if (value.length > 10) formatted += `-${value.slice(10, 12)}`;
 
     input.value = formatted;
 }
