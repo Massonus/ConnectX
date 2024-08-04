@@ -93,7 +93,7 @@
 }
 
 .promo-section {
-    color: #000; /* Черный текст */
+    color: var(--text-color);
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;

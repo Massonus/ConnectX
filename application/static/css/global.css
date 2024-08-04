@@ -338,6 +338,37 @@ body.light-theme {
     margin-bottom: 10px;
 }
 
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-danger {
+    color: var(--alert-danger-text-color);
+    background-color: var(--alert-danger-background-color);
+    border-color: var(--alert-danger-border-color);
+}
+
+.alert-success {
+    color: var(--alert-success-text-color);
+    background-color: var(--alert-success-background-color);
+    border-color: var(--alert-success-border-color);
+}
+
+.close-alert {
+    color: var(--neutral-dark-color);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
 .quote-form {
     width: 100%;
     display: flex;
