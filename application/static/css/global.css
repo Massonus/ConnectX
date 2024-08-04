@@ -350,19 +350,19 @@ body.light-theme {
 }
 
 .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
+    color: var(--alert-danger-text-color);
+    background-color: var(--alert-danger-background-color);
+    border-color: var(--alert-danger-border-color);
 }
 
 .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    color: var(--alert-success-text-color);
+    background-color: var(--alert-success-background-color);
+    border-color: var(--alert-success-border-color);
 }
 
 .close-alert {
-    color: #000;
+    color: var(--neutral-dark-color);
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
