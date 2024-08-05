@@ -37,7 +37,6 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-
 .tariff-card h2 {
     color: var(--text-color);
     font-size: 24px;
@@ -189,12 +188,12 @@
 
 #controls {
     position: absolute;
-    top: 50%;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
     pointer-events: none;
+    padding: 10px 0;
 }
 
 #prev,
@@ -274,11 +273,12 @@
 
 @media (max-width: 768px) {
     .slide {
-        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-}
 
-.dark-theme #prev,
-.dark-theme #next {
-    filter: invert(100%);
+    #prev,
+    #next {
+        top: 10px;
+    }
 }
