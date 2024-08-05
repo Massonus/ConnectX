@@ -8,16 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const TRANSITION_NONE = 'none';
     const TRANSITION_NORMAL = 'transform 0.5s';
 
-    function updateWidths() {
-        moveOffset = window.innerWidth <= 768 ? carouselContainer.offsetWidth : carouselContainer.offsetWidth / 3;
-
-        for (const slide of slides) {
-            slide.style.width = `${moveOffset}px`;
-        }
-
-        carousel.style.width = `${slides.length * moveOffset}px`;
-    }
-
     function moveSlide(direction) {
         if (direction === 1) {
             carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);

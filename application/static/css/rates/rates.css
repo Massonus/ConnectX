@@ -23,7 +23,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 325px;
-    min-height: 450px; /* Добавляем минимальную высоту */
+    min-height: 500px;
     background-color: var(--item-background-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--box-shadow-color);
@@ -51,54 +51,55 @@
 
 .price {
     font-size: 24px;
-    color: var(--highlight-color); /* Обновите цвет, чтобы соответствовать кнопке */
+    color: var(--highlight-color);
     margin: 20px 0;
 }
 
-.condition, .discount {
-    background-color: var(--item-background-color);
+.condition {
     color: var(--text-color);
-    padding: 5px 10px;
-    border-radius: 5px;
     margin: 10px 0;
 }
 
 .superpower-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--text-color);
 }
 
 .superpower-description span:first-child {
-    margin-right: 5px;
+    margin-right: 10px;
     font-size: 24px;
     vertical-align: middle;
 }
 
 .rates-button {
-    background-color: var(--highlight-color);
+    background-color: #ff4500; /* Orange button color */
     border: none;
-    color: var(--text-white-color);
+    color: #ffffff; /* White text color */
     padding: 10px 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
     align-self: center;
+    width: 100%;
 }
 
 .rates-button:hover {
-    background-color: var(--button-hover-color);
+    background-color: #e03b00; /* Darker orange on hover */
 }
 
 .rates-button a {
-    color: var(--text-white-color);
+    color: #ffffff; /* White text color */
     text-decoration: none;
 }
 
 .promo-section {
-    color: var(--text-color);
+    color: #000; /* Черный текст */
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -123,8 +124,8 @@
 }
 
 .promo-item img {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
@@ -161,7 +162,7 @@
     position: relative;
     max-width: 1300px;
     margin: auto;
-    margin-bottom: 40px; /* Добавляем отступ снизу */
+    margin-bottom: 40px;
 }
 
 #carousel-container {
@@ -170,7 +171,7 @@
     overflow: hidden;
     border-radius: 10px;
     background-color: var(--item-background-color);
-    position: relative; /* Обновление для позиционирования контролов */
+    position: relative;
 }
 
 #carousel {
@@ -180,7 +181,7 @@
 
 .slide {
     list-style: none;
-    flex: 0 0 33.3333%; /* Отображаем по три элемента */
+    flex: 0 0 33.3333%; /* Displaying three items per slide */
     padding: 15px;
     box-sizing: border-box;
 }
@@ -211,11 +212,11 @@
 }
 
 #prev {
-    left: 10px; /* Скорректируем позиционирование */
+    left: 10px;
 }
 
 #next {
-    right: 10px; /* Скорректируем позиционирование */
+    right: 10px;
 }
 
 #prev:hover,
