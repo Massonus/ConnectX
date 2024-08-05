@@ -27,6 +27,9 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tariff-card:hover {
@@ -61,7 +64,7 @@
     text-align: center;
 }
 
-.promo-section h2 {
+.promo-section h2, .rates-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -69,10 +72,11 @@
 .promo-details {
     display: flex;
     justify-content: space-between;
+    align-content: center;
     flex-wrap: wrap;
     max-width: 1400px;
     padding: 0 5px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .promo-item {
@@ -104,12 +108,6 @@
     font-family: 'Poppins', sans-serif;
     padding: 0 15px;
     position: relative;
-}
-
-.rates-section h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: var(--text-color);
 }
 
 .rates-section strong {
@@ -233,6 +231,12 @@
 @media (max-width: 768px) {
     .slide {
         width: 100%;
+    }
+}
+
+@media (max-width: 455px) {
+    .promo-details {
+        flex-direction: column;
     }
 }
 
