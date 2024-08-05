@@ -274,7 +274,10 @@
 
 @media (max-width: 768px) {
     .slide {
-        width: 100%;
+        flex: 0 0 100%;
+    }
+    #controls {
+        top: 10px;
     }
 }
 
