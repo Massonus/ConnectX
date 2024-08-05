@@ -24,9 +24,9 @@
     width: 100%;
     max-width: 325px;
     min-height: 500px;
-    background-color: #f5f5f5; /* Slightly darker than the original */
+    background-color: #f5f5f5;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly darker shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -34,7 +34,7 @@
 
 .tariff-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly darker hover shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -77,9 +77,9 @@
 }
 
 .rates-button {
-    background-color: #ff4500; /* Orange button color */
+    background-color: #ff4500;
     border: none;
-    color: #ffffff; /* White text color */
+    color: #ffffff;
     padding: 10px 20px;
     margin-top: 20px;
     border-radius: 5px;
@@ -91,16 +91,16 @@
 }
 
 .rates-button:hover {
-    background-color: #e03b00; /* Darker orange on hover */
+    background-color: #e03b00;
 }
 
 .rates-button a {
-    color: #ffffff; /* White text color */
+    color: #ffffff;
     text-decoration: none;
 }
 
 .promo-section {
-    color: #000; /* Черный текст */
+    color: #000;
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -182,7 +182,7 @@
 
 .slide {
     list-style: none;
-    flex: 0 0 33.3333%; /* Displaying three items per slide */
+    flex: 0 0 33.3333%;
     padding: 15px;
     box-sizing: border-box;
 }
