@@ -1,31 +1,35 @@
-.rates-wrapper {
-    width: 100%;
-    background-color: var(--background-color);
+.superpower-description span:first-child {
+    margin-right: 10px;
+    font-size: 24px;
+    vertical-align: middle;
 }
 
-.rates-container {
-    margin: auto;
-    padding: 20px;
-    max-width: 1200px;
-}
-
-.tariff-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.rates-button {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--neutral-white-color);
+    padding: 10px 20px;
     margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: 100%;
 }
 
 .tariff-card {
     width: 100%;
-    max-width: 325px;
     background-color: var(--item-background-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--box-shadow-color);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tariff-card:hover {
@@ -45,69 +49,34 @@
     margin: 10px 0;
 }
 
-.price {
-    font-size: 24px;
-    color: var(--highlight-color);
-    margin: 20px 0;
-}
-
-.condition, .discount {
-    background-color: var(--item-background-color);
-    color: var(--text-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.superpower-description {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: var(--text-color);
-}
-
-.superpower-description span:first-child {
-    margin-right: 5px;
-    font-size: 24px;
-    vertical-align: middle;
-}
-
-.rates-button {
-    background-color: var(--highlight-color);
-    border: none;
-    color: var(--text-white-color);
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
 .rates-button:hover {
-    background-color: var(--button-hover-color);
+    background-color: var(--primary-color);
 }
 
 .rates-button a {
-    color: var(--text-white-color);
+    color: var(--neutral-white-color);
     text-decoration: none;
 }
 
 .promo-section {
     color: var(--text-color);
     padding: 20px;
-    margin-bottom: 20px;
     text-align: center;
 }
 
-.promo-section h2 {
+.promo-section h2, .rates-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 .promo-details {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-content: center;
     flex-wrap: wrap;
+    max-width: 1400px;
+    padding: 0 5px;
+    margin: auto;
 }
 
 .promo-item {
@@ -118,8 +87,8 @@
 }
 
 .promo-item img {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
@@ -133,21 +102,145 @@
     line-height: 1.5;
 }
 
-@media (min-width: 768px) {
-    .rates-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.rates-section {
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 15px;
+    position: relative;
+}
 
-    .tariff-container {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+.rates-section strong {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+}
 
-    .tariff-card {
-        margin: 20px;
+.carousel-wrapper {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+}
+
+#rates-carousel-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--item-background-color);
+}
+
+#rates-carousel {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.slide {
+    list-style: none;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.rates-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-dark-color);
+    color: var(--background-light-grey-color);
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.rates-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.rates-item h3 {
+    margin-top: 10px;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.rates-item p {
+    margin: 5px 0;
+    color: var(--subtle-text-color);
+}
+
+.rates-item .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: var(--neutral-white-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    align-self: start;
+    width: auto;
+}
+
+.rates-item .btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+#rates-controls {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#rates-prev,
+#rates-next {
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0;
+}
+
+#rates-prev {
+    left: -15px;
+}
+
+#rates-next {
+    right: -15px;
+}
+
+#rates-prev:hover,
+#rates-next:hover {
+    opacity: 1;
+}
+
+#rates-controls span img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        width: 100%;
     }
+}
+
+@media (max-width: 455px) {
+    .promo-details {
+        flex-direction: column;
+    }
+}
+
+.dark-theme #rates-prev,
+.dark-theme #rates-next {
+    filter: invert(100%);
 }

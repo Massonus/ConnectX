@@ -1,68 +1,84 @@
 {% extends 'base.html' %}
 
 {% block links %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rates-page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rates-page.css') }}">
+    <script src="{{ url_for('static', filename='js/rates-carousel.js') }}"></script>
 {% endblock %}
 
 {% block content %}
-<header class="custom-header">
-    <div class="custom-header-content">
-        <h3 class="custom-header-title">Rates</h3>
-        <nav class="breadcrumb">
-            <a href="{{ url_for('main.index') }}" class="breadcrumb-link">Home</a>
-            <span class="breadcrumb-separator">→</span>
-            <span class="breadcrumb-current">Rates</span>
-        </nav>
-    </div>
-</header>
-<div class="promo-section">
-    <h2>Connect your home Internet</h2>
-    <div class="promo-details">
-        <div class="promo-item">
-            <img src="{{ url_for('static', filename='img/rates-icons/wallet_icon.png') }}" alt="Wallet Icon">
-            <h3>Free connection</h3>
-            <p>You do not need to pay extra for the visit of a technician and cable installation, the Home Internet connection is free.</p>
+    <header class="custom-header">
+        <div class="custom-header-content">
+            <h3 class="custom-header-title">Rates</h3>
+            <nav class="breadcrumb">
+                <a href="{{ url_for('main.index') }}" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Rates</span>
+            </nav>
         </div>
-        <div class="promo-item">
-            <img src="{{ url_for('static', filename='img/rates-icons/ethernet_on_icon.png') }}" alt="Network Icon">
-            <h3>Fast connection</h3>
-            <p>If you need Home Internet today, leave a request on the website before 3 p.m. and our wizard will connect the Internet on the same day.</p>
-        </div>
-        <div class="promo-item">
-            <img src="{{ url_for('static', filename='img/rates-icons/calendar_icon.png') }}" alt="Calendar Icon">
-            <h3>The Internet works when you forgot to recharge</h3>
-            <p>If you suddenly miss a payment day, you can order free Internet access for another 7 days with the Week of Trust service.</p>
-        </div>
-    </div>
-</div>
+    </header>
 
-{% if session.is_admin %}
-<button class="rates-button"><a href="{{ url_for('rate.add_page') }}">Add</a></button>
-{% endif %}
-
-<div class="rates-container">
-    {% for rate in rates %}
-    <div class="tariff-container">
-        <div class="tariff-card">
-            <h2>{{ rate.name }}</h2>
-            <p><strong>Home Internet</strong><br>Up to {{ rate.speed }} Mbps</p>
-            <p><strong>Superpower:</strong></p>
-            <div class="superpower-description">
-                {% if "Consistent Speed" in rate.superpower %}
-                <span>📈</span> <span>{{ rate.superpower }}}</span>
-                {% elif "Enhanced Stability" in rate.superpower %}
-                <span>🔒</span> <span>{{ rate.superpower }}}</span>
-                {% elif "Super Speed" in rate.superpower %}
-                <span>⚡</span> <span>{{ rate.superpower }}</span>
-                {% endif %}
+    <div class="promo-section">
+        <h2>Connect your home Internet</h2>
+        <div class="promo-details">
+            <div class="promo-item">
+                <img src="{{ url_for('static', filename='img/rates-icons/wallet_icon.png') }}" alt="Wallet Icon">
+                <h3>Free connection</h3>
+                <p>You do not need to pay extra for the visit of a technician and cable installation, the Home Internet connection is free.</p>
             </div>
-            <p class="price">${{ rate.price }} per month</p>
-            <p class="condition">Information</p>
-            <p class="description">{{ rate.description }}</p>
-            <button class="rates-button"><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Обрати
-                тариф</a></button>
+            <div class="promo-item">
+                <img src="{{ url_for('static', filename='img/rates-icons/ethernet_on_icon.png') }}" alt="Network Icon">
+                <h3>Fast connection</h3>
+                <p>If you need Home Internet today, leave a request on the website before 3 p.m. and our wizard will connect the Internet on the same day.</p>
+            </div>
+            <div class="promo-item">
+                <img src="{{ url_for('static', filename='img/rates-icons/calendar_icon.png') }}" alt="Calendar Icon">
+                <h3>The Internet works when you forgot to recharge</h3>
+                <p>If you suddenly miss a payment day, you can order free Internet access for another 7 days with the Week of Trust service.</p>
+            </div>
         </div>
     </div>
-    {% endfor %}
-</div>
+
+    {% if session.is_admin %}
+        <button class="rates-button"><a href="{{ url_for('rate.add_page') }}">Add</a></button>
+    {% endif %}
+
+    <div id="rates-block" class="rates-section">
+        <h2>Rates</h2>
+        <div class="carousel-wrapper">
+            <div id="rates-carousel-container" class="limited-width">
+                <ul id="rates-carousel" class="animate">
+                    {% for rate in rates %}
+                        <li class="slide rate-item">
+                            <div class="tariff-card">
+                                <h3>{{ rate.name }}</h3>
+                                <p><strong>Home Internet</strong><br>Up to {{ rate.speed }} Mbps</p>
+                                <p><strong>Superpower:</strong></p>
+                                <div class="superpower-description">
+                                    {% if "Consistent Speed" in rate.superpower %}
+                                        <span>📈</span> <span>{{ rate.superpower }}</span>
+                                    {% elif "Enhanced Stability" in rate.superpower %}
+                                        <span>🔒</span> <span>{{ rate.superpower }}</span>
+                                    {% elif "Super Speed" in rate.superpower %}
+                                        <span>⚡</span> <span>{{ rate.superpower }}</span>
+                                    {% elif "Lightning Fast" in rate.superpower %}
+                                        <span>🎮</span> <span>{{ rate.superpower }}</span>
+                                    {% elif "Blazing Speed" in rate.superpower %}
+                                        <span>💼</span> <span>{{ rate.superpower }}</span>
+                                    {% endif %}
+                                </div>
+                                <p class="price">${{ rate.price }} per month</p>
+                                <p class="condition">Information</p>
+                                <p class="description">{{ rate.description }}</p>
+                                <button class="rates-button"><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Choose rate</a></button>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div id="rates-controls">
+            <span id="rates-prev" class="carousel-control"><img src="{{ url_for('static', filename='img/carousel-prev.png') }}" alt="Previous"></span>
+                <span id="rates-next" class="carousel-control"><img src="{{ url_for('static', filename='img/carousel-next.png') }}" alt="Next"></span>
+            </div>
+        </div>
+    </div>
 {% endblock %}
