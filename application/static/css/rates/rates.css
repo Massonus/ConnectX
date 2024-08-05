@@ -104,6 +104,8 @@
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .promo-section h2 {
@@ -113,8 +115,11 @@
 
 .promo-details {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 0 5px;
+    margin: 0 auto;
 }
 
 .promo-item {
@@ -274,7 +279,7 @@
 
 @media (max-width: 768px) {
     .slide {
-        flex: 0 0 100%;
+        flex: 100%;
     }
     #controls {
         top: 10px;
