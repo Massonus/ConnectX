@@ -83,9 +83,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    padding: 0 10px;
     background-color: var(--background-light-color);
     color: var(--text-dark-subtle-color);
+}
+
+.accordion-content-open {
+    padding: 10px;
+}
+
+.accordion-content-closed {
+    padding: 0 10px;
 }
 
 .accordion-content p {

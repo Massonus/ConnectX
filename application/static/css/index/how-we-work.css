@@ -42,6 +42,14 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.step.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .step h3 {
@@ -54,6 +62,45 @@
     font-size: 1em;
     margin: 0;
     color: var(--background-light-grey-color);
+}
+
+.progress-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.progress-info {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: var(--background-light-grey-color);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-status {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.progress-status span {
+    font-size: 1em;
+    color: var(--background-light-grey-color);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .how-we-work-image {

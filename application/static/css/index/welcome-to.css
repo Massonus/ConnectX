@@ -94,6 +94,10 @@
     font-size: 1em;
 }
 
+.services-link:hover {
+    color: var(--button-hover-color);
+}
+
 .video {
     display: flex;
     align-items: center;

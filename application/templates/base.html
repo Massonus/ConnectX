@@ -7,7 +7,9 @@
 
     {% block links %} {% endblock %}
 
-    <script defer src="{{ url_for('static', filename='js/base.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/change-theme-and-burger-menu.js') }}"></script>
+    <script defer type="module" src="{{ url_for('static', filename='js/quote-form.js') }}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
@@ -105,11 +107,16 @@
             </div>
         </div>
         <div id="quote-form" class="quote-form">
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Your Name*" required>
-                <input type="tel" name="phone" placeholder="Phone Number*" required>
-                <input type="email" name="email" placeholder="Email*" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
+            <form id="request-quote-form">
+                <div id="alert-container"></div>
+                <input type="text" id="name" name="name" placeholder="Your Name*">
+                <div class="alert-container" id="alert-name"></div>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number*">
+                <div class="alert-container" id="alert-phone"></div>
+                <input type="email" id="email" name="email" placeholder="Email*">
+                <div class="alert-container" id="alert-email"></div>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                <div class="alert-container" id="alert-message"></div>
                 <button type="submit" class="request-quote-button">Request a Quote</button>
             </form>
         </div>

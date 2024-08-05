@@ -33,6 +33,38 @@
     padding: 20px;
     border: 1px solid var(--box-shadow-color);
     border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    max-height: 100px;
+    transition: max-height 0.6s ease-out, padding 0.6s ease-out;
+}
+
+.process-step.active {
+    max-height: 500px;
+}
+
+.process-step-title::after {
+    content: "▼";
+    font-size: 1em;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: transform 0.3s;
+}
+
+.process-step.active .process-step-title::after {
+    transform: rotate(180deg);
+}
+
+.process-step-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+}
+
+.process-step.active .process-step-content {
+    max-height: 300px;
 }
 
 .process-step-number {
@@ -50,6 +82,12 @@
 .process-step-description {
     font-size: 1.2em;
     color: var(--subtle-text-color);
+}
+
+.process-step-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
 }
 
 @media (min-width: 768px) {
