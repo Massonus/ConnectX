@@ -6,15 +6,55 @@
 
 {% block content %}
 
-    <h3>{{ rate.name }}</h3>
-    <p><strong>Speed:</strong> {{ rate.speed }} Мбит/с</p>
-    <p><strong>Price:</strong> {{ rate.price }} </p>
-    <p><strong>Description:</strong> {{ rate.description }}</p>
-    {% if session.is_admin %}
-        <button><a href="{{ url_for('rate.delete_rate', rate_id=rate.id) }}">Delete</a></button>
-        <button><a href="{{ url_for('rate.edit_page', rate_id=rate.id) }}">Edit</a></button>
-    {% endif %}
+    <header class="custom-header">
+        <div class="custom-header-content">
+            <h3 class="custom-header-title">Rates</h3>
+            <nav class="breadcrumb">
+                <a href="{{ url_for('rate.show_rates') }}" class="breadcrumb-link">Rates</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Rates</span>
+            </nav>
+        </div>
+    </header>
 
+    {% for rate in rates %}
+        <div id="rate-content-{{ rate.id }}" class="about-us">
+            <img src="{{ url_for('static', filename=rate.image_link) }}" alt="Phone on an orange background" class="about-us-image"/>
+
+            <div class="about-us-content">
+                <h1 class="main-title">{{ rate.name }}</h1>
+                <h2 class="features-title">Features</h2>
+                <div class="feature-item">
+                    <div class="feature-item-icon">
+                        <img src="{{ url_for('static', filename=rate.first_sub_image) }}" alt="Trust Week Icon">
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>{{ rate.first_sub }}</h3>
+                        <p>{{ rate.first_sub_text }}</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-item-icon">
+                        <img src="{{ url_for('static', filename=rate.second_sub_image) }}" alt="Home Day Icon">
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>{{ rate.second_sub }}</h3>
+                        <p>{{ rate.second_sub_text }}</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-item-icon">
+                        <img src="{{ url_for('static', filename=rate.third_sub_image) }}" alt="Address Change Icon">
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>{{ rate.third_sub }}</h3>
+                        <p>{{ rate.third_sub_text }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hr-divider"></div>
+    {% endfor %}
 {% endblock %}
 
 
