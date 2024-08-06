@@ -17,47 +17,47 @@
         </div>
     </header>
 
+    {% for rate in rates %}
+        <div class="about-us">
+            <img src="{{ url_for('static', filename=rate.image_link) }}"
+                 alt="Phone on an orange background" class="about-us-image"/>
 
-    <div class="about-us">
-        <img src="{{ url_for('static', filename='img/additional-inform-rates/basic.png') }}"
-             alt="Phone on an orange background" class="about-us-image"/>
-
-        <div class="about-us-content">
-            <h1 class="main-title">Features</h1>
-            <h2 class="features-title">Корисні функції</h2>
-            <div class="feature-item">
-                <div class="feature-item-icon">
-                    <img src="{{ url_for('static', filename='img/additional-inform-rates/calendar.png') }}"
-                         alt="Trust Week Icon">
+            <div class="about-us-content">
+                <h1 class="main-title">{{ rate.name }}</h1>
+                <h2 class="features-title">Features</h2>
+                <div class="feature-item">
+                    <div class="feature-item-icon">
+                        <img src="{{ url_for('static', filename=rate.first_sub_image) }}"
+                             alt="Trust Week Icon">
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>{{ rate.first_sub }}</h3>
+                        <p>{{ rate.first_sub_text }}</p>
+                    </div>
                 </div>
-                <div class="feature-item-content">
-                    <h3>Trust Week</h3>
-                    <p>If you accidentally missed a payment day, activate Trust Week and keep access to the internet and
-                        TV for another 7 days.</p>
+                <div class="feature-item">
+                    <div class="feature-item-icon">
+                        <img src="{{ url_for('static', filename=rate.second_sub_image) }}"
+                             alt="Home Day Icon">
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>{{ rate.second_sub }}</h3>
+                        <p>{{ rate.second_sub_text }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-item">
-                <div class="feature-item-icon">
-                    <img src="{{ url_for('static', filename='img/additional-inform-rates/sofa.png') }}" alt="Home Day Icon">
-                </div>
-                <div class="feature-item-content">
-                    <h3>Home Day</h3>
-                    <p>Need home internet for a day or don't have enough funds to pay for a plan? Order the Home Day
-                        service for 25 UAH and use the internet until the end of the next day.</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <div class="feature-item-icon">
-                    <img src="{{ url_for('static', filename='img/additional-inform-rates/arrow.png') }}" alt="Address Change Icon">
-                </div>
-                <div class="feature-item-content">
-                    <h3>Address Change</h3>
-                    <p>Are you moving? Home Internet and Kyivstar TV will change the address with you — your plan,
-                        account balance, and connected services will remain unchanged.</p>
+                <div class="feature-item">
+                    <div class="feature-item-icon">
+                        <img src="{{ url_for('static', filename=rate.third_sub_image) }}"
+                             alt="Address Change Icon">
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>{{ rate.third_sub }}</h3>
+                        <p>{{ rate.third_sub_text }}</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endfor %}
 {% endblock %}
 
 

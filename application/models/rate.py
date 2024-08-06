@@ -9,6 +9,19 @@ class Rate(db.Model):
     price = db.Column(db.Float, nullable=False)
     description = db.Column(db.Text, nullable=True)
     superpower = db.Column(db.Text, nullable=True)
+    image_link = db.Column(db.Text, nullable=True)
+
+    first_sub = db.Column(db.Text, nullable=True)
+    first_sub_text = db.Column(db.Text, nullable=True)
+    first_sub_image = db.Column(db.Text, nullable=True)
+
+    second_sub = db.Column(db.Text, nullable=True)
+    second_sub_text = db.Column(db.Text, nullable=True)
+    second_sub_image = db.Column(db.Text, nullable=True)
+
+    third_sub = db.Column(db.Text, nullable=True)
+    third_sub_text = db.Column(db.Text, nullable=True)
+    third_sub_image = db.Column(db.Text, nullable=True)
 
     def __repr__(self):
         return f'<Rate {self.name}>'
