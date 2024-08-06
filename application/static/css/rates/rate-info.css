@@ -52,12 +52,11 @@
 
 .feature-item-icon {
     margin-right: 20px;
-    flex-shrink: 0;
 }
 
 .feature-item-icon img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 }
 
 .feature-item-content h3 {
