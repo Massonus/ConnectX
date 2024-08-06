@@ -1,163 +1,64 @@
 {% extends 'base.html' %}
 
 {% block links %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/rates/rate-info.css') }}">
-<script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rates/info-page.css') }}">
+{% endblock %}
 
 {% block content %}
 
-<header class="custom-header">
-    <div class="custom-header-content">
-        <h3 class="custom-header-title">Rates</h3>
-        <nav class="breadcrumb">
-            <a href="{{ url_for('main.index') }}" class="breadcrumb-link">Rates</a>
-            <span class="breadcrumb-separator">→</span>
-            <span class="breadcrumb-current">Rates</span>
-        </nav>
-    </div>
-</header>
+    <header class="custom-header">
+        <div class="custom-header-content">
+            <h3 class="custom-header-title">Rates</h3>
+            <nav class="breadcrumb">
+                <a href="{{ url_for('rate.show_rates') }}" class="breadcrumb-link">Rates</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Rates</span>
+            </nav>
+        </div>
+    </header>
 
-<div class="about-us">
 
-    <img src="{{ url_for('static', filename='img/additional-inform-rates/basic.png') }}"
-         alt="Phone on an orange background" class="about-us-image"/>
+    <div class="about-us">
+        <img src="{{ url_for('static', filename='img/additional-inform-rates/basic.png') }}"
+             alt="Phone on an orange background" class="about-us-image"/>
 
-    <div class="about-us-content">
-        <h1>{{ rate.name }}</h1>
-        <h3 class="about-us-headline">Bringing Life Back to Your Network.</h3>
-        <p class="about-us-subheadline">
-            Schedule your installation with ConnectX today and experience ultimate convenience and expertise.
-        </p>
-        <p class="about-us-description">
-            A reliable and affordable plan for everyday internet usage. Perfect for browsing, emailing, and staying
-            connected with friends and family.
-        </p>
-        <p class="about-us-description">
-            We understand the frustration that comes with a malfunctioning internet connection,
-            which is why we strive to provide swift and reliable solutions that get you back online in no time.
-        </p>
-    </div>
-</div>
-<div class="useful-features">
-    <h2>Корисні функції</h2>
-    <div class="feature">
-        <div class="feature-icon">
-            <img src="{{ url_for('static', filename='icons/trust-week.png') }}" alt="Trust Week Icon">
-        </div>
-        <div class="feature-content">
-            <h3>Тиждень довіри</h3>
-            <p>Випадково пропустили день оплати? Підключіть Тиждень довіри, і у вас залишиться доступ до інтернету та
-                телебачення ще на 7 днів.</p>
-        </div>
-    </div>
-    <div class="feature">
-        <div class="feature-icon">
-            <img src="{{ url_for('static', filename='icons/home-day.png') }}" alt="Home Day Icon">
-        </div>
-        <div class="feature-content">
-            <h3>Домашній день</h3>
-            <p>Потрібний Домашній Інтернет на день чи не вистачає коштів для оплати тарифного плану? Замовляйте послугу
-                Домашній день за 25 грн і користуйтесь інтернетом до кінця наступної доби.</p>
+        <div class="about-us-content">
+            <h1 class="main-title">Features</h1>
+            <h2 class="features-title">Корисні функції</h2>
+            <div class="feature-item">
+                <div class="feature-item-icon">
+                    <img src="{{ url_for('static', filename='icons/trust-week.png') }}" alt="Trust Week Icon">
+                </div>
+                <div class="feature-item-content">
+                    <h3>Trust Week</h3>
+                    <p>If you accidentally missed a payment day, activate Trust Week and keep access to the internet and
+                        TV for another 7 days.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon">
+                    <img src="{{ url_for('static', filename='icons/home-day.png') }}" alt="Home Day Icon">
+                </div>
+                <div class="feature-item-content">
+                    <h3>Home Day</h3>
+                    <p>Need home internet for a day or don't have enough funds to pay for a plan? Order the Home Day
+                        service for 25 UAH and use the internet until the end of the next day.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon">
+                    <img src="{{ url_for('static', filename='icons/address-change.png') }}" alt="Address Change Icon">
+                </div>
+                <div class="feature-item-content">
+                    <h3>Address Change</h3>
+                    <p>Are you moving? Home Internet and Kyivstar TV will change the address with you — your plan,
+                        account balance, and connected services will remain unchanged.</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="feature">
-        <div class="feature-icon">
-            <img src="{{ url_for('static', filename='icons/address-change.png') }}" alt="Address Change Icon">
-        </div>
-        <div class="feature-content">
-            <h3>Зміна адреси</h3>
-            <p>Ви переїжджаєте? Домашній Інтернет і Київстар ТВ змінюють адресу разом із вами — тариф, залишок на
-                рахунку та підключені послуги зберігаються.</p>
-        </div>
-    </div>
-</div>
 
-{% if session.get('is_admin') %}
-<div class="admin-actions">
-    <button class="btn-delete">
-        <a href="{{ url_for('rate.delete_rate', rate_id=rate.id) }}"
-           onclick="return confirm('Are you sure you want to delete this rate?');">Delete</a>
-    </button>
-    <button class="btn-edit">
-        <a href="{{ url_for('rate.edit_page', rate_id=rate.id) }}">Edit</a>
-    </button>
-</div>
-{% endif %}
-</div>
+
 {% endblock %}
 
 
-<!--
-<div class="rate-detail">
-    <h1>{{ rate.name }}</h1>
-    <div class="rate-advantages">
-        <h4>Advantages:</h4>
-        <p>Consistent speed for all your online activities.</p>
-        <p>24/7 customer support.</p>
-        <p>Free router and installation.</p>
-    </div>
-
-    <div class="rate-limitations">
-        <h4>Limitations:</h4>
-        <ul>
-            <li>Data cap of 500GB per month.</li>
-            <li>Available only in select areas.</li>
-            <li>No support for static IP addresses.</li>
-        </ul>
-    </div>
-
-    <div class="rate-details">
-        <div class="rate-speed">
-            <h3>Швидкість</h3>
-            <p>до {{ rate.speed }} Мбіт/с</p>
-        </div>
-        <div class="rate-traffic">
-            <h3>Трафік</h3>
-            <p>Безлім</p>
-        </div>
-    </div>
-
-    <div class="rate-functions">
-        <h3>Корисні функції</h3>
-        <ul>
-            <li>
-                <strong>Тиждень довіри</strong> - Випадково пропустили день оплати? Підключіть Тиждень довіри, і у вас
-                залишиться інтернет.
-            </li>
-        </ul>
-    </div>
-
-    <div class="rate-reviews">
-        <h4>Customer Reviews:</h4>
-        <div class="review">
-            <p><strong>John Doe:</strong> Excellent service, reliable speed, and great support!</p>
-        </div>
-        <div class="review">
-            <p><strong>Jane Smith:</strong> Good value for money. Installation was quick and hassle-free.</p>
-        </div>
-        <div class="review">
-            <p><strong>Bob Johnson:</strong> Speed drops occasionally during peak hours, but overall a solid plan.</p>
-        </div>
-    </div>
-    <div class="rate-promo">
-        <div class="promo-banner">
-            <span>Акція на 12 місяців</span>
-            <p><strong>{{ rate.price }} грн/міс</strong></p>
-            <p>Далі 200 грн/міс</p>
-            <button class="rates-button"><a href="#">Підключити</a></button>
-        </div>
-    </div>
-    {% if session.get('is_admin') %}
-    <div class="admin-actions">
-        <button class="btn-delete">
-            <a href="{{ url_for('rate.delete_rate', rate_id=rate.id) }}"
-               onclick="return confirm('Are you sure you want to delete this rate?');">Delete</a>
-        </button>
-        <button class="btn-edit">
-            <a href="{{ url_for('rate.edit_page', rate_id=rate.id) }}">Edit</a>
-        </button>
-    </div>
-    {% endif %}
-</div>
-{% endblock %}
--->

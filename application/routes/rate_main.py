@@ -10,10 +10,10 @@ def show_rates():
     return render_template('rates/rates.html', rates=rates)
 
 
-@bp.route('/basic/<int:rate_id>')
-def show_rate_by_id(rate_id: int):
-    rate = rate_util.get_by_id(rate_id)  # Здесь должна быть функция для получения тарифа по его ID
-    return render_template('rates/rate-info.html', rate=rate)
+@bp.route('/description')
+def show_rate_description():
+    rates = rate_util.get_all()
+    return render_template('rates/rate-info.html', rates=rates)
 
 
 @bp.route('/add', methods=('POST',))

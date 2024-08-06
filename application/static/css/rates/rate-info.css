@@ -1,18 +1,8 @@
-:root {
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --highlight-color: #007bff;
-    --secondary-background-color: #ffffff;
-    --danger-color: #dc3545;
-    --primary-color: #007bff;
-    --danger-hover-color: #c82333;
-    --primary-hover-color: #0056b3;
-}
-
 .about-us {
     display: flex;
     gap: 20px;
-    justify-content: start;
+    justify-content: space-between;
+    align-items: stretch;
     background-color: var(--background-color);
     padding: 30px;
     border-radius: 10px;
@@ -20,6 +10,9 @@
 }
 
 .about-us-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 1;
     padding: 30px;
     color: var(--text-color);
@@ -32,104 +25,50 @@
     border-radius: 10px;
 }
 
-.about-us-headline {
-    font-size: 2.3em;
+.main-title {
+    font-size: 2.5em;
     color: var(--highlight-color);
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.about-us-subheadline {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.about-us-description {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.useful-features {
-    padding: 30px;
-    background-color: var(--background-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.useful-features h2 {
+.features-title {
     font-size: 2.3em;
     color: var(--highlight-color);
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.feature {
+.feature-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
     text-align: left;
-    background-color: var(--secondary-background-color);
+    background-color: var(--neutral-white-color);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.feature-icon {
+.feature-item-icon {
     margin-right: 20px;
     flex-shrink: 0;
 }
 
-.feature-icon img {
+.feature-item-icon img {
     width: 60px;
     height: 60px;
 }
 
-.feature-content h3 {
+.feature-item-content h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: var(--text-color);
 }
 
-.feature-content p {
+.feature-item-content p {
     font-size: 1.2em;
     color: var(--text-color);
-}
-
-.admin-actions {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.admin-actions .btn-delete, .admin-actions .btn-edit {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.admin-actions .btn-delete a, .admin-actions .btn-edit a {
-    text-decoration: none;
-    color: white;
-}
-
-.admin-actions .btn-delete {
-    background-color: var(--danger-color);
-}
-
-.admin-actions .btn-edit {
-    background-color: var(--primary-color);
-}
-
-.admin-actions .btn-delete:hover {
-    background-color: var(--danger-hover-color);
-}
-
-.admin-actions .btn-edit:hover {
-    background-color: var(--primary-hover-color);
 }
 
 @media (max-width: 768px) {
@@ -150,20 +89,20 @@
         padding: 20px;
     }
 
-    .feature {
+    .feature-item {
         flex-direction: column;
         align-items: center;
     }
 
-    .feature-icon {
+    .feature-item-icon {
         margin-bottom: 10px;
     }
 
-    .feature-content h3 {
+    .feature-item-content h3 {
         text-align: center;
     }
 
-    .feature-content p {
+    .feature-item-content p {
         text-align: center;
     }
 }

@@ -69,7 +69,7 @@
                                 <p class="price">${{ rate.price }} per month</p>
                                 <p class="condition">Information</p>
                                 <p class="description">{{ rate.description }}</p>
-                                <button class="rates-button"><a href="{{ url_for('rate.show_rate_by_id', rate_id=rate.id) }}">Choose rate</a></button>
+                                <button class="rates-button"><a href="{{ url_for('rate.show_rate_description')}}">Choose rate</a></button>
                             </div>
                         </li>
                     {% endfor %}
