@@ -7,6 +7,8 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--box-shadow);
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .about-us-content {
