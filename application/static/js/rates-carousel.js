@@ -1,43 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.getElementById('carousel');
-    const slides = document.getElementsByClassName('slide');
-    const carouselContainer = document.getElementById('carousel-container');
+    const ratesCarousel = document.getElementById('rates-carousel');
+    const ratesSlides = document.getElementsByClassName('slide');
+    const ratesCarouselContainer = document.getElementById('rates-carousel-container');
 
-    let moveOffset = carouselContainer.offsetWidth / 3;
-    const SLIDE_DURATION = 500;
-    const TRANSITION_NONE = 'none';
-    const TRANSITION_NORMAL = 'transform 0.5s';
+    let moveOffset = ratesCarouselContainer.offsetWidth;
+    const slideDuration = 500;
+    const minWindowWidth = 768;
+    const transitionNone = 'none';
+    const transitionNormal = 'transform 0.5s';
+
+    function updateWidths() {
+        moveOffset = window.innerWidth <= minWindowWidth ? ratesCarouselContainer.offsetWidth : ratesCarouselContainer.offsetWidth / 3;
+
+        for (const slide of ratesSlides) {
+            slide.style.width = `${moveOffset}px`
+        }
+
+        ratesCarousel.style.width = `${ratesSlides.length * moveOffset}px`;
+    }
 
     function moveSlide(direction) {
         if (direction === 1) {
-            carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);
+            ratesCarousel.insertBefore(ratesCarousel.lastElementChild, ratesCarousel.firstElementChild);
 
-            carousel.style.transition = TRANSITION_NONE;
-            carousel.style.transform = `translateX(-${moveOffset}px)`;
+            ratesCarousel.style.transition = transitionNone;
+            ratesCarousel.style.transform = `translateX(-${moveOffset}px)`;
 
             setTimeout(() => {
-                carousel.style.transition = TRANSITION_NORMAL;
-                carousel.style.transform = 'translateX(0)';
+                ratesCarousel.style.transition = transitionNormal;
+                ratesCarousel.style.transform = 'translateX(0)';
             }, 20);
         } else {
-            carousel.style.transition = TRANSITION_NORMAL;
-            carousel.style.transform = `translateX(-${moveOffset}px)`;
+            ratesCarousel.style.transition = transitionNormal;
+            ratesCarousel.style.transform = `translateX(-${moveOffset}px)`;
 
             setTimeout(() => {
-                carousel.appendChild(carousel.firstElementChild);
+                ratesCarousel.appendChild(ratesCarousel.firstElementChild);
 
-                carousel.style.transition = TRANSITION_NONE;
-                carousel.style.transform = 'translateX(0)';
-            }, SLIDE_DURATION);
+                ratesCarousel.style.transition = transitionNone;
+                ratesCarousel.style.transform = 'translateX(0)';
+            }, slideDuration);
         }
     }
 
-    document.getElementById('prev').addEventListener('click', () => moveSlide(1));
-    document.getElementById('next').addEventListener('click', () => moveSlide(-1));
+    document.getElementById('rates-prev').addEventListener('click', () => moveSlide(1));
+    document.getElementById('rates-next').addEventListener('click', () => moveSlide(-1));
 
     window.addEventListener('resize', updateWidths);
 
     updateWidths();
 });
-
-
