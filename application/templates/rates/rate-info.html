@@ -18,17 +18,15 @@
     </header>
 
     {% for rate in rates %}
-        <div class="about-us">
-            <img src="{{ url_for('static', filename=rate.image_link) }}"
-                 alt="Phone on an orange background" class="about-us-image"/>
+        <div id="rate-content-{{ rate.id }}" class="about-us">
+            <img src="{{ url_for('static', filename=rate.image_link) }}" alt="Phone on an orange background" class="about-us-image"/>
 
             <div class="about-us-content">
                 <h1 class="main-title">{{ rate.name }}</h1>
                 <h2 class="features-title">Features</h2>
                 <div class="feature-item">
                     <div class="feature-item-icon">
-                        <img src="{{ url_for('static', filename=rate.first_sub_image) }}"
-                             alt="Trust Week Icon">
+                        <img src="{{ url_for('static', filename=rate.first_sub_image) }}" alt="Trust Week Icon">
                     </div>
                     <div class="feature-item-content">
                         <h3>{{ rate.first_sub }}</h3>
@@ -37,8 +35,7 @@
                 </div>
                 <div class="feature-item">
                     <div class="feature-item-icon">
-                        <img src="{{ url_for('static', filename=rate.second_sub_image) }}"
-                             alt="Home Day Icon">
+                        <img src="{{ url_for('static', filename=rate.second_sub_image) }}" alt="Home Day Icon">
                     </div>
                     <div class="feature-item-content">
                         <h3>{{ rate.second_sub }}</h3>
@@ -47,8 +44,7 @@
                 </div>
                 <div class="feature-item">
                     <div class="feature-item-icon">
-                        <img src="{{ url_for('static', filename=rate.third_sub_image) }}"
-                             alt="Address Change Icon">
+                        <img src="{{ url_for('static', filename=rate.third_sub_image) }}" alt="Address Change Icon">
                     </div>
                     <div class="feature-item-content">
                         <h3>{{ rate.third_sub }}</h3>

@@ -67,9 +67,9 @@
                                     {% endif %}
                                 </div>
                                 <p class="price">${{ rate.price }} per month</p>
-                                <p class="condition">Information</p>
+                                <p class="condition">Additional information</p>
                                 <p class="description">{{ rate.description }}</p>
-                                <button class="rates-button"><a href="{{ url_for('rate.show_rate_description')}}">Choose rate</a></button>
+                                <a href="{{ url_for('rate.show_rate_description', filename='rates/rate-info.html', _anchor='rate-content-' + rate.id|string)}}"><button class="rates-button">Choose rate</button></a>
                             </div>
                         </li>
                     {% endfor %}
