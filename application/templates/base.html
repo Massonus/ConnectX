@@ -61,10 +61,10 @@
             </div>
             <ul class="header-links" id="header-links">
                 <li><a href="{{ url_for('about.index') }}">About us</a></li>
-                <li><a href="{{ url_for('rate.show_rates') }}">Rate</a></li>
+                <li><a href="{{ url_for('rate.show_rates') }}">Rates</a></li>
                 <li><a href="{{ url_for('main.index', filename='main-page/cta-and-testimonials.html', _anchor='testimonial-block') }}">Testimonials</a></li>
                 <li><a href="{{ url_for('main.index', filename='main-page/news.html', _anchor='news-block') }}">News</a></li>
-                <li><a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a></li>
+                <li><a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Services</a></li>
                 <li><a href="{{ url_for('contact.index') }}">Contact us</a></li>
 
                 {% if session.loggedin %}
@@ -148,7 +148,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ url_for('rate.show_rates') }}">Rate</a>
+                        <a href="{{ url_for('rate.show_rates') }}">Rates</a>
                     </li>
 
                     <li>
@@ -160,7 +160,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Service</a>
+                        <a href="{{ url_for('main.index', filename='main-page/services.html', _anchor='service-block') }}">Services</a>
                     </li>
                 </ul>
             </div>

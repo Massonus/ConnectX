@@ -98,23 +98,6 @@
     color: var(--button-hover-color);
 }
 
-.video {
-    display: flex;
-    align-items: center;
-    margin: 20px;
-}
-
-.video-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.video-icon {
-    margin-right: 10px;
-}
-
 @media (max-width: 768px) {
     .sub-welcome-container {
         flex-direction: column;
